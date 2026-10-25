@@ -311,8 +311,8 @@ footer.foot a:hover{color:#fff}
     <p>Udfyld formularen med dit projekt, så kontakter jeg dig hurtigst muligt.</p>
     <ul class="checks"><li>Uforpligtende og gratis første snak</li><li>Du taler direkte med mig, der bygger siden</li><li>Typisk færdig inden for få dage</li></ul>
    </div>
-   <!-- Formular: FormSubmit.co (gratis). Henvendelser sendes til edwebworks@outlook.com -->
-   <form id="kontaktform" action="https://formsubmit.co/edwebworks@outlook.com" method="POST" class="rv d2">
+   <!-- Formular: FormSubmit.co (gratis). Henvendelser sendes til ED.s indbakke -->
+   <form id="kontaktform" action="https://formsubmit.co/8f6b2cd857b41da52beb4443be0fed0d" method="POST" class="rv d2">
     <input type="hidden" name="_subject" value="Ny henvendelse fra edwebworks.com">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
@@ -335,7 +335,7 @@ footer.foot a:hover{color:#fff}
 <script>
 (function(){var f=document.getElementById('kontaktform');if(!f||!window.fetch)return;var st=f.querySelector('.form-status'),btn=f.querySelector('button[type=submit]');
 f.addEventListener('submit',function(e){e.preventDefault();if(f._honey&&f._honey.value)return;st.className='form-status';st.textContent='Sender...';btn.disabled=true;
-fetch('https://formsubmit.co/ajax/edwebworks@outlook.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+fetch('https://formsubmit.co/ajax/8f6b2cd857b41da52beb4443be0fed0d',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw d;return d})})
 .then(function(){f.innerHTML='<div class="form-done"><h3>Tak! <em>Jeg vender tilbage hurtigst muligt.</em></h3><p>Din besked er sendt. Du taler direkte med mig, der bygger siden.</p></div>'})
 .catch(function(){btn.disabled=false;st.className='form-status err';st.innerHTML='Beskeden kunne ikke sendes. Prøv igen, eller skriv direkte til <a href="mailto:edwebworks@outlook.com" style="text-decoration:underline">edwebworks@outlook.com</a>.'})})})();
