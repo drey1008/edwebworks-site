@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Kornblomst — Café &amp; brunch (demo af ED. Web Works)</title>
+<meta name="description" content="Eksempel på en hjemmeside til en café, lavet af ED. Web Works. Fiktiv virksomhed.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://edwebworks.com/demoer/cafe/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2b1a12">
+<!--
+  DEMO — fiktiv virksomhed. Navn, adresse, menu og priser er opdigtede eksempler.
+  Billeder: Pexels (gratis licens, pexels.com/license):
+   hero.webp      — Ahmet Yüksek, pexels.com/photo/29784882
+   bord.webp      — miniperde, pexels.com/photo/30180369
+   juice.webp     — Vural Kayıtmaz, pexels.com/photo/33687951
+   bar.webp       — Nur, pexels.com/photo/36038129
+   croissant.webp — pexels.com/photo/27969785
+   bagvaerk.webp  — pexels.com/photo/32846791
+-->
+<style>
+:root{--dark:#2b1a12;--dark2:#3a2419;--cream:#f7ecd9;--paper:#fbf5ea;--orange:#e5673a;--olive:#7d8a4e;--mute:#a08b78;
+--display:"Cooper Black","Bookman Old Style","Recoleta",Georgia,serif;--sans:"Trebuchet MS","Segoe UI",system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--dark);font:17px/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{width:min(1200px,100% - 40px);margin:0 auto}
+.demo-flag{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:60;background:#e5673a;color:#fff;font:600 12px/1 system-ui,sans-serif;letter-spacing:.04em;padding:8px 14px;border-radius:99px;white-space:nowrap}
+.ed-banner{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;background:#16181a;color:#fff;font:400 14px/1.3 system-ui,sans-serif;padding:10px 10px 10px 18px;border-radius:99px;box-shadow:0 14px 40px -12px rgba(0,0,0,.45);width:max-content;max-width:calc(100% - 24px)}
+.ed-banner b{font-weight:600}.ed-banner b i{font-style:normal;color:#ff8a5c}
+.ed-banner a{background:#d4420f;color:#fff;text-decoration:none;padding:8px 14px;border-radius:99px;white-space:nowrap;font-weight:500}
+.ed-banner a:hover{background:#b8380b}
+/* hero */
+.hero{background:var(--dark);color:var(--cream);position:relative;overflow:hidden;padding:0 0 120px;border-radius:0 0 48px 48px}
+header{padding:54px 0 0;position:relative;z-index:3}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.brand{font:400 28px/1 var(--display);text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand svg{width:30px;height:30px}
+.nav ul{display:flex;gap:26px;list-style:none;font-weight:600;font-size:15px}
+.nav ul a{text-decoration:none;opacity:.8}.nav ul a:hover{opacity:1;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;text-decoration:none;font:700 16px/1 var(--sans);padding:17px 26px;border-radius:14px;border:0;cursor:pointer;box-shadow:0 6px 0 #b04a24;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #b04a24}
+.btn.cream{background:var(--cream);color:var(--dark);box-shadow:0 6px 0 #cdb99a}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:80px;position:relative;z-index:2}
+.hero h1{font:400 clamp(54px,8vw,120px)/.92 var(--display);letter-spacing:-.02em}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:20px;color:#e6d4bb;max-width:38ch;margin:28px 0 36px}
+.hero .ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero .open{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-size:15px;color:#e6d4bb}
+.hero .open::before{content:"";width:10px;height:10px;border-radius:50%;background:#8fd16a;box-shadow:0 0 0 4px rgba(143,209,106,.25)}
+.stack{position:relative;height:600px}
+.stack figure{position:absolute;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);will-change:transform}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack .a{width:68%;height:82%;right:0;top:0;transform:rotate(3deg)}
+.stack .b{width:48%;height:52%;left:0;bottom:0;transform:rotate(-6deg);border:8px solid var(--dark2)}
+.stamp{position:absolute;left:30%;top:6%;width:140px;height:140px;z-index:3;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.blob{position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(229,103,58,.35),transparent 70%)}
+/* usp */
+.usp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:110px 0 40px}
+.usp div{background:var(--cream);border-radius:28px;padding:34px}
+.usp .ico{font-size:36px;display:block;margin-bottom:16px}
+.usp h3{font:400 28px/1.1 var(--display);margin-bottom:10px}
+.usp p{color:#6d5444}
+/* menu */
+.menu{padding:110px 0}
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.menu h2{font:400 clamp(44px,6vw,86px)/.95 var(--display)}
+.menu h2 span{color:var(--orange)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{background:var(--cream);border:0;border-radius:99px;padding:12px 20px;font:700 15px/1 var(--sans);color:var(--dark);cursor:pointer}
+.tab[aria-selected=true]{background:var(--dark);color:var(--cream)}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:0 60px}
+.panel{display:none;grid-column:1/-1;grid-template-columns:1fr 1fr;gap:0 60px}
+.panel.on{display:grid}
+.dish{display:flex;gap:16px;align-items:baseline;padding:20px 0;border-bottom:2px dashed #e5d5bd}
+.dish h4{font:400 24px/1.2 var(--display)}
+.dish p{color:#7b6352;font-size:15px}
+.dish .dots{flex:1}
+.dish .pr{font:400 22px/1 var(--display);color:var(--orange);white-space:nowrap}
+.tag{display:inline-block;font:700 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;background:var(--olive);color:#fff;border-radius:6px;padding:4px 7px;margin-left:8px;vertical-align:middle}
+/* scroll-billeder */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 0 110px;align-items:center}
+.duo figure{border-radius:32px;overflow:hidden;aspect-ratio:3/4}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+.duo .txt h2{font:400 clamp(40px,5vw,72px)/.98 var(--display);margin-bottom:22px}
+.duo .txt p{font-size:19px;color:#6d5444;max-width:40ch}
+.slide-l,.slide-r{will-change:transform}
+.wide{margin:0 20px;border-radius:40px;overflow:hidden;height:70vh;position:relative}
+.wide img{width:100%;height:130%;object-fit:cover;will-change:transform}
+.wide .over{position:absolute;inset:0;display:flex;align-items:flex-end;padding:48px;background:linear-gradient(to top,rgba(43,26,18,.75),transparent 60%);color:var(--cream)}
+.wide .over p{font:400 clamp(32px,4.4vw,64px)/1 var(--display);max-width:16ch}
+/* book bord */
+.table{background:var(--olive);color:#fff;border-radius:48px;margin:110px 20px 0;padding:100px 0}
+.table .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.table h2{font:400 clamp(42px,5.4vw,80px)/.95 var(--display)}
+.table p{font-size:19px;color:#eef1dc;margin-top:20px;max-width:40ch}
+.table form{background:var(--paper);color:var(--dark);border-radius:28px;padding:32px;display:grid;gap:16px}
+.table label{font-weight:700;font-size:14px;display:block;margin-bottom:6px}
+.table select,.table input{width:100%;font:400 16px/1.3 var(--sans);padding:14px 16px;border-radius:12px;border:2px solid #e5d5bd;background:#fff;color:var(--dark)}
+.table .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.table .msg{font-size:14px;color:var(--olive);min-height:1.3em;font-weight:700}
+/* find */
+.find{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:110px 0 60px}
+.find div{border-top:3px solid var(--dark);padding-top:18px}
+.find h3{font:400 26px/1.1 var(--display);margin-bottom:8px}
+.find p{color:#6d5444}
+footer{padding:30px 0 110px;color:var(--mute);font-size:14px}
+.js .rv{opacity:0;transform:translateY(40px) scale(.98);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}
+@media (max-width:900px){
+ .nav ul{display:none}
+ .hero-grid,.duo,.table .wrap{grid-template-columns:1fr}
+ .hero-grid{padding-top:48px}
+ .stack{height:440px}
+ .stamp{width:100px;height:100px;left:4%;top:0}
+ .usp,.find{grid-template-columns:1fr;padding-top:80px}
+ .panel{grid-template-columns:1fr}
+ .menu{padding:80px 0}
+ .wide{height:50vh;margin:0 10px;border-radius:28px}.wide .over{padding:26px}
+ .table{margin:80px 10px 0;padding:70px 0;border-radius:32px}
+ .table form{padding:22px}
+ .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="demo-flag">Eksempel · Fiktiv virksomhed</div>
+<section class="hero">
+ <div class="blob" aria-hidden="true"></div>
+ <header class="wrap nav">
+  <a class="brand" href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="5" fill="#e5673a"/><g fill="#7da0e0"><ellipse cx="16" cy="5" rx="4" ry="5"/><ellipse cx="16" cy="27" rx="4" ry="5"/><ellipse cx="5" cy="16" rx="5" ry="4"/><ellipse cx="27" cy="16" rx="5" ry="4"/></g></svg>Kornblomst</a>
+  <ul><li><a href="#menu">Menu</a></li><li><a href="#bord">Book bord</a></li><li><a href="#find">Find os</a></li></ul>
+  <a class="btn cream" href="#bord">Book bord</a>
+ </header>
+ <div class="wrap hero-grid">
+  <div>
+   <h1>Kaffe, kager <span>&amp; lange</span> morgener.</h1>
+   <p>Nybagte croissanter fra kl. 7, kaffe brygget med omhu og brunch, der er værd at stå op til. Kom som du er — vi har altid en plads ved vinduet.</p>
+   <div class="ctas"><a class="btn" href="#bord">Book bord til brunch</a><a class="btn cream" href="#menu">Se menuen</a></div>
+   <p class="open">Åbent i dag 7–17</p>
+  </div>
+  <div class="stack">
+   <svg class="stamp" viewBox="0 0 140 140" aria-hidden="true"><defs><path id="c" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><circle cx="70" cy="70" r="68" fill="#e5673a"/><text font-family="Trebuchet MS,sans-serif" font-weight="700" font-size="13" fill="#fff"><textPath href="#c" textLength="320" lengthAdjust="spacing">BAGT HER · HVER MORGEN · SIDEN KL. 7 ·</textPath></text><text x="70" y="80" text-anchor="middle" font-size="30" fill="#fff">☕</text></svg>
+   <figure class="a" data-float="-0.06"><img src="img/hero.webp" alt="Cappuccino med latte art og stearinlys" width="1100" height="1649" fetchpriority="high"></figure>
+   <figure class="b" data-float="0.08"><img src="img/croissant.webp" alt="Nybagte croissanter" width="1400" height="934"></figure>
+  </div>
+ </div>
+</section>
+
+<main>
+ <section class="wrap usp">
+  <div class="rv"><span class="ico">🥐</span><h3>Bagt her. Hver dag.</h3><p>Vores bagværk kommer ikke i en kasse. Det kommer ud af ovnen, mens du venter.</p></div>
+  <div class="rv d1"><span class="ico">☕</span><h3>Kaffe med karakter</h3><p>Bønner fra små ristere, brygget af folk der elsker det. Spørg endelig om dagens filterkaffe.</p></div>
+  <div class="rv d2"><span class="ico">🌿</span><h3>Plads til alle</h3><p>Hunde, barnevogne og bærbare er velkomne. Vi har gratis wifi og stikkontakter ved hvert bord.</p></div>
+ </section>
+
+ <section id="menu" class="wrap menu">
+  <div class="menu-head">
+   <h2 class="rv">Dagens <span>menu</span></h2>
+   <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="0">Morgen</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="1">Brunch</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="2">Kaffe &amp; drikke</button>
+   </div>
+  </div>
+  <div class="board rv">
+   <div class="panel on" role="tabpanel">
+    <div class="dish"><div><h4>Croissant med smør</h4><p>Lyst lagdelt, bagt kl. 7</p></div><span class="dots"></span><span class="pr">32 kr</span></div>
+    <div class="dish"><div><h4>Kanelsnurre<span class="tag">Favorit</span></h4><p>Med kardemomme og brunt sukker</p></div><span class="dots"></span><span class="pr">36 kr</span></div>
+    <div class="dish"><div><h4>Yoghurt &amp; granola</h4><p>Hjemmelavet granola, sæsonens bær</p></div><span class="dots"></span><span class="pr">65 kr</span></div>
+    <div class="dish"><div><h4>Surdejsbolle med ost</h4><p>Smør, lagret ost og marmelade</p></div><span class="dots"></span><span class="pr">55 kr</span></div>
+   </div>
+   <div class="panel" role="tabpanel">
+    <div class="dish"><div><h4>Kornblomst-brunch<span class="tag">Til 1</span></h4><p>Æg, bacon, avocado, ost, yoghurt, bagværk og juice</p></div><span class="dots"></span><span class="pr">169 kr</span></div>
+    <div class="dish"><div><h4>Vegetarbrunch<span class="tag">Veg</span></h4><p>Røræg, halloumi, hummus, grønt og surdej</p></div><span class="dots"></span><span class="pr">159 kr</span></div>
+    <div class="dish"><div><h4>Pandekager</h4><p>Med ahornsirup, bær og crème fraîche</p></div><span class="dots"></span><span class="pr">95 kr</span></div>
+    <div class="dish"><div><h4>Avocado-toast</h4><p>Pocheret æg, chili og citron</p></div><span class="dots"></span><span class="pr">109 kr</span></div>
+   </div>
+   <div class="panel" role="tabpanel">
+    <div class="dish"><div><h4>Cappuccino</h4><p>Dobbelt espresso, silkeblød mælk</p></div><span class="dots"></span><span class="pr">42 kr</span></div>
+    <div class="dish"><div><h4>Dagens filterkaffe</h4><p>Fri genopfyldning</p></div><span class="dots"></span><span class="pr">35 kr</span></div>
+    <div class="dish"><div><h4>Chai latte</h4><p>Hjemmelavet krydderblanding</p></div><span class="dots"></span><span class="pr">45 kr</span></div>
+    <div class="dish"><div><h4>Friskpresset juice</h4><p>Appelsin eller æble-ingefær</p></div><span class="dots"></span><span class="pr">48 kr</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="wrap duo">
+  <figure class="slide-l" data-slide="-1"><img src="img/bar.webp" alt="Kaffebar med kopper og latte" width="900" height="1200" loading="lazy"></figure>
+  <div class="txt">
+   <h2 class="rv">Dit faste sted. Bare hyggeligere.</h2>
+   <p class="rv d1">Uanset om du skal mødes med en veninde, arbejde en time i fred eller bare nyde en kop kaffe alene, så føles Kornblomst som at komme hjem — bare med bedre kaffe.</p>
+  </div>
+ </section>
+
+ <div class="wide"><img src="img/croissant.webp" alt="Croissanter på et bræt" width="1400" height="934" loading="lazy" data-pan><div class="over"><p>Duften af smør kl. 7 om morgenen.</p></div></div>
+
+ <section class="wrap duo">
+  <div class="txt">
+   <h2 class="rv">Brunch, der samler folk.</h2>
+   <p class="rv d1">Fødselsdag, barselsgruppe eller bare søndag? Vi dækker gerne op til grupper på op til 12 personer. Book bordet online, så står det klar, når I kommer.</p>
+  </div>
+  <figure class="slide-r" data-slide="1"><img src="img/juice.webp" alt="Latte og friskpresset juice på træbord" width="900" height="1200" loading="lazy"></figure>
+ </section>
+
+ <section id="bord" class="table">
+  <div class="wrap">
+   <div>
+    <h2 class="rv">Book et bord — det tager 20 sekunder.</h2>
+    <p class="rv d1">Vi holder bordet i 15 minutter. Kommer I flere end 12? Ring til os, så finder vi en løsning.</p>
+   </div>
+   <form class="rv d2" onsubmit="event.preventDefault();this.querySelector('.msg').textContent='Dette er en demo — her ville gæsten få en bekræftelse på SMS.'">
+    <div class="row"><div><label for="d">Dag</label><select id="d"><option>Lørdag</option><option>Søndag</option><option>I morgen</option></select></div><div><label for="t">Tid</label><select id="t"><option>09:30</option><option>10:00</option><option selected>11:00</option><option>12:30</option></select></div></div>
+    <div><label for="p">Antal personer</label><select id="p"><option>2</option><option selected>4</option><option>6</option><option>8–12</option></select></div>
+    <div><label for="n">Navn</label><input id="n" placeholder="Dit navn"></div>
+    <button class="btn" type="submit">Book bordet</button>
+    <p class="msg" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </section>
+
+ <section id="find" class="wrap find">
+  <div class="rv"><h3>Find os</h3><p>Eksempelgade 7<br>1234 Fiktivby</p></div>
+  <div class="rv d1"><h3>Åbningstider</h3><p>Man–fre 7–17<br>Lør–søn 8–16</p></div>
+  <div class="rv d2"><h3>Kontakt</h3><p>12 34 56 78<br>hej@kornblomst.example</p></div>
+ </section>
+</main>
+<footer class="wrap">© Café Kornblomst — fiktiv virksomhed brugt som eksempel</footer>
+
+<div class="ed-banner"><span>Demo <span class="long">lavet </span>af <b>ED<i>.</i></b> — vil du have en side som denne?</span><a href="https://edwebworks.com/#kontakt">Kontakt ED.</a></div>
+
+<script>
+(function(){
+ var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('.panel');
+ tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});panels.forEach(function(p,i){p.classList.toggle('on',i==t.dataset.tab)})})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('in')});
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var fl=document.querySelectorAll('[data-float]'),sl=document.querySelectorAll('[data-slide]'),pan=document.querySelectorAll('[data-pan]'),tick=false;
+ var base={a:'rotate(3deg)',b:'rotate(-6deg)'};
+ function prog(el){var r=el.getBoundingClientRect(),vh=innerHeight;return Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height)))}
+ function upd(){var y=scrollY;
+  fl.forEach(function(el){el.style.transform=base[el.className]+' translate3d(0,'+(y*parseFloat(el.dataset.float))+'px,0)'});
+  sl.forEach(function(el){var p=prog(el),d=parseFloat(el.dataset.slide);el.style.transform='translate3d('+(d*(1-Math.min(1,p*2))*120)+'px,0,0) rotate('+(d*(1-p)*6)+'deg)';el.style.opacity=Math.min(1,.25+p*1.8)});
+  pan.forEach(function(el){var p=prog(el.parentNode);el.style.transform='translate3d(0,'+(-p*23)+'%,0)'});
+  tick=false}
+ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>

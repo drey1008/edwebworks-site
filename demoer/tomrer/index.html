@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kvist &amp; Søn Tømrer — Tømrer og snedker (demo af ED. Web Works)</title>
+<meta name="description" content="Eksempel på en hjemmeside til en tømrer, lavet af ED. Web Works. Fiktiv virksomhed.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://edwebworks.com/demoer/tomrer/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1b1d1f">
+<!--
+  DEMO — fiktiv virksomhed. Navn, CVR, adresse og telefon er opdigtede eksempler.
+  Billeder: Pexels (gratis licens, pexels.com/license):
+   hero.webp      — Pew Nguyen, pexels.com/photo/37162562
+   vaerksted.webp — Tima Miroshnichenko, pexels.com/photo/6790812
+   koekken.webp   — Curtis Adams, pexels.com/photo/36777558
+   stue.webp      — Alexander Zvir, pexels.com/photo/4252513
+-->
+<style>
+:root{--ink:#1b1d1f;--ink2:#25282b;--y:#ffc21a;--y2:#e6a800;--wood:#c98b4f;--paper:#f4f2ee;--mute:#6c7075;--line:#d9d6d0;
+--cond:"Arial Narrow","Roboto Condensed","Helvetica Neue Condensed",Impact,"Franklin Gothic Medium",sans-serif;--sans:"Helvetica Neue",Arial,system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:17px/1.55 var(--sans);overflow-x:hidden}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{width:min(1240px,100% - 40px);margin:0 auto}
+.demo-flag{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:60;background:rgba(27,29,31,.9);color:#fff;font:600 12px/1 system-ui,sans-serif;letter-spacing:.04em;padding:8px 14px;border-radius:99px;white-space:nowrap}
+.ed-banner{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;background:#16181a;color:#fff;font:400 14px/1.3 system-ui,sans-serif;padding:10px 10px 10px 18px;border-radius:99px;box-shadow:0 14px 40px -12px rgba(0,0,0,.45);width:max-content;max-width:calc(100% - 24px);border:1px solid rgba(255,255,255,.12)}
+.ed-banner b{font-weight:600}.ed-banner b i{font-style:normal;color:#ff8a5c}
+.ed-banner a{background:#d4420f;color:#fff;text-decoration:none;padding:8px 14px;border-radius:99px;white-space:nowrap;font-weight:500}
+.ed-banner a:hover{background:#b8380b}
+.topbar{background:var(--y);color:var(--ink);font:700 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em;padding:46px 0 12px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 26px/1 var(--cond);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;display:flex;align-items:center;gap:12px}
+.brand .mk{width:38px;height:38px;background:var(--y);color:var(--ink);display:grid;place-items:center;font-size:22px}
+.nav ul{display:flex;gap:30px;list-style:none;font:700 15px/1 var(--sans);text-transform:uppercase;letter-spacing:.05em}
+.nav ul a{text-decoration:none;color:#c9cbce}.nav ul a:hover{color:var(--y)}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--y);color:var(--ink);text-decoration:none;font:700 16px/1 var(--sans);text-transform:uppercase;letter-spacing:.04em;padding:18px 26px;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--y2)}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
+.btn.line:hover{box-shadow:inset 0 0 0 2px var(--y);color:var(--y)}
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,29,31,.95) 0%,rgba(27,29,31,.6) 55%,rgba(27,29,31,.2))}
+.hero .wrap{position:relative;z-index:1;padding:130px 0 120px}
+.hero h1{font:700 clamp(56px,9vw,136px)/.88 var(--cond);text-transform:uppercase;letter-spacing:-.01em;max-width:11ch}
+.hero h1 span{color:var(--y)}
+.hero p{font-size:20px;color:#d4d6d9;max-width:44ch;margin:30px 0 40px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:34px;flex-wrap:wrap;margin-top:56px;font:700 14px/1.3 var(--sans);text-transform:uppercase;letter-spacing:.05em;color:#e9eaec}
+.trust span{display:flex;align-items:center;gap:10px}
+.trust span::before{content:"";width:22px;height:22px;background:var(--y) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='9'%3E%3Cpath d='M1 4.5l3.2 3L11 1' fill='none' stroke='%231b1d1f' stroke-width='2.2'/%3E%3C/svg%3E") no-repeat center}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.sec-h h2{font:700 clamp(44px,6vw,88px)/.9 var(--cond);text-transform:uppercase}
+.sec-h p{max-width:40ch;color:var(--mute)}
+.kick{font:700 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.12em;color:var(--wood);margin-bottom:14px;display:block}
+.svc{padding:120px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:2px solid var(--line)}
+.card{background:var(--paper);padding:36px 32px 40px;position:relative;transition:background .25s,color .25s}
+.card .no{font:700 15px/1 var(--cond);color:var(--wood)}
+.card h3{font:700 34px/1 var(--cond);text-transform:uppercase;margin:46px 0 12px}
+.card p{color:var(--mute)}
+.card:hover{background:var(--ink);color:#fff}.card:hover p{color:#b9bcc0}.card:hover .no{color:var(--y)}
+.card.cta{background:var(--y)}.card.cta:hover{background:var(--y2);color:var(--ink)}.card.cta p{color:var(--ink)}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:640px;background:var(--ink);color:#fff}
+.split figure{position:relative;overflow:hidden}
+.split figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split .txt{padding:100px 70px;display:flex;flex-direction:column;justify-content:center}
+.split h2{font:700 clamp(40px,5vw,76px)/.92 var(--cond);text-transform:uppercase;margin-bottom:26px}
+.split h2 span{color:var(--y)}
+.split ol{list-style:none;counter-reset:s;display:grid;gap:22px;margin-top:10px}
+.split li{display:grid;grid-template-columns:56px 1fr;gap:16px;counter-increment:s}
+.split li::before{content:counter(s);width:56px;height:56px;display:grid;place-items:center;background:var(--y);color:var(--ink);font:700 28px/1 var(--cond)}
+.split li h3{font:700 22px/1.1 var(--sans);margin-bottom:4px}
+.split li p{color:#b9bcc0}
+.work{padding:120px 0}
+.photos{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:300px 300px;gap:12px}
+.photos figure{position:relative;overflow:hidden}
+.photos figure:first-child{grid-row:1/3}
+.photos img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.photos figure:hover img{transform:scale(1.05)}
+.photos figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font:700 14px/1 var(--sans);text-transform:uppercase;letter-spacing:.05em;padding:12px 16px}
+.photos figcaption small{color:var(--y);font-weight:700}
+.note{font-size:14px;color:var(--mute);margin-top:14px}
+.quote{background:var(--ink);color:#fff;padding:120px 0}
+.quote .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.quote h2{font:700 clamp(44px,6vw,90px)/.9 var(--cond);text-transform:uppercase}
+.quote h2 span{color:var(--y)}
+.quote .lead{color:#c9cbce;font-size:19px;margin:26px 0}
+.phone{display:inline-block;font:700 44px/1 var(--cond);color:var(--y);text-decoration:none;margin-top:8px}
+.quote form{display:grid;gap:18px;background:var(--ink2);padding:36px;border-top:6px solid var(--y)}
+.quote .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.quote label{display:block;font:700 13px/1 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#9fa3a8;margin-bottom:8px}
+.quote input,.quote select,.quote textarea{width:100%;font:400 16px/1.3 var(--sans);color:#fff;background:var(--ink);border:2px solid #3a3e42;padding:14px 16px;border-radius:0}
+.quote textarea{min-height:120px;resize:vertical}
+.quote input:focus,.quote select:focus,.quote textarea:focus{outline:none;border-color:var(--y)}
+.quote .msg{color:var(--y);font-weight:700;min-height:1.3em;font-size:15px}
+footer{background:#111214;color:#8d9196;padding:36px 0 110px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.1s}.js .rv.d2{transition-delay:.2s}
+@media (max-width:900px){
+ .nav ul{display:none}.nav .btn{padding:14px 16px;font-size:13px}
+ .hero .wrap{padding:80px 0 80px}
+ .grid{grid-template-columns:1fr}
+ .split{grid-template-columns:1fr}.split figure{min-height:320px}.split .txt{padding:64px 20px}
+ .photos{grid-template-columns:1fr;grid-template-rows:280px 220px 220px}.photos figure:first-child{grid-row:auto}
+ .svc,.work,.quote{padding:80px 0}
+ .quote .wrap{grid-template-columns:1fr;gap:40px}.quote form{padding:22px}.quote .row{grid-template-columns:1fr}
+ .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="demo-flag">Eksempel · Fiktiv virksomhed</div>
+<div class="topbar"><div class="wrap"><span>Svar på din forespørgsel inden for 24 timer</span><span>Ring: 12 34 56 78</span></div></div>
+<header><div class="wrap nav">
+ <a class="brand" href="#"><span class="mk">K</span>Kvist &amp; Søn</a>
+ <ul><li><a href="#ydelser">Ydelser</a></li><li><a href="#proces">Sådan arbejder vi</a></li><li><a href="#projekter">Projekter</a></li></ul>
+ <a class="btn" href="#tilbud">Få et tilbud</a>
+</div></header>
+
+<main>
+ <section class="hero">
+  <img src="img/hero.webp" alt="Tømrer høvler et bræt i værkstedet" width="1600" height="1067" fetchpriority="high">
+  <div class="wrap">
+   <span class="kick">Tømrer &amp; snedker · Fiktivby og omegn</span>
+   <h1>Godt håndværk. <span>Fast pris.</span> Ryddet op.</h1>
+   <p>Fra nyt køkken til ny tagterrasse: Du får en fast pris, før vi starter, én kontaktperson hele vejen og en byggeplads, der er pænere, når vi går, end da vi kom.</p>
+   <div class="ctas"><a class="btn" href="#tilbud">Få et gratis tilbud →</a><a class="btn line" href="tel:12345678">Ring 12 34 56 78</a></div>
+   <div class="trust"><span>Fast pris inden start</span><span>Én fast kontaktperson</span><span>Vi rydder op efter os</span></div>
+  </div>
+ </section>
+
+ <section id="ydelser" class="wrap svc">
+  <div class="sec-h"><div><span class="kick">Det laver vi</span><h2 class="rv">Ingen opgave for lille.<br>Ingen for stor.</h2></div><p class="rv d1">Vi klarer det hele selv — og har vi brug for en elektriker eller VVS'er, koordinerer vi det for dig.</p></div>
+  <div class="grid">
+   <article class="card rv"><span class="no">01</span><h3>Køkkener</h3><p>Montering af nyt køkken eller skræddersyede snedkerløsninger, der passer til millimeter.</p></article>
+   <article class="card rv d1"><span class="no">02</span><h3>Tag &amp; terrasse</h3><p>Nyt tag, efterisolering, carport og terrasser i træ, der holder til danske vintre.</p></article>
+   <article class="card rv d2"><span class="no">03</span><h3>Vinduer &amp; døre</h3><p>Udskiftning, der sænker varmeregningen og gør huset lunere — uden at du mærker byggerod.</p></article>
+   <article class="card rv"><span class="no">04</span><h3>Gulve</h3><p>Plankegulve, sildeben og afslibning. Vi hjælper dig med at vælge træ og finish.</p></article>
+   <article class="card rv d1"><span class="no">05</span><h3>Tilbygning</h3><p>Fra første skitse til nøglen i hånden. Vi hjælper også med byggetilladelsen.</p></article>
+   <article class="card cta rv d2"><span class="no">→</span><h3>Noget helt andet?</h3><p>Skriv kort, hvad du drømmer om — så ringer vi dig op og giver et ærligt bud.</p></article>
+  </div>
+ </section>
+
+ <section id="proces" class="split">
+  <figure><img src="img/vaerksted.webp" alt="Tømrer arbejder i værkstedet" width="1200" height="800" loading="lazy"></figure>
+  <div class="txt">
+   <span class="kick">Sådan arbejder vi</span>
+   <h2 class="rv">Fra opkald til <span>færdig opgave</span></h2>
+   <ol>
+    <li class="rv"><div><h3>Gratis besigtigelse</h3><p>Vi kommer ud, måler op og lytter til, hvad du vil have.</p></div></li>
+    <li class="rv d1"><div><h3>Fast pris på skrift</h3><p>Du får et klart tilbud med pris og tidsplan — ingen ekstraregninger.</p></div></li>
+    <li class="rv d2"><div><h3>Vi bygger — og holder dig opdateret</h3><p>Du får besked undervejs, og vi rydder op hver dag.</p></div></li>
+   </ol>
+  </div>
+ </section>
+
+ <section id="projekter" class="wrap work">
+  <div class="sec-h"><div><span class="kick">Projekter</span><h2 class="rv">Arbejde, vi er<br>stolte af</h2></div><p class="rv d1">Her viser vi dine egne færdige projekter med før- og efterbilleder — det sælger bedre end nogen tekst.</p></div>
+  <div class="photos rv">
+   <figure><img src="img/koekken.webp" alt="Lyst køkken med træskabe" width="1400" height="934" loading="lazy"><figcaption><small>Køkken ·</small> Eksempelbillede</figcaption></figure>
+   <figure><img src="img/stue.webp" alt="Lyst køkken-alrum" width="1200" height="791" loading="lazy"><figcaption><small>Alrum ·</small> Eksempelbillede</figcaption></figure>
+   <figure><img src="img/hero.webp" alt="Bearbejdning af træ" width="1600" height="1067" loading="lazy"><figcaption><small>Snedkeri ·</small> Eksempelbillede</figcaption></figure>
+  </div>
+  <p class="note">Billederne er stockfotos brugt som eksempler.</p>
+ </section>
+
+ <section id="tilbud" class="quote">
+  <div class="wrap">
+   <div>
+    <h2 class="rv">Få et <span>gratis tilbud</span> på din opgave</h2>
+    <p class="lead rv d1">Fortæl kort om opgaven, så vender vi tilbage inden for 24 timer på hverdage. Har du travlt? Ring direkte.</p>
+    <a class="phone rv d2" href="tel:12345678">12 34 56 78</a>
+   </div>
+   <form class="rv d1" onsubmit="event.preventDefault();this.querySelector('.msg').textContent='Dette er en demo — her ville forespørgslen lande direkte i tømrerens indbakke.'">
+    <div class="row"><div><label for="n">Navn</label><input id="n" placeholder="Dit navn"></div><div><label for="tl">Telefon</label><input id="tl" placeholder="Dit nummer"></div></div>
+    <div class="row"><div><label for="o">Opgave</label><select id="o"><option>Køkken</option><option>Tag &amp; terrasse</option><option>Vinduer &amp; døre</option><option>Gulve</option><option>Tilbygning</option><option>Andet</option></select></div><div><label for="pn">Postnummer</label><input id="pn" placeholder="1234"></div></div>
+    <div><label for="b">Beskriv opgaven</label><textarea id="b" placeholder="Fx: Vi vil gerne have lagt nyt plankegulv i stuen, ca. 35 m²"></textarea></div>
+    <button class="btn" type="submit">Send forespørgsel →</button>
+    <p class="msg" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </section>
+</main>
+<footer><div class="wrap"><span>© Kvist &amp; Søn Tømrer — fiktiv virksomhed brugt som eksempel</span><span>Eksempelvej 3, 1234 Fiktivby</span></div></footer>
+
+<div class="ed-banner"><span>Demo <span class="long">lavet </span>af <b>ED<i>.</i></b> — vil du have en side som denne?</span><a href="https://edwebworks.com/#kontakt">Kontakt ED.</a></div>
+<script>
+(function(){var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('in')})})();
+</script>
+</body>
+</html>

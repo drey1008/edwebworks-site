@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saks &amp; Sølv — Frisørsalon (demo af ED. Web Works)</title>
+<meta name="description" content="Eksempel på en hjemmeside til en frisørsalon, lavet af ED. Web Works. Fiktiv virksomhed.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://edwebworks.com/demoer/frisor/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f6f0ea">
+<!--
+  DEMO — fiktiv virksomhed. Navn, adresse, telefon og priser er opdigtede eksempler.
+  Billeder: Pexels (gratis licens, pexels.com/license):
+   hero.webp     — Daniel & Hannah Snipes, pexels.com/photo/33867518
+   klip.webp     — cottonbro studio, pexels.com/photo/3993445
+   salon.webp    — pexels.com/photo/7750124
+   detalje.webp  — Jari Lobo, pexels.com/photo/15659458
+   stol.webp     — pexels.com/photo/3993309
+-->
+<style>
+:root{--bg:#f6f0ea;--bg2:#efe5db;--ink:#2a1c18;--mute:#7a6a62;--acc:#b06f55;--acc2:#8f5640;--line:rgba(42,28,24,.14);
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:"Avenir Next","Segoe UI",system-ui,-apple-system,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1180px,100% - 40px);margin:0 auto}
+/* demo-mærkat */
+.demo-flag{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:60;background:rgba(42,28,24,.86);color:#fff;font:500 12px/1 var(--sans);letter-spacing:.04em;padding:8px 14px;border-radius:99px;backdrop-filter:blur(6px);white-space:nowrap}
+.ed-banner{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;background:#16181a;color:#fff;font:400 14px/1.3 system-ui,sans-serif;padding:10px 10px 10px 18px;border-radius:99px;box-shadow:0 14px 40px -12px rgba(0,0,0,.45);width:max-content;max-width:calc(100% - 24px)}
+.ed-banner b{font-weight:600}.ed-banner b i{font-style:normal;color:#ff8a5c}
+.ed-banner a{background:#d4420f;color:#fff;text-decoration:none;padding:8px 14px;border-radius:99px;white-space:nowrap;font-weight:500}
+.ed-banner a:hover{background:#b8380b}
+/* header */
+header{position:absolute;top:0;left:0;right:0;z-index:20;padding:52px 0 0}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.brand{font:400 26px/1 var(--serif);letter-spacing:-.01em;text-decoration:none}
+.brand em{color:var(--acc)}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.nav ul a{text-decoration:none;opacity:.8}.nav ul a:hover{opacity:1;color:var(--acc2)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--bg);text-decoration:none;font:500 15px/1 var(--sans);padding:16px 24px;border-radius:99px;border:0;cursor:pointer;transition:background .25s,transform .25s}
+.btn:hover{background:var(--acc2);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.ghost:hover{background:var(--bg2)}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:140px 0 80px}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2);margin-bottom:26px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor}
+h1{font:400 clamp(48px,7vw,104px)/.95 var(--serif);letter-spacing:-.03em}
+h1 em{font-style:italic;color:var(--acc)}
+.hero p.lead{font-size:19px;color:var(--mute);max-width:40ch;margin:30px 0 38px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .note{font-size:13px;color:var(--mute);margin-top:18px}
+.hero-img{position:relative;height:min(78vh,760px);border-radius:300px 300px 18px 18px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(42,28,24,.5)}
+.hero-img img{position:absolute;inset:-8% 0 auto 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.hero-badge{position:absolute;left:-28px;bottom:48px;background:var(--bg);border-radius:16px;padding:16px 20px;font-size:14px;box-shadow:0 20px 40px -20px rgba(42,28,24,.4);z-index:2}
+.hero-badge strong{display:block;font:400 22px/1.1 var(--serif)}
+.hero-col{position:relative}
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:22px 0;white-space:nowrap}
+.marquee div{display:inline-block;font:italic 400 clamp(26px,3vw,40px)/1 var(--serif);color:var(--acc2);will-change:transform}
+.marquee span{margin:0 28px;color:var(--mute);font-style:normal}
+/* intro */
+.intro{padding:140px 0 120px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+.intro h2{font:400 clamp(34px,4.2vw,60px)/1.05 var(--serif);letter-spacing:-.02em}
+.intro h2 em{color:var(--acc);font-style:italic}
+.intro p{font-size:18px;color:var(--mute);max-width:46ch}
+.intro p+p{margin-top:16px}
+/* zoom band */
+.zoom{height:86vh;margin:0 20px;border-radius:22px;overflow:hidden;position:relative}
+.zoom img{width:100%;height:100%;object-fit:cover;transform:scale(1.18);will-change:transform}
+.zoom figcaption{position:absolute;left:40px;bottom:36px;color:#fff;font:italic 400 clamp(26px,3.4vw,46px)/1.1 var(--serif);max-width:18ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+.zoom::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(30,18,14,.55),transparent 50%)}
+.zoom figcaption{z-index:1}
+/* ydelser */
+.svc{padding:140px 0 120px;display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.svc .stick{position:sticky;top:60px;align-self:start}
+.svc h2{font:400 clamp(40px,4.6vw,68px)/1 var(--serif);letter-spacing:-.02em;margin-bottom:20px}
+.svc .stick p{color:var(--mute);max-width:34ch;margin-bottom:28px}
+.svc .stick figure{border-radius:200px 200px 14px 14px;overflow:hidden;max-width:300px;aspect-ratio:2/3}
+.svc .stick figure img{width:100%;height:100%;object-fit:cover}
+.menu-group{margin-bottom:48px}
+.menu-group h3{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2);margin-bottom:8px;font-weight:500}
+.item{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:22px 0;border-bottom:1px solid var(--line);transition:padding .3s}
+.item:hover{padding-left:10px}
+.item h4{font:400 26px/1.2 var(--serif)}
+.item .price{font:400 22px/1.2 var(--serif);color:var(--acc2);white-space:nowrap}
+.item p{grid-column:1/-1;color:var(--mute);font-size:15px;max-width:56ch}
+/* proces */
+.steps{background:var(--ink);color:var(--bg);border-radius:22px;margin:0 20px;padding:120px 0}
+.steps h2{font:400 clamp(36px,4.4vw,62px)/1.05 var(--serif);max-width:16ch;margin-bottom:64px}
+.steps h2 em{color:#e3a58a;font-style:italic}
+.steps ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.steps li{border-top:1px solid rgba(246,240,234,.25);padding-top:26px;counter-increment:s}
+.steps li::before{content:"0" counter(s);display:block;font:italic 400 44px/1 var(--serif);color:#e3a58a;margin-bottom:18px}
+.steps h3{font:400 26px/1.2 var(--serif);margin-bottom:10px}
+.steps p{color:rgba(246,240,234,.7)}
+/* galleri – vandret ved scroll */
+.gallery{padding:140px 0 40px;overflow:hidden}
+.gallery h2{font:400 clamp(36px,4.4vw,62px)/1 var(--serif);margin-bottom:48px}
+.track{display:flex;gap:18px;will-change:transform;padding-left:max(20px,calc((100vw - 1180px)/2))}
+.track figure{flex:none;width:min(420px,72vw);aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:var(--bg2)}
+.track figure.wide{width:min(640px,86vw)}
+.track img{width:100%;height:100%;object-fit:cover}
+.track figure.txt{display:flex;flex-direction:column;justify-content:flex-end;padding:32px;background:var(--acc);color:#fff}
+.track figure.txt p{font:italic 400 30px/1.15 var(--serif)}
+/* book */
+.book{padding:140px 0;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.book h2{font:400 clamp(40px,5vw,76px)/.98 var(--serif);letter-spacing:-.02em}
+.book h2 em{font-style:italic;color:var(--acc)}
+.book .info{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px;font-size:15px}
+.book .info h3{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2);margin-bottom:8px;font-weight:500}
+.book .info p{color:var(--mute)}
+.widget{background:#fff;border-radius:22px;padding:32px;box-shadow:0 40px 80px -50px rgba(42,28,24,.45)}
+.widget h3{font:400 28px/1.1 var(--serif);margin-bottom:6px}
+.widget .sub{color:var(--mute);font-size:14px;margin-bottom:24px}
+.widget label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:18px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg);border-radius:99px;padding:10px 16px;font:400 14px/1 var(--sans);cursor:pointer;color:var(--ink);transition:background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.widget .btn{width:100%;justify-content:center;margin-top:26px}
+.widget .msg{font-size:14px;color:var(--acc2);margin-top:14px;min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:40px 0 110px;font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+/* reveal */
+.js .rv{opacity:0;transform:translateY(36px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.12s}.js .rv.d2{transition-delay:.24s}
+@media (max-width:900px){
+ .nav ul{display:none}
+ header{padding-top:50px}
+ .hero{grid-template-columns:1fr;padding-top:120px;min-height:0}
+ .hero-img{height:62vh;border-radius:220px 220px 16px 16px}
+ .hero-badge{left:12px;bottom:18px}
+ .intro,.svc,.book{grid-template-columns:1fr;gap:36px;padding:90px 0}
+ .svc .stick{position:static}
+ .svc .stick figure{display:none}
+ .zoom{height:60vh;margin:0 10px}.zoom figcaption{left:22px;bottom:22px}
+ .steps{margin:0 10px;padding:80px 0}.steps ol{grid-template-columns:1fr}
+ .gallery{padding-top:90px}
+ .book .info{grid-template-columns:1fr}
+ .widget{padding:24px}
+ .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}
+ .ed-banner .long{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}.zoom img{transform:none}}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="demo-flag">Eksempel · Fiktiv virksomhed</div>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#">Saks <em>&amp;</em> Sølv</a>
+  <ul><li><a href="#ydelser">Behandlinger</a></li><li><a href="#galleri">Galleri</a></li><li><a href="#book">Find os</a></li></ul>
+  <a class="btn" href="#book">Book tid</a>
+ </div>
+</header>
+
+<main>
+ <section class="wrap hero">
+  <div>
+   <p class="eyebrow">Frisørsalon i hjertet af byen</p>
+   <h1>Hår, der føles som <em>dig.</em> Hver dag.</h1>
+   <p class="lead">Vi tager os tid til at lytte, før vi klipper. Så du går herfra med en frisure, der passer til dit hår, din hverdag og dit spejlbillede — også om tre uger.</p>
+   <div class="ctas"><a class="btn" href="#book">Book din tid online →</a><a class="btn ghost" href="#ydelser">Se priser</a></div>
+   <p class="note">Book på 30 sekunder · Gratis konsultation før farve</p>
+  </div>
+  <div class="hero-col">
+   <div class="hero-img"><img src="img/hero.webp" alt="Frisør i en lys, moderne salon" width="1100" height="1650" data-parallax="0.12" fetchpriority="high"></div>
+   <div class="hero-badge rv d2"><strong>Ledige tider i dag</strong>Se dem direkte i kalenderen</div>
+  </div>
+ </section>
+
+ <div class="marquee" aria-hidden="true"><div data-marquee>Klip <span>✦</span> Farve <span>✦</span> Balayage <span>✦</span> Styling <span>✦</span> Bryllupshår <span>✦</span> Klip <span>✦</span> Farve <span>✦</span> Balayage <span>✦</span> Styling <span>✦</span> Bryllupshår <span>✦</span> Klip <span>✦</span> Farve <span>✦</span> Balayage <span>✦</span></div></div>
+
+ <section class="wrap intro">
+  <h2 class="rv">En salon, hvor du kan <em>trække vejret</em> — og blive set.</h2>
+  <div class="rv d1">
+   <p>Hos Saks &amp; Sølv starter hvert besøg med en kop kaffe og en ærlig snak om, hvad du drømmer om — og hvad dit hår faktisk kan.</p>
+   <p>Vi bruger skånsomme produkter, giver dig tips til hjemmepleje og fortæller altid prisen, før vi går i gang. Ingen overraskelser, kun et resultat du glæder dig over.</p>
+  </div>
+ </section>
+
+ <figure class="zoom"><img src="img/salon.webp" alt="Lys frisørsalon med runde spejle" width="1400" height="914" loading="lazy" data-zoom><figcaption>Lyst, roligt og med plads til dig.</figcaption></figure>
+
+ <section id="ydelser" class="wrap svc">
+  <div class="stick">
+   <h2 class="rv">Behandlinger &amp; priser</h2>
+   <p class="rv d1">Faste priser, ingen skjulte tillæg. Usikker på hvad du skal vælge? Book en gratis konsultation, så finder vi ud af det sammen.</p>
+   <figure class="rv d2"><img src="img/klip.webp" alt="Frisør klipper vådt hår" width="900" height="1350" loading="lazy"></figure>
+  </div>
+  <div>
+   <div class="menu-group rv">
+    <h3>Klip</h3>
+    <div class="item"><h4>Dameklip</h4><span class="price">fra 595 kr</span><p>Inkl. vask, konsultation og føn. Vi klipper efter dit hårs naturlige fald.</p></div>
+    <div class="item"><h4>Herreklip</h4><span class="price">fra 395 kr</span><p>Præcis klipning med saks og maskine, afsluttet med styling.</p></div>
+    <div class="item"><h4>Børneklip (under 12 år)</h4><span class="price">fra 275 kr</span><p>Rolig stemning, god tid og en lille overraskelse til sidst.</p></div>
+   </div>
+   <div class="menu-group rv">
+    <h3>Farve</h3>
+    <div class="item"><h4>Helfarve</h4><span class="price">fra 895 kr</span><p>Ensartet farve med glans, der holder. Inkl. klip efter ønske.</p></div>
+    <div class="item"><h4>Balayage</h4><span class="price">fra 1.495 kr</span><p>Håndmalede, naturlige toner, der gror smukt ud — så du kan vente længere mellem besøgene.</p></div>
+    <div class="item"><h4>Toning &amp; glossing</h4><span class="price">fra 450 kr</span><p>Frisk op på farven og få glansen tilbage på en halv time.</p></div>
+   </div>
+   <div class="menu-group rv">
+    <h3>Særlige dage</h3>
+    <div class="item"><h4>Bryllups- og festfrisure</h4><span class="price">fra 950 kr</span><p>Inkl. prøveopsætning, så du ved præcis, hvordan du ser ud på dagen.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="steps">
+  <div class="wrap">
+   <h2 class="rv">Sådan foregår dit besøg — <em>uden stress.</em></h2>
+   <ol>
+    <li class="rv"><h3>Book online</h3><p>Vælg behandling og tid, når det passer dig — også kl. 23 om aftenen. Du får en bekræftelse med det samme.</p></li>
+    <li class="rv d1"><h3>Vi lytter først</h3><p>Vi taler om dit hår, din hverdag og dine ønsker, før saksen kommer frem.</p></li>
+    <li class="rv d2"><h3>Gå glad herfra</h3><p>Du får et resultat, du kan style selv, og tips til at holde det flot derhjemme.</p></li>
+   </ol>
+  </div>
+ </section>
+
+ <section id="galleri" class="gallery">
+  <div class="wrap"><h2 class="rv">Et kig ind i salonen</h2></div>
+  <div class="track" data-track>
+   <figure><img src="img/stol.webp" alt="Frisørstole i salonen" width="900" height="1350" loading="lazy"></figure>
+   <figure class="wide"><img src="img/detalje.webp" alt="Nærbillede af klipning med saks" width="1200" height="669" loading="lazy"></figure>
+   <figure class="txt"><p>Små detaljer. Stor forskel.</p></figure>
+   <figure><img src="img/klip.webp" alt="Frisør i arbejde" width="900" height="1350" loading="lazy"></figure>
+   <figure class="wide"><img src="img/salon.webp" alt="Salonens lyse interiør" width="1400" height="914" loading="lazy"></figure>
+  </div>
+ </section>
+
+ <section id="book" class="wrap book">
+  <div>
+   <h2 class="rv">Klar til at føle dig <em>som dig selv</em> igen?</h2>
+   <div class="info rv d1">
+    <div><h3>Adresse</h3><p>Eksempelvej 12<br>1234 Fiktivby</p></div>
+    <div><h3>Åbningstider</h3><p>Man–fre 9–18<br>Lør 9–14</p></div>
+    <div><h3>Telefon</h3><p>12 34 56 78</p></div>
+    <div><h3>Parkering</h3><p>Gratis 2 timer lige foran døren</p></div>
+   </div>
+  </div>
+  <form class="widget rv d2" onsubmit="event.preventDefault();this.querySelector('.msg').textContent='Dette er en demo — her ville kunden få en bookingbekræftelse.'">
+   <h3>Book din tid</h3>
+   <p class="sub">Vælg behandling og dag — det tager under et minut.</p>
+   <label>Behandling</label>
+   <div class="chips" data-group><button type="button" class="chip" aria-pressed="true">Dameklip</button><button type="button" class="chip" aria-pressed="false">Herreklip</button><button type="button" class="chip" aria-pressed="false">Farve</button><button type="button" class="chip" aria-pressed="false">Balayage</button></div>
+   <label>Dag</label>
+   <div class="chips" data-group><button type="button" class="chip" aria-pressed="true">I dag</button><button type="button" class="chip" aria-pressed="false">I morgen</button><button type="button" class="chip" aria-pressed="false">Torsdag</button><button type="button" class="chip" aria-pressed="false">Fredag</button></div>
+   <label>Tid</label>
+   <div class="chips" data-group><button type="button" class="chip" aria-pressed="false">10:00</button><button type="button" class="chip" aria-pressed="true">11:30</button><button type="button" class="chip" aria-pressed="false">14:00</button><button type="button" class="chip" aria-pressed="false">16:30</button></div>
+   <button class="btn" type="submit">Bekræft booking →</button>
+   <p class="msg" role="status" aria-live="polite"></p>
+  </form>
+ </section>
+</main>
+
+<footer><div class="wrap"><span>© Saks &amp; Sølv — fiktiv virksomhed brugt som eksempel</span><span>Følg os på Instagram</span></div></footer>
+
+<div class="ed-banner"><span>Demo <span class="long">lavet </span>af <b>ED<i>.</i></b> — vil du have en side som denne?</span><a href="https://edwebworks.com/#kontakt">Kontakt ED.</a></div>
+
+<script>
+(function(){
+ document.querySelectorAll('[data-group]').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;g.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b)})})});
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('in')});
+ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var par=document.querySelectorAll('[data-parallax]'),zoom=document.querySelectorAll('[data-zoom]'),mq=document.querySelector('[data-marquee]'),track=document.querySelector('[data-track]'),tick=false;
+ function upd(){var y=scrollY,vh=innerHeight;
+  par.forEach(function(el){el.style.transform='translate3d(0,'+(y*parseFloat(el.dataset.parallax))+'px,0)'});
+  zoom.forEach(function(el){var r=el.parentNode.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh-r.top)/(vh+r.height)));el.style.transform='scale('+(1.18-p*.18)+')'});
+  if(mq)mq.style.transform='translate3d('+(-y*.25%(mq.scrollWidth/2))+'px,0,0)';
+  if(track){var r=track.getBoundingClientRect(),p=(vh-r.top)/(vh+r.height),max=Math.max(0,track.scrollWidth-innerWidth+40);track.style.transform='translate3d('+(-Math.min(1,Math.max(0,p))*max)+'px,0,0)'}
+  tick=false}
+ addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener('resize',upd);upd();
+})();
+</script>
+</body>
+</html>
