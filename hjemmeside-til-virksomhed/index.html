@@ -57,7 +57,7 @@ section.blk{padding-top:112px}
 .card{background:var(--soft);border-radius:4px;padding:28px}
 .card h3{font-weight:400;font-size:26px;letter-spacing:-.03em;margin-bottom:8px}
 .card p{color:#55595c}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:40px}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:40px}
 .plan{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column}
 .plan.dark{background:linear-gradient(170deg,var(--trust-2),var(--trust));color:#fff}
 .plan .top{font-size:13px;color:var(--grey)}.plan.dark .top{color:var(--trust-mute)}
@@ -114,214 +114,12 @@ input::placeholder,textarea::placeholder{color:#8a92c4}
 button[disabled]{opacity:.6;cursor:wait}
 footer.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:96px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--trust-mute)}
 footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-decoration:underline}footer.foot a:hover{color:#fff}
-@media (max-width:1000px){.plans{grid-template-columns:1fr}.cgrid{grid-template-columns:1fr}}
+@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
 @media (max-width:720px){:root{--pad:18px}.nav{height:60px}.hero{padding-top:48px;padding-bottom:56px}.hero .lead{font-size:18px}section.blk{padding-top:80px}.grid,.plans,.demos{grid-template-columns:1fr}.band{margin:80px 10px 0}.band .in{padding:64px 18px}.steps li{grid-template-columns:1fr;gap:6px}.contact{margin-top:80px;padding-top:72px}.row2{grid-template-columns:1fr}form{padding:20px}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "ProfessionalService",
-   "@id": "https://edwebworks.com/#ed",
-   "name": "ED. Web Works",
-   "alternateName": "ED.",
-   "url": "https://edwebworks.com/",
-   "email": "edwebworks@outlook.com",
-   "description": "Enkle og hurtige hjemmesider til alle slags virksomheder og forretninger i hele Danmark. Fast pris, gratis demo før du betaler og status hver uge.",
-   "areaServed": {
-    "@type": "Country",
-    "name": "Danmark"
-   },
-   "telephone": "+45 26 57 94 81",
-   "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "telephone": "+45 26 57 94 81",
-    "email": "edwebworks@outlook.com",
-    "availableLanguage": "da",
-    "hoursAvailable": {
-     "@type": "OpeningHoursSpecification",
-     "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-     ],
-     "opens": "06:00",
-     "closes": "20:00"
-    }
-   },
-   "priceRange": "4.500 kr. til 7.500 kr. ekskl. moms",
-   "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Hjemmesidepakker",
-    "itemListElement": [
-     {
-      "@type": "Offer",
-      "name": "Start",
-      "description": "Alt det, din forretning har brug for, på en side der er hurtig og nem at bruge.",
-      "price": "4500",
-      "priceCurrency": "DKK",
-      "priceSpecification": {
-       "@type": "UnitPriceSpecification",
-       "price": "4500",
-       "priceCurrency": "DKK",
-       "valueAddedTaxIncluded": false
-      }
-     },
-     {
-      "@type": "Offer",
-      "name": "Plus",
-      "description": "Til dig, der vil have mere plads og slippe for at skrive teksterne selv.",
-      "price": "7500",
-      "priceCurrency": "DKK",
-      "priceSpecification": {
-       "@type": "UnitPriceSpecification",
-       "price": "7500",
-       "priceCurrency": "DKK",
-       "valueAddedTaxIncluded": false
-      }
-     },
-     {
-      "@type": "Offer",
-      "name": "Drift",
-      "description": "Jeg holder siden ved lige, så du kan passe din forretning.",
-      "price": "249",
-      "priceCurrency": "DKK",
-      "priceSpecification": {
-       "@type": "UnitPriceSpecification",
-       "price": "249",
-       "priceCurrency": "DKK",
-       "valueAddedTaxIncluded": false,
-       "unitCode": "MON"
-      }
-     }
-    ]
-   }
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://edwebworks.com/hjemmeside-til-virksomhed/",
-   "url": "https://edwebworks.com/hjemmeside-til-virksomhed/",
-   "name": "Hjemmeside til din virksomhed | Fast pris | ED. Web Works",
-   "description": "Enkel og hurtig hjemmeside til din forretning, uanset branche og hvor i Danmark du ligger. Fast pris fra 4.500 kr. ekskl. moms, gratis demo før du betaler og status hver uge.",
-   "inLanguage": "da-DK",
-   "isPartOf": {
-    "@type": "WebSite",
-    "@id": "https://edwebworks.com/#website",
-    "url": "https://edwebworks.com/",
-    "name": "ED. Web Works"
-   },
-   "about": {
-    "@id": "https://edwebworks.com/#ed"
-   },
-   "breadcrumb": {
-    "@id": "https://edwebworks.com/hjemmeside-til-virksomhed/#crumbs"
-   }
-  },
-  {
-   "@type": "BreadcrumbList",
-   "@id": "https://edwebworks.com/hjemmeside-til-virksomhed/#crumbs",
-   "itemListElement": [
-    {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Forside",
-     "item": "https://edwebworks.com/"
-    },
-    {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Hjemmeside til din virksomhed",
-     "item": "https://edwebworks.com/hjemmeside-til-virksomhed/"
-    }
-   ]
-  },
-  {
-   "@type": "FAQPage",
-   "@id": "https://edwebworks.com/hjemmeside-til-virksomhed/#faq",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "Hvad koster en hjemmeside til min virksomhed?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Hvilke slags virksomheder laver du sider til?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Alle slags forretninger i hele Danmark, store som små. De mindre forretninger, som ofte bliver overset, er særligt velkomne. Frisører og skønhed er mit fokus, men jeg laver også sider til for eksempel caféer, håndværkere og klinikker."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Hvad hvis jeg har brug for mere end 6 sider?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Så laver jeg et tilbud, der passer til dig. Det gælder også, hvis du har brug for en webshop eller noget helt særligt."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Skal jeg betale for demoen?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Skal vi mødes, eller kan det hele foregå online?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Hvor hurtigt kan siden være klar?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Hvad er med i prisen?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du kan bruge dit eget logo og dine egne billeder. Har du ikke et logo, kan jeg designe et efter aftale. Fotografering kan aftales for sig."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Hvad får jeg med Drift?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Drift koster 249 kr. om måneden ekskl. moms. Domæne og hosting er med. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Er priserne med eller uden moms?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Alle priser på siden er ekskl. moms."
-     }
-    }
-   ]
-  }
- ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://edwebworks.com/#ed","name":"ED. Web Works","alternateName":"ED.","url":"https://edwebworks.com/","email":"edwebworks@outlook.com","description":"Enkle og hurtige hjemmesider til alle slags virksomheder og forretninger i hele Danmark. Fast pris, gratis demo før du betaler og status hver uge.","areaServed":{"@type":"Country","name":"Danmark"},"telephone":"+45 26 57 94 81","contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+45 26 57 94 81","email":"edwebworks@outlook.com","availableLanguage":"da","hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"20:00"}},"priceRange":"fra 4.500 kr. ekskl. moms","hasOfferCatalog":{"@type":"OfferCatalog","name":"Hjemmesidepakker","itemListElement":[{"@type":"Offer","name":"Basis","description":"Til dig der skal online med et professionelt visitkort.","priceCurrency":"DKK","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"DKK","valueAddedTaxIncluded":false,"minPrice":"4500"}},{"@type":"Offer","name":"Vækst","description":"Til virksomheden der vil konvertere besøgende til kunder.","priceCurrency":"DKK","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"DKK","valueAddedTaxIncluded":false,"minPrice":"7500"}},{"@type":"Offer","name":"Custom","description":"Til virksomheden der vil have noget helt eget.","priceCurrency":"DKK"},{"@type":"Offer","name":"Drift","description":"Jeg holder siden ved lige, så du kan passe din forretning.","priceCurrency":"DKK","price":"249","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"DKK","valueAddedTaxIncluded":false,"price":"249","unitCode":"MON"}}]}},{"@type":"WebPage","@id":"https://edwebworks.com/hjemmeside-til-virksomhed/","url":"https://edwebworks.com/hjemmeside-til-virksomhed/","name":"Hjemmeside til din virksomhed | Fast pris | ED. Web Works","description":"Enkel og hurtig hjemmeside til din forretning, uanset branche og hvor i Danmark du ligger. Fast pris fra 4.500 kr. ekskl. moms, gratis demo før du betaler og status hver uge.","inLanguage":"da-DK","isPartOf":{"@type":"WebSite","@id":"https://edwebworks.com/#website","url":"https://edwebworks.com/","name":"ED. Web Works"},"about":{"@id":"https://edwebworks.com/#ed"},"breadcrumb":{"@id":"https://edwebworks.com/hjemmeside-til-virksomhed/#crumbs"}},{"@type":"BreadcrumbList","@id":"https://edwebworks.com/hjemmeside-til-virksomhed/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Forside","item":"https://edwebworks.com/"},{"@type":"ListItem","position":2,"name":"Hjemmeside til din virksomhed","item":"https://edwebworks.com/hjemmeside-til-virksomhed/"}]},{"@type":"FAQPage","@id":"https://edwebworks.com/hjemmeside-til-virksomhed/#faq","mainEntity":[{"@type":"Question","name":"Hvad koster en hjemmeside til min virksomhed?","acceptedAnswer":{"@type":"Answer","text":"Basis koster fra 4.500 kr. ekskl. moms og giver dig op til 5 sider med skræddersyet design, kontaktformular og kalenderintegration. Vækst koster fra 7.500 kr. ekskl. moms med op til 10 sider, betalingslink, blog og SEO-tekster. Custom laver jeg et tilbud på. Du får altid en fast pris, før vi går i gang."}},{"@type":"Question","name":"Hvilke slags virksomheder laver du sider til?","acceptedAnswer":{"@type":"Answer","text":"Alle slags forretninger i hele Danmark, store som små. De mindre forretninger, som ofte bliver overset, er særligt velkomne. Frisører og skønhed er mit fokus, men jeg laver også sider til for eksempel caféer, håndværkere og klinikker."}},{"@type":"Question","name":"Hvad hvis jeg har brug for mere end 10 sider?","acceptedAnswer":{"@type":"Answer","text":"Så er Custom til dig. Den har ubegrænset antal sider, og du får et tilbud, der passer til det, du har brug for."}},{"@type":"Question","name":"Skal jeg betale for demoen?","acceptedAnswer":{"@type":"Answer","text":"Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris."}},{"@type":"Question","name":"Skal vi mødes, eller kan det hele foregå online?","acceptedAnswer":{"@type":"Answer","text":"Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark."}},{"@type":"Question","name":"Hvor hurtigt kan siden være klar?","acceptedAnswer":{"@type":"Answer","text":"Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge."}},{"@type":"Question","name":"Hvad er med i prisen?","acceptedAnswer":{"@type":"Answer","text":"Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du kan bruge dit eget logo og dine egne billeder. Har du ikke et logo, kan jeg designe et efter aftale. Fotografering kan aftales for sig."}},{"@type":"Question","name":"Hvad får jeg med Drift?","acceptedAnswer":{"@type":"Answer","text":"Drift er et tilvalg til 249 kr. om måneden ekskl. moms. Du får domæne og hosting, og jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider."}},{"@type":"Question","name":"Er priserne med eller uden moms?","acceptedAnswer":{"@type":"Answer","text":"Alle priser på siden er ekskl. moms."}}]}]}
 </script>
 </head>
 <body>
@@ -339,13 +137,13 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
  <section class="blk px wrap" aria-labelledby="feat-h">
   <h2 class="h2" id="feat-h">Også til de forretninger, der tit bliver glemt.</h2>
   <p class="intro">Skomageren, den lille butik på hjørnet og værkstedet i baggården fortjener også en god hjemmeside. Dem vil jeg især gerne hjælpe. Dine kunder vil have svar hurtigt, så jeg fokuserer på det, der får dem til at ringe, booke eller komme forbi.</p>
-  <div class="grid"><article class="card"><h3>Det vigtigste først</h3><p>Hvad du tilbyder, hvad det koster, og hvor du ligger, står klart med det samme.</p></article><article class="card"><h3>Nem kontakt eller booking</h3><p>En tydelig knap til at ringe, skrive eller booke, så kunden ikke skal lede.</p></article><article class="card"><h3>Hurtig på mobilen</h3><p>Siden er enkel og let, så den åbner hurtigt, også når kunden står på gaden.</p></article><article class="card"><h3>Lettere at finde på Google</h3><p>Med Plus sætter jeg din Google-profil op og skriver teksterne, så kunderne kan finde dig.</p></article></div>
+  <div class="grid"><article class="card"><h3>Det vigtigste først</h3><p>Hvad du tilbyder, hvad det koster, og hvor du ligger, står klart med det samme.</p></article><article class="card"><h3>Nem kontakt eller booking</h3><p>En tydelig knap til at ringe, skrive eller booke, så kunden ikke skal lede.</p></article><article class="card"><h3>Hurtig på mobilen</h3><p>Siden er enkel og let, så den åbner hurtigt, også når kunden står på gaden.</p></article><article class="card"><h3>Lettere at finde på Google</h3><p>Med Vækst skriver jeg SEO-tekster til siden, så kunderne lettere kan finde dig.</p></article></div>
  </section>
  <section class="blk px wrap" id="priser" aria-labelledby="pris-h">
-  <h2 class="h2" id="pris-h">Faste priser. <span>Ingen overraskelser.</span></h2>
-  <p class="intro">Du ved, hvad det koster, før vi går i gang. Alle priser er ekskl. moms.</p>
-  <div class="plans"><article class="plan"><p class="top">Det enkle udgangspunkt</p><h3>Start</h3><p class="price">4.500 kr. <small>ekskl. moms</small></p><p class="desc">Alt det, din forretning har brug for, på en side der er hurtig og nem at bruge.</p><ul><li>1 til 3 sider</li><li>Prisliste</li><li>Galleri</li><li>Bookingknap</li><li>Mobilvenlig</li></ul><a class="pill light" href="#kontakt" data-pakke="Start">Vælg Start <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">Når du vil findes på Google</p><h3>Plus</h3><p class="price">7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil have mere plads og slippe for at skrive teksterne selv.</p><ul><li>Op til 6 sider</li><li>Opsætning af Google-profil</li><li>Tekster skrevet til dig</li></ul><a class="pill go" href="#kontakt" data-pakke="Plus">Vælg Plus <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Efter lanceringen</p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p><p class="desc">Jeg holder siden ved lige, så du kan passe din forretning.</p><ul><li>Domæne og hosting</li><li>Rettelser og opdateringer</li><li>En lille rapport hver måned</li></ul><a class="pill light" href="#kontakt" data-pakke="Drift">Vælg Drift <span class="plus" aria-hidden="true">+</span></a></article></div>
-  <p class="note">Har du brug for mere end 6 sider, en webshop eller noget helt særligt, så laver jeg et tilbud, der passer til dig.</p>
+  <h2 class="h2" id="pris-h">Klare priser. <span>Ingen overraskelser.</span></h2>
+  <p class="intro">Priserne er fra-priser, og du får en fast pris i dit tilbud, før vi går i gang. Alle priser er ekskl. moms.</p>
+  <div class="plans"><article class="plan"><p class="top">01 · Til visitkortet</p><h3>Basis</h3><p class="price">fra 4.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig der skal online med et professionelt visitkort.</p><ul><li>Op til 5 sider</li><li>Skræddersyet design</li><li>Kontaktformular</li><li>Kalender integration</li><li>Mobilvenligt</li></ul><a class="pill light" href="#kontakt" data-pakke="Basis">Få et tilbud <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">02 · Til væksten</p><h3>Vækst</h3><p class="price">fra 7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til virksomheden der vil konvertere besøgende til kunder.</p><ul><li>Alt i Basis</li><li>Op til 10 sider</li><li>Betalingslink</li><li>Blog / nyheder</li><li>SEO-tekster</li><li>Et års vejledning</li></ul><a class="pill go" href="#kontakt" data-pakke="Vækst">Få et tilbud <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">03 · Til det helt egne</p><h3>Custom</h3><p class="price">Efter tilbud</p><p class="desc">Til virksomheden der vil have noget helt eget.</p><ul><li>Alt i Vækst</li><li>APP</li><li>Ubegrænset antal sider</li><li>Skræddersyede integrationer</li><li>Flersproget hvis nødvendigt</li><li>Dedikeret sparring</li><li>Opstart af sociale medier</li><li>Vejledning efter aftale</li></ul><a class="pill light" href="#kontakt" data-pakke="Custom">Få et tilbud <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Tilvalg</p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p><p class="desc">Jeg holder siden ved lige, så du kan passe din forretning.</p><ul><li>Domæne</li><li>Hosting</li><li>Rettelser og opdateringer</li></ul><a class="pill light" href="#kontakt" data-pakke="Drift">Få et tilbud <span class="plus" aria-hidden="true">+</span></a></article></div>
+  <p class="note">Har du brug for flere sider, en app eller noget helt særligt, så er Custom til dig, og jeg laver et tilbud, der passer.</p>
  </section>
  <section class="band" aria-labelledby="step-h"><div class="in">
   <h2 class="h2" id="step-h">Sådan foregår det. <span>Fra første snak til færdig side.</span></h2>
@@ -353,7 +151,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
    <li><h3>Vi snakker sammen</h3><p>Vi taler om din forretning, hvilke sider du har brug for, og hvordan dine kunder skal kontakte dig eller booke.</p></li>
    <li><h3>Du får en gratis demo</h3><p>Jeg laver en demo af din nye side. Du ser den, før du betaler noget, og du kan sige nej tak.</p></li>
    <li><h3>Jeg bygger siden</h3><p>Når du siger ja, bygger jeg siden færdig med dine tekster, priser og billeder. Du får status hver uge.</p></li>
-   <li><h3>Siden går live</h3><p>Vi tester den sammen på mobil og computer, og så går den live. Vil du have hjælp bagefter, er der Drift.</p></li>
+   <li><h3>Siden går live</h3><p>Vi tester den sammen på mobil og computer, og så går den live. Vil du have hjælp bagefter, kan du vælge Drift til.</p></li>
   </ol>
  </div></section>
  <section class="blk px wrap" aria-labelledby="demo-h">
@@ -363,7 +161,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
  </section>
  <section class="blk px wrap" aria-labelledby="faq-h">
   <h2 class="h2" id="faq-h">Ofte stillede spørgsmål</h2>
-  <div class="faq"><details><summary><h3>Hvad koster en hjemmeside til min virksomhed?</h3></summary><p>Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig.</p></details><details><summary><h3>Hvilke slags virksomheder laver du sider til?</h3></summary><p>Alle slags forretninger i hele Danmark, store som små. De mindre forretninger, som ofte bliver overset, er særligt velkomne. Frisører og skønhed er mit fokus, men jeg laver også sider til for eksempel caféer, håndværkere og klinikker.</p></details><details><summary><h3>Hvad hvis jeg har brug for mere end 6 sider?</h3></summary><p>Så laver jeg et tilbud, der passer til dig. Det gælder også, hvis du har brug for en webshop eller noget helt særligt.</p></details><details><summary><h3>Skal jeg betale for demoen?</h3></summary><p>Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris.</p></details><details><summary><h3>Skal vi mødes, eller kan det hele foregå online?</h3></summary><p>Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark.</p></details><details><summary><h3>Hvor hurtigt kan siden være klar?</h3></summary><p>Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge.</p></details><details><summary><h3>Hvad er med i prisen?</h3></summary><p>Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du kan bruge dit eget logo og dine egne billeder. Har du ikke et logo, kan jeg designe et efter aftale. Fotografering kan aftales for sig.</p></details><details><summary><h3>Hvad får jeg med Drift?</h3></summary><p>Drift koster 249 kr. om måneden ekskl. moms. Domæne og hosting er med. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned.</p></details><details><summary><h3>Er priserne med eller uden moms?</h3></summary><p>Alle priser på siden er ekskl. moms.</p></details></div>
+  <div class="faq"><details><summary><h3>Hvad koster en hjemmeside til min virksomhed?</h3></summary><p>Basis koster fra 4.500 kr. ekskl. moms og giver dig op til 5 sider med skræddersyet design, kontaktformular og kalenderintegration. Vækst koster fra 7.500 kr. ekskl. moms med op til 10 sider, betalingslink, blog og SEO-tekster. Custom laver jeg et tilbud på. Du får altid en fast pris, før vi går i gang.</p></details><details><summary><h3>Hvilke slags virksomheder laver du sider til?</h3></summary><p>Alle slags forretninger i hele Danmark, store som små. De mindre forretninger, som ofte bliver overset, er særligt velkomne. Frisører og skønhed er mit fokus, men jeg laver også sider til for eksempel caféer, håndværkere og klinikker.</p></details><details><summary><h3>Hvad hvis jeg har brug for mere end 10 sider?</h3></summary><p>Så er Custom til dig. Den har ubegrænset antal sider, og du får et tilbud, der passer til det, du har brug for.</p></details><details><summary><h3>Skal jeg betale for demoen?</h3></summary><p>Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris.</p></details><details><summary><h3>Skal vi mødes, eller kan det hele foregå online?</h3></summary><p>Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark.</p></details><details><summary><h3>Hvor hurtigt kan siden være klar?</h3></summary><p>Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge.</p></details><details><summary><h3>Hvad er med i prisen?</h3></summary><p>Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du kan bruge dit eget logo og dine egne billeder. Har du ikke et logo, kan jeg designe et efter aftale. Fotografering kan aftales for sig.</p></details><details><summary><h3>Hvad får jeg med Drift?</h3></summary><p>Drift er et tilvalg til 249 kr. om måneden ekskl. moms. Du får domæne og hosting, og jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider.</p></details><details><summary><h3>Er priserne med eller uden moms?</h3></summary><p>Alle priser på siden er ekskl. moms.</p></details></div>
  </section>
  <section id="kontakt" class="contact px" aria-labelledby="kontakt-h">
   <div class="cgrid">
@@ -385,7 +183,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
     </div>
     <div><label for="form-firma">Virksomhed</label><input id="form-firma" name="virksomhed" type="text" placeholder="Navnet på din virksomhed" autocomplete="organization"></div>
     <div><label for="form-pakke">Hvilken pakke er du interesseret i?</label>
-     <select id="form-pakke" name="pakke"><option>Start</option><option>Plus</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
+     <select id="form-pakke" name="pakke"><option>Basis</option><option>Vækst</option><option>Custom</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
     <div><label for="form-besked">Besked</label><textarea id="form-besked" name="besked" placeholder="Fortæl kort om din virksomhed, og hvad siden skal kunne..." required></textarea></div>
     <div class="send"><button class="pill go lg" type="submit">Send besked <span class="plus" aria-hidden="true">→</span></button><p class="reassure">Uforpligtende. Du binder dig ikke til noget</p></div>
     <p class="form-status" role="status" aria-live="polite"></p>

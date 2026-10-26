@@ -61,7 +61,7 @@ section.blk{padding-top:112px}
 .card{background:var(--soft);border-radius:4px;padding:28px}
 .card h3{font-weight:400;font-size:26px;letter-spacing:-.03em;margin-bottom:8px}
 .card p{color:#55595c}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:40px}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:40px}
 .plan{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column}
 .plan.dark{background:linear-gradient(170deg,var(--trust-2),var(--trust));color:#fff}
 .plan .top{font-size:13px;color:var(--grey)}.plan.dark .top{color:var(--trust-mute)}
@@ -118,7 +118,7 @@ input::placeholder,textarea::placeholder{color:#8a92c4}
 button[disabled]{opacity:.6;cursor:wait}
 footer.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:96px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--trust-mute)}
 footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-decoration:underline}footer.foot a:hover{color:#fff}
-@media (max-width:1000px){.plans{grid-template-columns:1fr}.cgrid{grid-template-columns:1fr}}
+@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
 @media (max-width:720px){:root{--pad:18px}.nav{height:60px}.hero{padding-top:48px;padding-bottom:56px}.hero .lead{font-size:18px}section.blk{padding-top:80px}.grid,.plans,.demos{grid-template-columns:1fr}.band{margin:80px 10px 0}.band .in{padding:64px 18px}.steps li{grid-template-columns:1fr;gap:6px}.contact{margin-top:80px;padding-top:72px}.row2{grid-template-columns:1fr}form{padding:20px}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .navr{display:flex;align-items:center;gap:14px}.lang{font-size:14px;color:var(--grey)}.lang a{text-decoration:underline}.contact .lang{color:var(--trust-mute)}
@@ -126,136 +126,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
 @media (max-width:720px){.about{grid-template-columns:1fr}.navr .lang{display:none}}
 </style>
 <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@graph": [
-  {
-   "@type": "ProfessionalService",
-   "@id": "https://edwebworks.com/#ed",
-   "name": "ED. Web Works",
-   "alternateName": "ED.",
-   "url": "https://edwebworks.com/",
-   "email": "edwebworks@outlook.com",
-   "telephone": "+45 26 57 94 81",
-   "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "telephone": "+45 26 57 94 81",
-    "email": "edwebworks@outlook.com",
-    "availableLanguage": [
-     "da",
-     "en"
-    ],
-    "hoursAvailable": {
-     "@type": "OpeningHoursSpecification",
-     "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-     ],
-     "opens": "06:00",
-     "closes": "20:00"
-    }
-   },
-   "description": "Simple, fast websites for all kinds of businesses. Fixed price, a free demo before you pay and weekly status updates. Based in Copenhagen, Denmark, working remotely.",
-   "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "København",
-    "addressCountry": "DK"
-   }
-  },
-  {
-   "@type": "WebPage",
-   "@id": "https://edwebworks.com/en/",
-   "url": "https://edwebworks.com/en/",
-   "name": "ED. Web Works | Websites for businesses, built remotely from Copenhagen",
-   "inLanguage": "en",
-   "isPartOf": {
-    "@type": "WebSite",
-    "@id": "https://edwebworks.com/#website",
-    "url": "https://edwebworks.com/",
-    "name": "ED. Web Works"
-   },
-   "about": {
-    "@id": "https://edwebworks.com/#ed"
-   }
-  },
-  {
-   "@type": "FAQPage",
-   "@id": "https://edwebworks.com/en/#faq",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "How much does a website cost?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Start and Plus are one time prices, and Care is a monthly plan. USD prices are being finalized, so send me a message and you will get a clear, fixed price before we begin."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What is included in the price?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Setting up your site is included. Domain and hosting are covered by the Care plan, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Do you work with businesses outside Denmark?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Do I have to pay for the demo?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How fast can my site be ready?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "What kinds of businesses do you build for?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Can you help me get found on Google?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Every site is built to be fast and mobile friendly. With Plus I also set up your Google Business Profile. Nobody can promise a specific ranking on Google, but a good site and a complete profile make it easier for customers to find you."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Are the example sites in English?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak."
-     }
-    }
-   ]
-  }
- ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://edwebworks.com/#ed","name":"ED. Web Works","alternateName":"ED.","url":"https://edwebworks.com/","email":"edwebworks@outlook.com","telephone":"+45 26 57 94 81","contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+45 26 57 94 81","email":"edwebworks@outlook.com","availableLanguage":["da","en"],"hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"20:00"}},"description":"Simple, fast websites for all kinds of businesses. Fixed price, a free demo before you pay and weekly status updates. Based in Copenhagen, Denmark, working remotely.","address":{"@type":"PostalAddress","addressLocality":"København","addressCountry":"DK"}},{"@type":"WebPage","@id":"https://edwebworks.com/en/","url":"https://edwebworks.com/en/","name":"ED. Web Works | Websites for businesses, built remotely from Copenhagen","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://edwebworks.com/#website","url":"https://edwebworks.com/","name":"ED. Web Works"},"about":{"@id":"https://edwebworks.com/#ed"}},{"@type":"FAQPage","@id":"https://edwebworks.com/en/#faq","mainEntity":[{"@type":"Question","name":"How much does a website cost?","acceptedAnswer":{"@type":"Answer","text":"Basic and Growth have from prices, Custom is quoted on request, and Care is an optional monthly add on. USD prices are being finalized, so send me a message and you will get a clear, fixed price before we begin."}},{"@type":"Question","name":"What is included in the price?","acceptedAnswer":{"@type":"Answer","text":"Setting up your site is included. Domain and hosting are covered by the Care add on, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately."}},{"@type":"Question","name":"Do you work with businesses outside Denmark?","acceptedAnswer":{"@type":"Answer","text":"Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link."}},{"@type":"Question","name":"Do I have to pay for the demo?","acceptedAnswer":{"@type":"Answer","text":"No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price."}},{"@type":"Question","name":"How fast can my site be ready?","acceptedAnswer":{"@type":"Answer","text":"Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way."}},{"@type":"Question","name":"What kinds of businesses do you build for?","acceptedAnswer":{"@type":"Answer","text":"All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics."}},{"@type":"Question","name":"Can you help me get found on Google?","acceptedAnswer":{"@type":"Answer","text":"Every site is built to be fast and mobile friendly. With Growth I also write SEO copy. Nobody can promise a specific ranking on Google, but a good site makes it easier for customers to find you."}},{"@type":"Question","name":"Are the example sites in English?","acceptedAnswer":{"@type":"Answer","text":"The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak."}}]}]}
 </script>
 </head>
 <body>
@@ -272,13 +143,13 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
  <section class="blk px wrap" aria-labelledby="feat-h">
   <h2 class="h2" id="feat-h">A site that works for you. <span>Not just one that exists.</span></h2>
   <p class="intro">Not a generic template, but a site that fits your business, your customers and what you want people to do when they land on it.</p>
-  <div class="grid"><article class="card"><h3>The important things first</h3><p>What you offer, what it costs and how to reach you are clear right away.</p></article><article class="card"><h3>Easy contact or booking</h3><p>A clear button to call, write or book, so customers never have to search.</p></article><article class="card"><h3>Fast on mobile</h3><p>The site is light and simple, so it opens quickly on any phone.</p></article><article class="card"><h3>Easier to find on Google</h3><p>With Plus I set up your Google Business Profile and write the copy, so customers can find you.</p></article></div>
+  <div class="grid"><article class="card"><h3>The important things first</h3><p>What you offer, what it costs and how to reach you are clear right away.</p></article><article class="card"><h3>Easy contact or booking</h3><p>A clear button to call, write or book, so customers never have to search.</p></article><article class="card"><h3>Fast on mobile</h3><p>The site is light and simple, so it opens quickly on any phone.</p></article><article class="card"><h3>Easier to find on Google</h3><p>With Growth I write SEO copy for your site, so customers can find you more easily.</p></article></div>
  </section>
  <section class="blk px wrap" id="pricing" aria-labelledby="pris-h">
-  <h2 class="h2" id="pris-h">Fixed prices. <span>No surprises.</span></h2>
-  <p class="intro">You know what it costs before we start. USD prices are being finalized, so ask for a quote and you will get a clear, fixed price.</p>
-  <div class="plans"><article class="plan"><p class="top">The simple starting point</p><h3>Start</h3><p class="price">USD price TBD</p><p class="desc">Everything your business needs, on a site that is fast and easy to use.</p><ul><li>1 to 3 pages</li><li>Price list</li><li>Gallery</li><li>Booking button</li><li>Works great on mobile</li></ul><a class="pill light" href="#contact" data-pakke="Start">Choose Start <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">When you want to be found on Google</p><h3>Plus</h3><p class="price">USD price TBD</p><p class="desc">For you if you want more room and would rather not write the copy yourself.</p><ul><li>Up to 6 pages</li><li>Google Business Profile setup</li><li>Copy written for you</li></ul><a class="pill go" href="#contact" data-pakke="Plus">Choose Plus <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">After launch</p><h3>Care</h3><p class="price">USD price TBD / month</p><p class="desc">I look after your site so you can focus on running your business.</p><ul><li>Domain and hosting</li><li>Edits and updates</li><li>A short monthly report</li></ul><a class="pill light" href="#contact" data-pakke="Care">Choose Care <span class="plus" aria-hidden="true">+</span></a></article></div>
-  <p class="note">Need more than 6 pages, an online shop or something special? I will put together a quote that fits.</p>
+  <h2 class="h2" id="pris-h">Clear prices. <span>No surprises.</span></h2>
+  <p class="intro">These are from prices. USD prices are being finalized, so ask for a quote and you will get a clear, fixed price before we start.</p>
+  <div class="plans"><article class="plan"><p class="top">01 · Your business card online</p><h3>Basic</h3><p class="price">from USD TBD</p><p class="desc">For you if you need a professional online business card.</p><ul><li>Up to 5 pages</li><li>Custom design</li><li>Contact form</li><li>Calendar integration</li><li>Mobile friendly</li></ul><a class="pill light" href="#contact" data-pakke="Basic">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">02 · For growth</p><h3>Growth</h3><p class="price">from USD TBD</p><p class="desc">For the business that wants to turn visitors into customers.</p><ul><li>Everything in Basic</li><li>Up to 10 pages</li><li>Payment link</li><li>Blog / news</li><li>SEO copy</li><li>One year of guidance</li></ul><a class="pill go" href="#contact" data-pakke="Growth">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">03 · Something all your own</p><h3>Custom</h3><p class="price">Quote on request</p><p class="desc">For the business that wants something entirely its own.</p><ul><li>Everything in Growth</li><li>App</li><li>Unlimited pages</li><li>Custom integrations</li><li>Multiple languages if needed</li><li>A dedicated sounding board</li><li>Social media setup</li><li>Guidance by agreement</li></ul><a class="pill light" href="#contact" data-pakke="Custom">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Add on</p><h3>Care</h3><p class="price">USD TBD / month</p><p class="desc">I look after your site so you can focus on running your business.</p><ul><li>Domain</li><li>Hosting</li><li>Edits and updates</li></ul><a class="pill light" href="#contact" data-pakke="Care">Get a quote <span class="plus" aria-hidden="true">+</span></a></article></div>
+  <p class="note">Need more pages, an app or something special? Custom is for you, and I will put together a quote that fits.</p>
  </section>
  <section class="band" aria-labelledby="step-h"><div class="in">
   <h2 class="h2" id="step-h">How it works. <span>From first chat to finished site.</span></h2>
@@ -286,7 +157,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
    <li><h3>We talk</h3><p>We go through your business, which pages you need and how your customers should contact you or book. By phone or video, wherever you are.</p></li>
    <li><h3>You get a free demo</h3><p>I make a demo of your new site. You see it before you pay anything, and you are free to say no thanks.</p></li>
    <li><h3>I build the site</h3><p>When you say yes, I finish the site with your copy, prices and photos. You get a status update every week.</p></li>
-   <li><h3>Your site goes live</h3><p>We test it together on mobile and desktop, and then it goes live. If you want help afterwards, there is Care.</p></li>
+   <li><h3>Your site goes live</h3><p>We test it together on mobile and desktop, and then it goes live. If you want help afterwards, you can add Care.</p></li>
   </ol>
  </div></section>
  <section class="blk px wrap" aria-labelledby="demo-h">
@@ -301,7 +172,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
  </section>
  <section class="blk px wrap" aria-labelledby="faq-h">
   <h2 class="h2" id="faq-h">Frequently asked questions</h2>
-  <div class="faq"><details><summary><h3>How much does a website cost?</h3></summary><p>Start and Plus are one time prices, and Care is a monthly plan. USD prices are being finalized, so send me a message and you will get a clear, fixed price before we begin.</p></details><details><summary><h3>What is included in the price?</h3></summary><p>Setting up your site is included. Domain and hosting are covered by the Care plan, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately.</p></details><details><summary><h3>Do you work with businesses outside Denmark?</h3></summary><p>Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link.</p></details><details><summary><h3>Do I have to pay for the demo?</h3></summary><p>No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price.</p></details><details><summary><h3>How fast can my site be ready?</h3></summary><p>Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way.</p></details><details><summary><h3>What kinds of businesses do you build for?</h3></summary><p>All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics.</p></details><details><summary><h3>Can you help me get found on Google?</h3></summary><p>Every site is built to be fast and mobile friendly. With Plus I also set up your Google Business Profile. Nobody can promise a specific ranking on Google, but a good site and a complete profile make it easier for customers to find you.</p></details><details><summary><h3>Are the example sites in English?</h3></summary><p>The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak.</p></details></div>
+  <div class="faq"><details><summary><h3>How much does a website cost?</h3></summary><p>Basic and Growth have from prices, Custom is quoted on request, and Care is an optional monthly add on. USD prices are being finalized, so send me a message and you will get a clear, fixed price before we begin.</p></details><details><summary><h3>What is included in the price?</h3></summary><p>Setting up your site is included. Domain and hosting are covered by the Care add on, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately.</p></details><details><summary><h3>Do you work with businesses outside Denmark?</h3></summary><p>Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link.</p></details><details><summary><h3>Do I have to pay for the demo?</h3></summary><p>No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price.</p></details><details><summary><h3>How fast can my site be ready?</h3></summary><p>Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way.</p></details><details><summary><h3>What kinds of businesses do you build for?</h3></summary><p>All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics.</p></details><details><summary><h3>Can you help me get found on Google?</h3></summary><p>Every site is built to be fast and mobile friendly. With Growth I also write SEO copy. Nobody can promise a specific ranking on Google, but a good site makes it easier for customers to find you.</p></details><details><summary><h3>Are the example sites in English?</h3></summary><p>The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak.</p></details></div>
  </section>
  <section id="contact" class="contact px" aria-labelledby="contact-h">
   <div class="cgrid">
@@ -323,7 +194,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
     </div>
     <div><label for="form-firma">Business</label><input id="form-firma" name="virksomhed" type="text" placeholder="Your business name" autocomplete="organization"></div>
     <div><label for="form-pakke">Which package are you interested in?</label>
-     <select id="form-pakke" name="pakke"><option>Start</option><option>Plus</option><option>Care</option><option value="Not sure yet" selected>Not sure yet</option></select></div>
+     <select id="form-pakke" name="pakke"><option>Basic</option><option>Growth</option><option>Custom</option><option>Care</option><option value="Not sure yet" selected>Not sure yet</option></select></div>
     <div><label for="form-besked">Message</label><textarea id="form-besked" name="besked" placeholder="Tell me briefly about your business and what the site should do..." required></textarea></div>
     <div class="send"><button class="pill go lg" type="submit">Send message <span class="plus" aria-hidden="true">→</span></button><p class="reassure">No commitment of any kind</p></div>
     <p class="form-status" role="status" aria-live="polite"></p>

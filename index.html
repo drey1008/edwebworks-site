@@ -111,6 +111,9 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop
 .plan h3{font-weight:400;font-size:44px;letter-spacing:-.04em;margin:72px 0 10px}
 .plan.dark .tag{position:absolute;left:28px;top:60px;margin:0}
 .plan .desc{color:#55595c;max-width:30ch;margin-bottom:36px}
+.plan .price,.addon .price{font-size:22px;letter-spacing:-.02em;margin-bottom:14px}.plan .price small,.addon .price small{font-size:13px;color:var(--grey)}.plan.dark .price small{color:var(--trust-mute)}
+.addon{grid-column:1/-1;background:var(--soft);border-radius:4px;padding:28px;display:grid;grid-template-columns:1fr 1.4fr auto;gap:24px;align-items:center}.addon .top{font-size:14px;color:var(--grey)}.addon h3{font-weight:400;font-size:36px;letter-spacing:-.04em;margin:8px 0 4px}.addon .desc{color:#55595c;max-width:52ch}.addon .pill{background:#fff}.addon .pill:hover{background:var(--trust);color:#fff}
+@media (max-width:720px){.addon{grid-template-columns:1fr;padding:22px;gap:12px}}
 .plan.dark .desc{color:#c8cdea}
 .plan ul{list-style:none;flex:1;margin-bottom:32px;font-size:15px}
 .plan li{padding:9px 0;border-top:1px solid rgba(0,0,0,.08);display:flex;gap:12px}
@@ -336,27 +339,32 @@ footer.foot a:hover{color:#fff}
  <section id="pakker" class="px" aria-labelledby="pakker-title">
   <div class="pk-head">
    <h2 id="pakker-title" class="rv">Tre pakker. Ingen overraskelser.</h2>
-   <p class="rv d1">Vælg det niveau, der passer til din virksomhed lige nu. Du kan altid opgradere senere. Du får et skræddersyet tilbud efter en kort snak.</p>
+   <p class="rv d1">Vælg det niveau, der passer til din virksomhed lige nu. Du kan altid opgradere senere. Priserne er fra-priser ekskl. moms, og du får et skræddersyet tilbud efter en kort snak.</p>
   </div>
   <div class="plans">
    <article class="plan rv">
     <div class="top"><span>01</span><span>Til visitkortet</span></div>
-    <h3>Basis</h3><p class="desc">Til dig der skal online med et professionelt visitkort.</p>
+    <h3>Basis</h3><p class="price">fra 4.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig der skal online med et professionelt visitkort.</p>
     <ul><li>Op til 5 sider</li><li>Skræddersyet design</li><li>Kontaktformular</li><li>Kalender integration</li><li>Mobilvenligt</li></ul>
     <a class="pill light" href="#kontakt" data-pakke="Basis">Få et tilbud <span class="plus" aria-hidden="true">+</span></a>
    </article>
    <article class="plan dark rv d1">
     <div class="top"><span>02</span><span>Til væksten</span></div>
     <span class="tag">Anbefalet til de fleste</span>
-    <h3>Vækst</h3><p class="desc">Til virksomheden der vil konvertere besøgende til kunder.</p>
+    <h3>Vækst</h3><p class="price">fra 7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til virksomheden der vil konvertere besøgende til kunder.</p>
     <ul><li class="inc">Alt i Basis</li><li>Op til 10 sider</li><li>Betalingslink</li><li>Blog / nyheder</li><li>SEO-tekster</li><li>Et års vejledning</li></ul>
     <a class="pill go" href="#kontakt" data-pakke="Vækst">Få et tilbud <span class="plus" aria-hidden="true">+</span></a>
    </article>
    <article class="plan rv d2">
     <div class="top"><span>03</span><span>Til det helt egne</span></div>
-    <h3>Custom</h3><p class="desc">Til virksomheden der vil have noget helt eget.</p>
+    <h3>Custom</h3><p class="price">Efter tilbud</p><p class="desc">Til virksomheden der vil have noget helt eget.</p>
     <ul><li class="inc">Alt i Vækst</li><li>APP</li><li>Ubegrænset antal sider</li><li>Skræddersyede integrationer</li><li>Flersproget hvis nødvendigt</li><li>Dedikeret sparring</li><li>Opstart af sociale medier</li><li>Vejledning efter aftale</li></ul>
     <a class="pill light" href="#kontakt" data-pakke="Custom">Book et uforpligtende møde <span class="plus" aria-hidden="true">+</span></a>
+   </article>
+   <article class="addon rv">
+    <div><p class="top"><span>Tilvalg</span></p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p></div>
+    <p class="desc">Jeg holder siden ved lige, så du kan passe din forretning. Du får domæne, hosting, rettelser og opdateringer.</p>
+    <a class="pill light" href="#kontakt" data-pakke="Drift">Få et tilbud <span class="plus" aria-hidden="true">+</span></a>
    </article>
   </div>
  </section>
@@ -394,7 +402,7 @@ footer.foot a:hover{color:#fff}
      <div><label for="form-email">E-mail</label><input id="form-email" name="email" type="email" placeholder="din@email.dk" autocomplete="email" required></div>
     </div>
     <div><label for="form-pakke">Hvilken pakke er du interesseret i?</label>
-     <select id="form-pakke" name="pakke"><option>Basis</option><option>Vækst</option><option>Custom</option><option selected>Ved ikke endnu</option></select></div>
+     <select id="form-pakke" name="pakke"><option>Basis</option><option>Vækst</option><option>Custom</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
     <div><label for="form-besked">Besked</label><textarea id="form-besked" name="besked" placeholder="Fortæl kort om dit projekt..." required></textarea></div>
     <div class="send"><button class="pill go lg" type="submit">Send besked <span class="plus" aria-hidden="true">→</span></button><p class="reassure">Uforpligtende. Du binder dig ikke til noget</p></div>
     <p class="form-status" role="status" aria-live="polite"></p>
