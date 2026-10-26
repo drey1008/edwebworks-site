@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hjemmeside til frisør i København | Fast pris | ED. Web Works</title>
+<meta name="description" content="Hjemmeside til din frisørsalon i København. Prisliste, galleri og bookingknap. Fast pris fra 4.500 kr. ekskl. moms og en gratis demo, før du betaler.">
+<link rel="canonical" href="https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:site_name" content="ED. Web Works">
+<meta property="og:url" content="https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/">
+<meta property="og:title" content="Hjemmeside til frisør i København | Fast pris | ED. Web Works">
+<meta property="og:description" content="Hjemmeside til din frisørsalon i København. Prisliste, galleri og bookingknap. Fast pris fra 4.500 kr. ekskl. moms og en gratis demo, før du betaler.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#141f4f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16181a;--grey:#686c6f;--grey-l:#85898c;--line:#ececec;--soft:#f3f3f2;--act:#d4420f;--act-h:#b8380b;--trust:#141f4f;--trust-2:#1c2a66;--trust-link:#2e3fa3;--trust-mute:#b4bbe0;--trust-tint:#eef0fa;--f:"Geist",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;--pad:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--ink);background:#fff;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--act);color:#fff}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:99px;z-index:99}.skip:focus{left:8px}
+:focus-visible{outline:2px solid var(--act);outline-offset:3px}
+.px{padding-left:var(--pad);padding-right:var(--pad)}
+.wrap{max-width:1200px;margin:0 auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:68px;max-width:1200px;margin:0 auto}
+.logo{font-size:22px;font-weight:500;letter-spacing:-.03em}.logo i{font-style:normal;color:var(--act)}
+.pill{display:inline-flex;align-items:center;gap:10px;font:400 14px/1 var(--f);padding:11px 16px 11px 18px;border-radius:99px;background:var(--ink);color:#fff;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.pill .plus{display:inline-block;transition:transform .25s}.pill:hover .plus{transform:rotate(90deg)}
+.pill.light{background:var(--soft);color:var(--ink)}.pill.light:hover{background:var(--trust-tint);color:var(--trust)}
+.pill.go{background:var(--act);color:#fff;box-shadow:0 8px 22px -10px rgba(212,66,15,.65)}.pill.go:hover{background:var(--act-h);transform:translateY(-1px)}
+.pill.lg{font-size:16px;padding:16px 22px 16px 26px}
+.reassure{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--grey);margin-top:12px}
+.reassure::before{content:"";width:14px;height:14px;flex:none;border-radius:50%;background:var(--trust-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6'%3E%3Cpath d='M1 3l2 2 4-4' fill='none' stroke='%232e3fa3' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center}
+.crumbs{font-size:13px;color:var(--grey);padding-top:28px}.crumbs ol{list-style:none;display:flex;gap:8px;flex-wrap:wrap}.crumbs li+li::before{content:"/";margin-right:8px;color:var(--grey-l)}.crumbs a{color:var(--trust-link)}
+.hero{position:relative;padding-top:12vh;padding-bottom:88px;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-12%;top:-18%;width:62vw;height:62vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(46,63,163,.13),rgba(46,63,163,.05) 55%,transparent 75%);pointer-events:none;z-index:-1}
+.kicker{font-size:14px;color:var(--grey);margin-bottom:22px;display:flex;align-items:center;gap:10px}.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--act)}
+.hero h1{font-weight:400;font-size:clamp(40px,5.6vw,84px);line-height:1.02;letter-spacing:-.045em;max-width:15ch}
+.hero h1 span{color:var(--act)}
+.hero .lead{font-size:20px;line-height:1.45;color:#3c4043;max-width:60ch;margin-top:36px}
+.cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px}
+.usp{list-style:none;display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:40px;font-size:15px;color:#3c4043}
+.usp li{display:flex;gap:10px;align-items:center}.usp li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--trust-link)}
+section.blk{padding-top:112px}
+.h2{font-weight:400;font-size:clamp(32px,4vw,56px);line-height:1.04;letter-spacing:-.04em;max-width:20ch}
+.h2 span{color:var(--grey-l)}
+.intro{color:#55595c;max-width:62ch;margin-top:18px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px}
+.card{background:var(--soft);border-radius:4px;padding:28px}
+.card h3{font-weight:400;font-size:26px;letter-spacing:-.03em;margin-bottom:8px}
+.card p{color:#55595c}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:40px}
+.plan{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column}
+.plan.dark{background:linear-gradient(170deg,var(--trust-2),var(--trust));color:#fff}
+.plan .top{font-size:13px;color:var(--grey)}.plan.dark .top{color:var(--trust-mute)}
+.plan h3{font-weight:400;font-size:32px;letter-spacing:-.035em;margin:28px 0 4px}
+.plan .price{font-size:22px;letter-spacing:-.02em}.plan .price small{font-size:13px;color:var(--grey)}.plan.dark .price small{color:var(--trust-mute)}
+.plan .desc{color:#55595c;margin:12px 0 18px;font-size:15px}.plan.dark .desc{color:#c8cdea}
+.plan ul{list-style:none;flex:1;margin-bottom:24px;font-size:15px}
+.plan li{padding:8px 0;border-top:1px solid rgba(0,0,0,.08);display:flex;gap:10px}.plan.dark li{border-color:rgba(255,255,255,.14)}
+.plan li::before{content:"+";color:var(--grey)}.plan.dark li::before{color:#ff8a5c}
+.plan .pill{align-self:flex-start}.plan .pill.light{background:#fff}
+.note{font-size:14px;color:var(--grey);margin-top:16px}
+.band{background:var(--trust);color:#fff;border-radius:6px;margin:112px var(--pad) 0;position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;left:-10%;bottom:-60%;width:70%;height:140%;background:radial-gradient(closest-side,rgba(110,128,230,.28),transparent 70%);pointer-events:none}
+.band .in{position:relative;padding:88px 40px;max-width:1200px;margin:0 auto}
+.band .h2 span{color:var(--trust-mute)}
+.steps{list-style:none;margin-top:40px;border-top:1px solid rgba(255,255,255,.55);counter-reset:s}
+.steps li{display:grid;grid-template-columns:80px 1fr 1.3fr;gap:var(--pad);padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:baseline;counter-increment:s}
+.steps li::before{content:"0" counter(s);font-size:14px;color:var(--trust-mute)}
+.steps h3{font-weight:400;font-size:26px;letter-spacing:-.03em}.steps p{color:#c8cdea}
+.demos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px}
+.demo{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:8px}
+.demo .meta{font-size:13px;color:var(--grey);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.demo .ex{color:var(--trust-link);background:var(--trust-tint);border-radius:99px;padding:3px 10px}
+.demo h3{font-weight:400;font-size:26px;letter-spacing:-.03em}
+.demo p{color:#55595c;flex:1}
+.demo .pill{align-self:flex-start;background:#fff;color:var(--ink);margin-top:8px}.demo .pill:hover{background:var(--trust);color:#fff}
+.faq{margin-top:32px;border-top:1px solid var(--line);max-width:860px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:18px;font-size:24px;color:var(--act);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq h3{font-weight:400;font-size:20px;letter-spacing:-.02em}
+.faq p{color:#55595c;padding:0 40px 24px 0;max-width:70ch}
+.faq a,.intro a{color:var(--trust-link);text-decoration:underline}
+.contact{background:var(--trust);color:#fff;margin-top:112px;padding-top:96px;padding-bottom:28px;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;right:-10%;top:-30%;width:60%;height:90%;background:radial-gradient(closest-side,rgba(212,66,15,.22),transparent 70%);pointer-events:none}
+.contact > *{position:relative}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1200px;margin:0 auto}
+.contact .h2 em{font-style:normal;color:#ff8a5c}
+.contact .side{color:#c8cdea;margin-top:24px;font-size:17px;max-width:44ch}
+form{display:grid;gap:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:block;font-size:13px;color:var(--trust-mute);margin-bottom:8px}
+input,select,textarea{width:100%;font:400 16px/1.4 var(--f);color:#fff;background:rgba(10,16,48,.55);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px;appearance:none}
+select option{color:#16181a;background:#fff}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#ff8a5c;box-shadow:0 0 0 3px rgba(255,138,92,.18)}
+input::placeholder,textarea::placeholder{color:#8a92c4}
+.send{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.contact .reassure{margin:0;color:var(--trust-mute)}.contact .reassure::before{background-color:rgba(255,255,255,.12)}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.form-status{font-size:15px}.form-status.err{color:#ffb59a}.form-status a{text-decoration:underline}
+button[disabled]{opacity:.6;cursor:wait}
+footer.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:96px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--trust-mute)}
+footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#fff}
+@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
+@media (max-width:720px){:root{--pad:18px}.nav{height:60px}.hero{padding-top:48px;padding-bottom:56px}.hero .lead{font-size:18px}section.blk{padding-top:80px}.grid,.plans,.demos{grid-template-columns:1fr}.band{margin:80px 10px 0}.band .in{padding:64px 18px}.steps li{grid-template-columns:1fr;gap:6px}.contact{margin-top:80px;padding-top:72px}.row2{grid-template-columns:1fr}form{padding:20px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ProfessionalService",
+   "@id": "https://edwebworks.com/#ed",
+   "name": "ED. Web Works",
+   "alternateName": "ED.",
+   "url": "https://edwebworks.com/",
+   "email": "edwebworks@outlook.com",
+   "description": "Enkle og hurtige hjemmesider til små lokale virksomheder i København. Fast pris, gratis demo før du betaler og status hver uge.",
+   "areaServed": {
+    "@type": "City",
+    "name": "København"
+   },
+   "priceRange": "2.995 kr. til 7.500 kr. ekskl. moms",
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hjemmesidepakker",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "name": "Pilot",
+      "description": "Til dig, der vil være med fra start. Du får en lavere pris og giver til gengæld en ærlig anmeldelse og lov til, at jeg viser siden som eksempel.",
+      "price": "2995",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "price": "2995",
+       "priceCurrency": "DKK",
+       "valueAddedTaxIncluded": false
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "Start",
+      "description": "Alt det, en lille virksomhed har brug for, på en side der er hurtig og nem at bruge.",
+      "price": "4500",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "price": "4500",
+       "priceCurrency": "DKK",
+       "valueAddedTaxIncluded": false
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "Plus",
+      "description": "Til dig, der vil have mere plads og slippe for at skrive teksterne selv.",
+      "price": "7500",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "price": "7500",
+       "priceCurrency": "DKK",
+       "valueAddedTaxIncluded": false
+      }
+     },
+     {
+      "@type": "Offer",
+      "name": "Drift",
+      "description": "Jeg holder siden ved lige, så du kan passe din forretning.",
+      "price": "249",
+      "priceCurrency": "DKK",
+      "priceSpecification": {
+       "@type": "UnitPriceSpecification",
+       "price": "249",
+       "priceCurrency": "DKK",
+       "valueAddedTaxIncluded": false,
+       "unitCode": "MON"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/",
+   "url": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/",
+   "name": "Hjemmeside til frisør i København | Fast pris | ED. Web Works",
+   "description": "Hjemmeside til din frisørsalon i København. Prisliste, galleri og bookingknap. Fast pris fra 4.500 kr. ekskl. moms og en gratis demo, før du betaler.",
+   "inLanguage": "da-DK",
+   "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://edwebworks.com/#website",
+    "url": "https://edwebworks.com/",
+    "name": "ED. Web Works"
+   },
+   "about": {
+    "@id": "https://edwebworks.com/#ed"
+   },
+   "breadcrumb": {
+    "@id": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/#crumbs"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/#crumbs",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Forside",
+     "item": "https://edwebworks.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Hjemmeside til frisør",
+     "item": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://edwebworks.com/hjemmeside-til-frisoer-koebenhavn/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Hvad koster en hjemmeside til en frisørsalon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig. De første 3 kunder kan få en pilotpris på 2.995 kr."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kan mine kunder booke tid direkte fra siden?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. Siden får en tydelig bookingknap, der fører kunden direkte til det bookingsystem, du allerede bruger."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvor hurtigt kan siden være klar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Skal jeg betale for demoen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hjælper du med Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alle sider bygges hurtige og mobilvenlige. Med Plus sætter jeg også din Google-profil op. Ingen kan love en bestemt placering på Google, men en god side og en udfyldt profil gør det lettere for kunderne at finde dig."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hvad får jeg med Drift?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Drift koster 249 kr. om måneden ekskl. moms. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Er priserne med eller uden moms?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Alle priser på siden er ekskl. moms."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Gå til indhold</a>
+<header class="px"><div class="nav"><a class="logo" href="/" aria-label="ED. forside">ED<i>.</i></a><a class="pill go" href="#kontakt">Få en gratis demo <span class="plus" aria-hidden="true">+</span></a></div></header>
+<main id="main">
+ <nav class="crumbs px wrap" aria-label="Brødkrummer"><ol><li><a href="/">Forside</a></li><li aria-current="page">Hjemmeside til frisør</li></ol></nav>
+ <section class="hero px wrap" aria-labelledby="h1">
+  <p class="kicker">Til frisører og skønhedssaloner</p>
+  <h1 id="h1">Hjemmeside til frisører <span>i København.</span></h1>
+  <p class="lead">Jeg bygger enkle og hurtige hjemmesider til saloner i København. Dine kunder ser dine behandlinger, dine priser og dit arbejde, og de kan booke tid med ét klik. Du får en gratis demo, før du betaler noget.</p>
+  <div class="cta"><a class="pill go lg" href="#kontakt">Få en gratis demo <span class="plus" aria-hidden="true">+</span></a><a class="pill light lg" href="#priser">Se priserne</a></div>
+  <ul class="usp"><li>Fast pris</li><li>Gratis demo, før du betaler</li><li>Status hver uge</li></ul>
+ </section>
+ <section class="blk px wrap" aria-labelledby="feat-h">
+  <h2 class="h2" id="feat-h">Det skal en salonside kunne.</h2>
+  <p class="intro">De fleste kunder finder deres frisør på mobilen. Derfor skal det vigtigste stå klart med det samme.</p>
+  <div class="grid"><article class="card"><h3>En prisliste, der er nem at læse</h3><p>Dine behandlinger og priser står overskueligt, så kunden ved, hvad det koster, før de booker.</p></article><article class="card"><h3>Booking med ét klik</h3><p>En tydelig bookingknap fører direkte til det bookingsystem, du allerede bruger.</p></article><article class="card"><h3>Et galleri med dit arbejde</h3><p>Billeder af klip, farver og salonen viser, hvem du er, bedre end mange ord.</p></article><article class="card"><h3>Lettere at finde på Google</h3><p>Siden er hurtig og mobilvenlig. Med Plus sætter jeg også din Google-profil op, så du kan blive fundet på kortet.</p></article></div>
+ </section>
+ <section class="blk px wrap" id="priser" aria-labelledby="pris-h">
+  <h2 class="h2" id="pris-h">Faste priser. <span>Ingen overraskelser.</span></h2>
+  <p class="intro">Du ved, hvad det koster, før vi går i gang. Alle priser er ekskl. moms.</p>
+  <div class="plans"><article class="plan"><p class="top">Kun til de første 3 kunder</p><h3>Pilot</h3><p class="price">2.995 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil være med fra start. Du får en lavere pris og giver til gengæld en ærlig anmeldelse og lov til, at jeg viser siden som eksempel.</p><ul><li>1 til 3 sider</li><li>Til gengæld for en anmeldelse</li><li>Kun 3 pladser</li></ul><a class="pill light" href="#kontakt" data-pakke="Pilot">Vælg Pilot <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Det enkle udgangspunkt</p><h3>Start</h3><p class="price">4.500 kr. <small>ekskl. moms</small></p><p class="desc">Alt det, en lille virksomhed har brug for, på en side der er hurtig og nem at bruge.</p><ul><li>1 til 3 sider</li><li>Prisliste</li><li>Galleri</li><li>Bookingknap</li><li>Mobilvenlig</li></ul><a class="pill light" href="#kontakt" data-pakke="Start">Vælg Start <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">Når du vil findes på Google</p><h3>Plus</h3><p class="price">7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil have mere plads og slippe for at skrive teksterne selv.</p><ul><li>Op til 6 sider</li><li>Opsætning af Google-profil</li><li>Tekster skrevet til dig</li></ul><a class="pill go" href="#kontakt" data-pakke="Plus">Vælg Plus <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Efter lanceringen</p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p><p class="desc">Jeg holder siden ved lige, så du kan passe din forretning.</p><ul><li>Rettelser og opdateringer</li><li>En lille rapport hver måned</li><li>Fast pris hver måned</li></ul><a class="pill light" href="#kontakt" data-pakke="Drift">Vælg Drift <span class="plus" aria-hidden="true">+</span></a></article></div>
+  <p class="note">Har du brug for mere end 6 sider, en webshop eller noget helt særligt, så laver jeg et tilbud, der passer til dig.</p>
+ </section>
+ <section class="band" aria-labelledby="step-h"><div class="in">
+  <h2 class="h2" id="step-h">Sådan foregår det. <span>Fra første snak til færdig side.</span></h2>
+  <ol class="steps">
+   <li><h3>Vi snakker sammen</h3><p>Vi taler om din forretning, hvilke sider du har brug for, og hvordan dine kunder skal kontakte dig eller booke.</p></li>
+   <li><h3>Du får en gratis demo</h3><p>Jeg laver en demo af din nye side. Du ser den, før du betaler noget, og du kan sige nej tak.</p></li>
+   <li><h3>Jeg bygger siden</h3><p>Når du siger ja, bygger jeg siden færdig med dine tekster, priser og billeder. Du får status hver uge.</p></li>
+   <li><h3>Siden går live</h3><p>Vi tester den sammen på mobil og computer, og så går den live. Vil du have hjælp bagefter, er der Drift.</p></li>
+  </ol>
+ </div></section>
+ <section class="blk px wrap" aria-labelledby="demo-h">
+  <h2 class="h2" id="demo-h">Se demoer, jeg har lavet.</h2>
+  <p class="intro">Her er eksempler på demoer, jeg har lavet. Saks &amp; Sølv er en fiktiv salon. De andre er forslag, jeg har lavet til rigtige virksomheder i København. De er ikke kunder hos ED.</p>
+  <div class="demos"><article class="demo"><p class="meta"><span>Frisør</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Saks &amp; Sølv</h3><p>En fiktiv salon. Priser, der er nemme at overskue, og booking direkte fra forsiden.</p><a class="pill" href="/demoer/frisor/" aria-label="Se demoen for Saks & Sølv">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Frisør</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Tornsberg Hairstyle</h3><p>Forslag til en salon med hår, negle og vipper. Behandlinger, priser og en tydelig bookingknap.</p><a class="pill" href="https://drey1008.github.io/demo-tornsberg/" rel="noopener" aria-label="Se demoen for Tornsberg Hairstyle">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Tatovering</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Tigre Tattoo</h3><p>Forslag til en tattooshop. Tatovørerne, inspiration og en formular til forespørgsler.</p><a class="pill" href="https://drey1008.github.io/demo-tigre-tattoo/" rel="noopener" aria-label="Se demoen for Tigre Tattoo">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Bageri</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Daniali &amp; Schiøtz Bageri</h3><p>Forslag til et bageri. Sortiment, åbningstider og bestilling af kager.</p><a class="pill" href="https://drey1008.github.io/demo-daniali-schiotz/" rel="noopener" aria-label="Se demoen for Daniali & Schiøtz Bageri">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Skomager</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Rosenberg Skomageri</h3><p>Forslag til et skomageri. Reparationer, historie og nem kontakt.</p><a class="pill" href="https://drey1008.github.io/demo-rosenberg-skomageri/" rel="noopener" aria-label="Se demoen for Rosenberg Skomageri">Se demo <span class="plus" aria-hidden="true">→</span></a></article></div>
+ </section>
+ <section class="blk px wrap" aria-labelledby="faq-h">
+  <h2 class="h2" id="faq-h">Ofte stillede spørgsmål</h2>
+  <div class="faq"><details><summary><h3>Hvad koster en hjemmeside til en frisørsalon?</h3></summary><p>Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig. De første 3 kunder kan få en pilotpris på 2.995 kr.</p></details><details><summary><h3>Kan mine kunder booke tid direkte fra siden?</h3></summary><p>Ja. Siden får en tydelig bookingknap, der fører kunden direkte til det bookingsystem, du allerede bruger.</p></details><details><summary><h3>Hvor hurtigt kan siden være klar?</h3></summary><p>Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge.</p></details><details><summary><h3>Skal jeg betale for demoen?</h3></summary><p>Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris.</p></details><details><summary><h3>Hjælper du med Google?</h3></summary><p>Alle sider bygges hurtige og mobilvenlige. Med Plus sætter jeg også din Google-profil op. Ingen kan love en bestemt placering på Google, men en god side og en udfyldt profil gør det lettere for kunderne at finde dig.</p></details><details><summary><h3>Hvad får jeg med Drift?</h3></summary><p>Drift koster 249 kr. om måneden ekskl. moms. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned.</p></details><details><summary><h3>Er priserne med eller uden moms?</h3></summary><p>Alle priser på siden er ekskl. moms.</p></details></div>
+ </section>
+ <section id="kontakt" class="contact px" aria-labelledby="kontakt-h">
+  <div class="cgrid">
+   <div>
+    <h2 class="h2" id="kontakt-h">Få en gratis demo af <em>din nye side.</em></h2>
+    <p class="side">Skriv lidt om din virksomhed, så vender jeg tilbage hurtigst muligt. Du taler direkte med mig, der bygger siden.</p>
+   </div>
+   <form id="kontaktform" action="https://formsubmit.co/8f6b2cd857b41da52beb4443be0fed0d" method="POST">
+    <input type="hidden" name="_subject" value="Ny henvendelse fra edwebworks.com/hjemmeside-til-frisoer-koebenhavn/">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://edwebworks.com/tak.html">
+    <input type="hidden" name="side" value="/hjemmeside-til-frisoer-koebenhavn/">
+    <div class="hp" aria-hidden="true"><label for="form-hp">Udfyld ikke dette felt</label><input id="form-hp" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+    <div class="row2">
+     <div><label for="form-navn">Navn</label><input id="form-navn" name="navn" type="text" placeholder="Dit navn" autocomplete="name" required></div>
+     <div><label for="form-email">E-mail</label><input id="form-email" name="email" type="email" placeholder="din@email.dk" autocomplete="email" required></div>
+    </div>
+    <div><label for="form-firma">Virksomhed</label><input id="form-firma" name="virksomhed" type="text" placeholder="Navnet på din virksomhed" autocomplete="organization"></div>
+    <div><label for="form-pakke">Hvilken pakke er du interesseret i?</label>
+     <select id="form-pakke" name="pakke"><option>Pilot</option><option>Start</option><option>Plus</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
+    <div><label for="form-besked">Besked</label><textarea id="form-besked" name="besked" placeholder="Fortæl kort om din salon, og om du allerede har et bookingsystem..." required></textarea></div>
+    <div class="send"><button class="pill go lg" type="submit">Send besked <span class="plus" aria-hidden="true">→</span></button><p class="reassure">Uforpligtende. Du binder dig ikke til noget</p></div>
+    <p class="form-status" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+  <footer class="foot"><span>© 2026 ED. Web Works</span><nav aria-label="Flere sider"><a href="/">Forside</a><a href="/hjemmeside-til-lille-virksomhed-koebenhavn/">Hjemmeside til lille virksomhed</a><a href="#main">Til toppen ↑</a></nav></footer>
+ </section>
+</main>
+<script>
+(function(){var f=document.getElementById('kontaktform');if(!f||!window.fetch)return;var st=f.querySelector('.form-status'),btn=f.querySelector('button[type=submit]');
+f.addEventListener('submit',function(e){e.preventDefault();if(f._honey&&f._honey.value)return;st.className='form-status';st.textContent='Sender...';btn.disabled=true;
+fetch('https://formsubmit.co/ajax/8f6b2cd857b41da52beb4443be0fed0d',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+.then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw d;return d})})
+.then(function(){f.innerHTML='<div><h3 style="font-weight:400;font-size:32px;letter-spacing:-.03em">Tak! Jeg vender tilbage hurtigst muligt.</h3><p style="color:#c8cdea;margin-top:10px">Din besked er sendt.</p></div>'})
+.catch(function(){btn.disabled=false;st.className='form-status err';st.innerHTML='Beskeden kunne ikke sendes. Prøv igen, eller skriv direkte til <a href="mailto:edwebworks@outlook.com">edwebworks@outlook.com</a>.'})})})();
+document.querySelectorAll('[data-pakke]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('form-pakke').value=a.dataset.pakke})});
+</script>
+</body>
+</html>
