@@ -57,7 +57,7 @@ section.blk{padding-top:112px}
 .card{background:var(--soft);border-radius:4px;padding:28px}
 .card h3{font-weight:400;font-size:26px;letter-spacing:-.03em;margin-bottom:8px}
 .card p{color:#55595c}
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:40px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:40px}
 .plan{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column}
 .plan.dark{background:linear-gradient(170deg,var(--trust-2),var(--trust));color:#fff}
 .plan .top{font-size:13px;color:var(--grey)}.plan.dark .top{color:var(--trust-mute)}
@@ -98,7 +98,7 @@ section.blk{padding-top:112px}
 .contact > *{position:relative}
 .cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1200px;margin:0 auto}
 .contact .h2 em{font-style:normal;color:#ff8a5c}
-.contact .side{color:#c8cdea;margin-top:24px;font-size:17px;max-width:44ch}
+.contact .side{color:#c8cdea;margin-top:24px;font-size:17px;max-width:44ch}.contact .tel{color:#fff;text-decoration:underline;white-space:nowrap}
 form{display:grid;gap:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 label{display:block;font-size:13px;color:var(--trust-mute);margin-bottom:8px}
@@ -114,7 +114,7 @@ input::placeholder,textarea::placeholder{color:#8a92c4}
 button[disabled]{opacity:.6;cursor:wait}
 footer.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:96px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--trust-mute)}
 footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#fff}
-@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
+@media (max-width:1000px){.plans{grid-template-columns:1fr}.cgrid{grid-template-columns:1fr}}
 @media (max-width:720px){:root{--pad:18px}.nav{height:60px}.hero{padding-top:48px;padding-bottom:56px}.hero .lead{font-size:18px}section.blk{padding-top:80px}.grid,.plans,.demos{grid-template-columns:1fr}.band{margin:80px 10px 0}.band .in{padding:64px 18px}.steps li{grid-template-columns:1fr;gap:6px}.contact{margin-top:80px;padding-top:72px}.row2{grid-template-columns:1fr}form{padding:20px}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
@@ -134,24 +134,12 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
     "@type": "Country",
     "name": "Danmark"
    },
-   "priceRange": "2.995 kr. til 7.500 kr. ekskl. moms",
+   "telephone": "+45 26 57 94 81",
+   "priceRange": "4.500 kr. til 7.500 kr. ekskl. moms",
    "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Hjemmesidepakker",
     "itemListElement": [
-     {
-      "@type": "Offer",
-      "name": "Pilot",
-      "description": "Til dig, der vil være med fra start. Du får en lavere pris, og til gengæld må jeg vise din side som eksempel.",
-      "price": "2995",
-      "priceCurrency": "DKK",
-      "priceSpecification": {
-       "@type": "UnitPriceSpecification",
-       "price": "2995",
-       "priceCurrency": "DKK",
-       "valueAddedTaxIncluded": false
-      }
-     },
      {
       "@type": "Offer",
       "name": "Start",
@@ -242,7 +230,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
      "name": "Hvad koster en hjemmeside til en frisørsalon?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig. De første 3 kunder kan få en pilotpris på 2.995 kr."
+      "text": "Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig."
      }
     },
     {
@@ -287,10 +275,18 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
     },
     {
      "@type": "Question",
+     "name": "Hvad er med i prisen?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du bruger dit eget logo og dine egne billeder. Har du brug for et nyt logo eller nye billeder, kan vi aftale det for sig."
+     }
+    },
+    {
+     "@type": "Question",
      "name": "Hvad får jeg med Drift?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Drift koster 249 kr. om måneden ekskl. moms. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned."
+      "text": "Drift koster 249 kr. om måneden ekskl. moms. Domæne og hosting er med. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned."
      }
     },
     {
@@ -327,7 +323,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
  <section class="blk px wrap" id="priser" aria-labelledby="pris-h">
   <h2 class="h2" id="pris-h">Faste priser. <span>Ingen overraskelser.</span></h2>
   <p class="intro">Du ved, hvad det koster, før vi går i gang. Alle priser er ekskl. moms.</p>
-  <div class="plans"><article class="plan"><p class="top">Kun til de første 3 kunder</p><h3>Pilot</h3><p class="price">2.995 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil være med fra start. Du får en lavere pris, og til gengæld må jeg vise din side som eksempel.</p><ul><li>1 til 3 sider</li><li>Jeg må vise siden som eksempel</li><li>Kun 3 pladser</li></ul><a class="pill light" href="#kontakt" data-pakke="Pilot">Vælg Pilot <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Det enkle udgangspunkt</p><h3>Start</h3><p class="price">4.500 kr. <small>ekskl. moms</small></p><p class="desc">Alt det, en lille virksomhed har brug for, på en side der er hurtig og nem at bruge.</p><ul><li>1 til 3 sider</li><li>Prisliste</li><li>Galleri</li><li>Bookingknap</li><li>Mobilvenlig</li></ul><a class="pill light" href="#kontakt" data-pakke="Start">Vælg Start <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">Når du vil findes på Google</p><h3>Plus</h3><p class="price">7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil have mere plads og slippe for at skrive teksterne selv.</p><ul><li>Op til 6 sider</li><li>Opsætning af Google-profil</li><li>Tekster skrevet til dig</li></ul><a class="pill go" href="#kontakt" data-pakke="Plus">Vælg Plus <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Efter lanceringen</p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p><p class="desc">Jeg holder siden ved lige, så du kan passe din forretning.</p><ul><li>Rettelser og opdateringer</li><li>En lille rapport hver måned</li><li>Fast pris hver måned</li></ul><a class="pill light" href="#kontakt" data-pakke="Drift">Vælg Drift <span class="plus" aria-hidden="true">+</span></a></article></div>
+  <div class="plans"><article class="plan"><p class="top">Det enkle udgangspunkt</p><h3>Start</h3><p class="price">4.500 kr. <small>ekskl. moms</small></p><p class="desc">Alt det, en lille virksomhed har brug for, på en side der er hurtig og nem at bruge.</p><ul><li>1 til 3 sider</li><li>Prisliste</li><li>Galleri</li><li>Bookingknap</li><li>Mobilvenlig</li></ul><a class="pill light" href="#kontakt" data-pakke="Start">Vælg Start <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">Når du vil findes på Google</p><h3>Plus</h3><p class="price">7.500 kr. <small>ekskl. moms</small></p><p class="desc">Til dig, der vil have mere plads og slippe for at skrive teksterne selv.</p><ul><li>Op til 6 sider</li><li>Opsætning af Google-profil</li><li>Tekster skrevet til dig</li></ul><a class="pill go" href="#kontakt" data-pakke="Plus">Vælg Plus <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Efter lanceringen</p><h3>Drift</h3><p class="price">249 kr./md. <small>ekskl. moms</small></p><p class="desc">Jeg holder siden ved lige, så du kan passe din forretning.</p><ul><li>Domæne og hosting</li><li>Rettelser og opdateringer</li><li>En lille rapport hver måned</li></ul><a class="pill light" href="#kontakt" data-pakke="Drift">Vælg Drift <span class="plus" aria-hidden="true">+</span></a></article></div>
   <p class="note">Har du brug for mere end 6 sider, en webshop eller noget helt særligt, så laver jeg et tilbud, der passer til dig.</p>
  </section>
  <section class="band" aria-labelledby="step-h"><div class="in">
@@ -341,18 +337,19 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
  </div></section>
  <section class="blk px wrap" aria-labelledby="demo-h">
   <h2 class="h2" id="demo-h">Se demoer, jeg har lavet.</h2>
-  <p class="intro">Her er eksempler på demoer, jeg har lavet. Saks &amp; Sølv er en fiktiv salon. De andre er forslag, jeg har lavet til rigtige virksomheder. De er ikke kunder hos ED.</p>
-  <div class="demos"><article class="demo"><p class="meta"><span>Frisør</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Saks &amp; Sølv</h3><p>En fiktiv salon. Priser, der er nemme at overskue, og booking direkte fra forsiden.</p><a class="pill" href="/demoer/frisor/" aria-label="Se demoen for Saks & Sølv">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Frisør</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Tornsberg Hairstyle</h3><p>Forslag til en salon med hår, negle og vipper. Behandlinger, priser og en tydelig bookingknap.</p><a class="pill" href="https://drey1008.github.io/demo-tornsberg/" rel="noopener" aria-label="Se demoen for Tornsberg Hairstyle">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Tatovering</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Tigre Tattoo</h3><p>Forslag til en tattooshop. Tatovørerne, inspiration og en formular til forespørgsler.</p><a class="pill" href="https://drey1008.github.io/demo-tigre-tattoo/" rel="noopener" aria-label="Se demoen for Tigre Tattoo">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Bageri</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Daniali &amp; Schiøtz Bageri</h3><p>Forslag til et bageri. Sortiment, åbningstider og bestilling af kager.</p><a class="pill" href="https://drey1008.github.io/demo-daniali-schiotz/" rel="noopener" aria-label="Se demoen for Daniali & Schiøtz Bageri">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Skomager</span><span class="ex">Demo. Ikke kunde hos ED.</span></p><h3>Rosenberg Skomageri</h3><p>Forslag til et skomageri. Reparationer, historie og nem kontakt.</p><a class="pill" href="https://drey1008.github.io/demo-rosenberg-skomageri/" rel="noopener" aria-label="Se demoen for Rosenberg Skomageri">Se demo <span class="plus" aria-hidden="true">→</span></a></article></div>
+  <p class="intro">Her er eksempler, jeg har lavet. Virksomhederne er fiktive, men designet og funktionerne kan blive dine, tilpasset din salon.</p>
+  <div class="demos"><article class="demo"><p class="meta"><span>Frisørsalon</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Saks &amp; Sølv</h3><p>Priser, der er nemme at overskue, booking direkte fra forsiden og billeder af salonens arbejde.</p><a class="pill" href="/demoer/frisor/" aria-label="Se demoen for Saks & Sølv">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Café og brunch</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Café Kornblomst</h3><p>Menukort med faner, bordbooking og billeder, der viser stemningen.</p><a class="pill" href="/demoer/cafe/" aria-label="Se demoen for Café Kornblomst">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Tømrer og håndværk</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Kvist &amp; Søn</h3><p>Klare ydelser, fast pris som hovedbudskab og en tilbudsformular, der er nem at udfylde.</p><a class="pill" href="/demoer/tomrer/" aria-label="Se demoen for Kvist & Søn">Se demo <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Fysioterapi og klinik</span><span class="ex">Eksempel. Fiktiv virksomhed</span></p><h3>Klinik Kerne</h3><p>Behandlinger med priser, ofte stillede spørgsmål og nem booking.</p><a class="pill" href="/demoer/fysio/" aria-label="Se demoen for Klinik Kerne">Se demo <span class="plus" aria-hidden="true">→</span></a></article></div>
  </section>
  <section class="blk px wrap" aria-labelledby="faq-h">
   <h2 class="h2" id="faq-h">Ofte stillede spørgsmål</h2>
-  <div class="faq"><details><summary><h3>Hvad koster en hjemmeside til en frisørsalon?</h3></summary><p>Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig. De første 3 kunder kan få en pilotpris på 2.995 kr.</p></details><details><summary><h3>Kan mine kunder booke tid direkte fra siden?</h3></summary><p>Ja. Siden får en tydelig bookingknap, der fører kunden direkte til det bookingsystem, du allerede bruger.</p></details><details><summary><h3>Hvor hurtigt kan siden være klar?</h3></summary><p>Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge.</p></details><details><summary><h3>Skal jeg betale for demoen?</h3></summary><p>Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris.</p></details><details><summary><h3>Skal vi mødes, eller kan det hele foregå online?</h3></summary><p>Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark.</p></details><details><summary><h3>Hjælper du med Google?</h3></summary><p>Alle sider bygges hurtige og mobilvenlige. Med Plus sætter jeg også din Google-profil op. Ingen kan love en bestemt placering på Google, men en god side og en udfyldt profil gør det lettere for kunderne at finde dig.</p></details><details><summary><h3>Hvad får jeg med Drift?</h3></summary><p>Drift koster 249 kr. om måneden ekskl. moms. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned.</p></details><details><summary><h3>Er priserne med eller uden moms?</h3></summary><p>Alle priser på siden er ekskl. moms.</p></details></div>
+  <div class="faq"><details><summary><h3>Hvad koster en hjemmeside til en frisørsalon?</h3></summary><p>Start koster 4.500 kr. ekskl. moms og giver dig 1 til 3 sider med prisliste, galleri og bookingknap. Plus koster 7.500 kr. ekskl. moms med op til 6 sider, opsætning af Google-profil og tekster skrevet til dig.</p></details><details><summary><h3>Kan mine kunder booke tid direkte fra siden?</h3></summary><p>Ja. Siden får en tydelig bookingknap, der fører kunden direkte til det bookingsystem, du allerede bruger.</p></details><details><summary><h3>Hvor hurtigt kan siden være klar?</h3></summary><p>Typisk inden for få dage, når jeg har dine tekster, priser og billeder. Undervejs får du status hver uge.</p></details><details><summary><h3>Skal jeg betale for demoen?</h3></summary><p>Nej. Demoen er gratis og uforpligtende. Du ser, hvordan din side kan se ud, og først hvis du vil gå videre, aftaler vi pakke og pris.</p></details><details><summary><h3>Skal vi mødes, eller kan det hele foregå online?</h3></summary><p>Begge dele kan lade sig gøre. Det meste foregår online, så jeg kan lave din side, uanset hvor i Danmark du ligger. Vi kan tale sammen i telefonen eller over video, og du kan følge med i demoen via et link. Jeg holder til i København, så bor du i nærheden, kommer jeg gerne forbi. Jeg tager også imod virksomheder uden for Danmark.</p></details><details><summary><h3>Hjælper du med Google?</h3></summary><p>Alle sider bygges hurtige og mobilvenlige. Med Plus sætter jeg også din Google-profil op. Ingen kan love en bestemt placering på Google, men en god side og en udfyldt profil gør det lettere for kunderne at finde dig.</p></details><details><summary><h3>Hvad er med i prisen?</h3></summary><p>Opsætning af siden er med i prisen. Domæne og hosting er med i Drift til 249 kr. om måneden ekskl. moms, så du ikke skal betale for det andre steder. Du bruger dit eget logo og dine egne billeder. Har du brug for et nyt logo eller nye billeder, kan vi aftale det for sig.</p></details><details><summary><h3>Hvad får jeg med Drift?</h3></summary><p>Drift koster 249 kr. om måneden ekskl. moms. Domæne og hosting er med. Jeg laver rettelser og opdateringer, for eksempel nye priser eller åbningstider, og du får en lille rapport hver måned.</p></details><details><summary><h3>Er priserne med eller uden moms?</h3></summary><p>Alle priser på siden er ekskl. moms.</p></details></div>
  </section>
  <section id="kontakt" class="contact px" aria-labelledby="kontakt-h">
   <div class="cgrid">
    <div>
     <h2 class="h2" id="kontakt-h">Få en gratis demo af <em>din nye side.</em></h2>
     <p class="side">Skriv lidt om din virksomhed, så vender jeg tilbage hurtigst muligt. Du taler direkte med mig, der bygger siden.</p>
+    <p class="side">Du kan også ringe på <a class="tel" href="tel:+4526579481">26 57 94 81</a>.</p>
    </div>
    <form id="kontaktform" action="https://formsubmit.co/8f6b2cd857b41da52beb4443be0fed0d" method="POST">
     <input type="hidden" name="_subject" value="Ny henvendelse fra edwebworks.com/hjemmeside-til-frisoer/">
@@ -367,7 +364,7 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot a:hover{color:#
     </div>
     <div><label for="form-firma">Virksomhed</label><input id="form-firma" name="virksomhed" type="text" placeholder="Navnet på din virksomhed" autocomplete="organization"></div>
     <div><label for="form-pakke">Hvilken pakke er du interesseret i?</label>
-     <select id="form-pakke" name="pakke"><option>Pilot</option><option>Start</option><option>Plus</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
+     <select id="form-pakke" name="pakke"><option>Start</option><option>Plus</option><option>Drift</option><option selected>Ved ikke endnu</option></select></div>
     <div><label for="form-besked">Besked</label><textarea id="form-besked" name="besked" placeholder="Fortæl kort om din salon, og om du allerede har et bookingsystem..." required></textarea></div>
     <div class="send"><button class="pill go lg" type="submit">Send besked <span class="plus" aria-hidden="true">→</span></button><p class="reassure">Uforpligtende. Du binder dig ikke til noget</p></div>
     <p class="form-status" role="status" aria-live="polite"></p>
