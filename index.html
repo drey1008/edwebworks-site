@@ -129,13 +129,10 @@ header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop
 .pk-note{grid-column:1/-1;font-size:14px;color:var(--grey);margin-top:-112px;padding-bottom:140px}
 /* about */
 .about{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--pad);padding-top:120px;padding-bottom:140px}
-.about .photo{grid-column:1/5;align-self:start;width:100%;max-width:380px;margin:0;position:relative}
-.about .photo::before{content:"";position:absolute;inset:auto -14px -14px auto;width:62%;height:62%;border-radius:6px;background:var(--trust-tint);z-index:-1}
-.about .photo img{display:block;width:100%;height:auto;aspect-ratio:382/434;object-fit:cover;border-radius:6px;box-shadow:0 30px 60px -34px rgba(20,31,79,.45)}
-.about .txt{grid-column:6/12}
+.about .txt{grid-column:1/10}
 .about .txt .kicker{margin-bottom:28px}
 .about h2{font-weight:400;font-size:clamp(32px,3.6vw,52px);line-height:1.05;letter-spacing:-.04em;margin-bottom:40px}
-.about .txt p{font-size:17px;color:#3c4043;margin-bottom:18px;max-width:58ch}
+.about .txt p{font-size:19px;color:#3c4043;margin-bottom:18px;max-width:58ch}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--pad);margin-top:48px;padding-top:18px;border-top:1px solid var(--line);font-size:14px}
 .facts span{display:block;color:var(--grey);margin-bottom:4px}
 .facts p{margin:0!important;font-size:14px!important;color:var(--ink)!important}
@@ -202,7 +199,7 @@ footer.foot a:hover{color:#fff}
 .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}
 /* responsive */
 @media (max-width:1000px){
- .ex-head h2,.ex-head p,.hero-foot p.lead,.hero-foot .cta-wrap,.statement h2,.svc .intro,.svc ol,.svc .band-cta,.pk-head h2,.pk-head p,.about .photo,.about .txt,.contact h2,.contact .side,.contact form{grid-column:1/-1}
+ .ex-head h2,.ex-head p,.hero-foot p.lead,.hero-foot .cta-wrap,.statement h2,.svc .intro,.svc ol,.svc .band-cta,.pk-head h2,.pk-head p,.about .txt,.contact h2,.contact .side,.contact form{grid-column:1/-1}
  .hero-foot .cta-wrap{align-items:flex-start}
  .hero-foot .cta{justify-content:flex-start}
  .svc .intro strong{max-width:none;margin-bottom:24px}
@@ -236,8 +233,6 @@ footer.foot a:hover{color:#fff}
  .plan.dark h3{margin-top:56px}
  .plan h3{font-size:36px;margin-top:32px}
  .about{padding-top:72px;padding-bottom:88px;row-gap:40px}
- .about .photo{max-width:300px}
- .about .photo::before{inset:auto -10px -10px auto}
  .facts{grid-template-columns:1fr;gap:12px}
  .contact{padding-top:80px}
  .contact form{padding:20px}
@@ -365,7 +360,6 @@ footer.foot a:hover{color:#fff}
 
  <section id="om" class="px" aria-labelledby="om-title" style="border-top:1px solid var(--line)">
   <div class="about">
-   <figure class="photo rv"><picture><source srcset="edin.webp" type="image/webp"><img src="edin.jpg" alt="Edin, stifter af ED." width="382" height="434" loading="lazy" decoding="async"></picture></figure>
    <div class="txt rv d1">
     <p class="kicker">Om mig</p>
     <h2 id="om-title">Mellem dyre bureauer og skabeloner.</h2>
