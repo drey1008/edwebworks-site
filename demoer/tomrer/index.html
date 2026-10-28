@@ -12,12 +12,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#1b1d1f">
 <!--
-  DEMO — fiktiv virksomhed. Navn, CVR, adresse og telefon er opdigtede eksempler.
-  Billeder: Pexels (gratis licens, pexels.com/license):
-   hero.webp      — Pew Nguyen, pexels.com/photo/37162562
-   vaerksted.webp — Tima Miroshnichenko, pexels.com/photo/6790812
-   koekken.webp   — Curtis Adams, pexels.com/photo/36777558
-   stue.webp      — Alexander Zvir, pexels.com/photo/4252513
+  DEMO: fiktiv virksomhed. Navn, CVR, adresse og telefon er opdigtede eksempler.
+  Billederne er pladsholdere. Kunden leverer sine egne billeder.
 -->
 <style>
 :root{--ink:#1b1d1f;--ink2:#25282b;--y:#ffc21a;--y2:#e6a800;--wood:#c98b4f;--paper:#f4f2ee;--mute:#6c7075;--line:#d9d6d0;
@@ -45,8 +41,8 @@ header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
 .btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.4)}
 .btn.line:hover{box-shadow:inset 0 0 0 2px var(--y);color:var(--y)}
 .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,29,31,.95) 0%,rgba(27,29,31,.6) 55%,rgba(27,29,31,.2))}
+.hero .ph{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;background:linear-gradient(145deg,#3a3d40,#2e3134);color:#e9eaec;align-items:flex-end;padding-right:9%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(27,29,31,.95) 0%,rgba(27,29,31,.75) 50%,rgba(27,29,31,0) 72%)}
 .hero .wrap{position:relative;z-index:1;padding:130px 0 120px}
 .hero h1{font:700 clamp(56px,9vw,136px)/.88 var(--cond);text-transform:uppercase;letter-spacing:-.01em;max-width:11ch}
 .hero h1 span{color:var(--y)}
@@ -69,7 +65,7 @@ header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
 .card.cta{background:var(--y)}.card.cta:hover{background:var(--y2);color:var(--ink)}.card.cta p{color:var(--ink)}
 .split{display:grid;grid-template-columns:1fr 1fr;min-height:640px;background:var(--ink);color:#fff}
 .split figure{position:relative;overflow:hidden}
-.split figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.split figure .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .split .txt{padding:100px 70px;display:flex;flex-direction:column;justify-content:center}
 .split h2{font:700 clamp(40px,5vw,76px)/.92 var(--cond);text-transform:uppercase;margin-bottom:26px}
 .split h2 span{color:var(--y)}
@@ -82,8 +78,8 @@ header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
 .photos{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:300px 300px;gap:12px}
 .photos figure{position:relative;overflow:hidden}
 .photos figure:first-child{grid-row:1/3}
-.photos img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.photos figure:hover img{transform:scale(1.05)}
+.photos .ph{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.photos figure:hover .ph{transform:scale(1.05)}
 .photos figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font:700 14px/1 var(--sans);text-transform:uppercase;letter-spacing:.05em;padding:12px 16px}
 .photos figcaption small{color:var(--y);font-weight:700}
 .note{font-size:14px;color:var(--mute);margin-top:14px}
@@ -116,6 +112,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+
+/* billedpladsholdere: kunden leverer egne billeder */
+.ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;aspect-ratio:var(--ar,3/2);background:linear-gradient(145deg,#efe4d6,#e4d3bd);color:#8a5a2b;text-align:center;overflow:hidden}
+.ph i{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.55)}
+.ph svg{width:26px;height:26px}
+.ph span{font:600 13px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+@media (max-width:760px){.hero .ph i,.hero .ph span{display:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -130,33 +133,33 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <main>
  <section class="hero">
-  <img src="img/hero.webp" alt="Tømrer høvler et bræt i værkstedet" width="1600" height="1067" fetchpriority="high">
+  <div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1600/1067"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div>
   <div class="wrap">
-   <span class="kick">Tømrer &amp; snedker · Fiktivby og omegn</span>
-   <h1>Godt håndværk. <span>Fast pris.</span> Ryddet op.</h1>
-   <p>Fra nyt køkken til ny tagterrasse: Du får en fast pris, før vi starter, én kontaktperson hele vejen og en byggeplads, der er pænere, når vi går, end da vi kom.</p>
+   <span class="kick">Kvist &amp; Søn · Fiktivby og omegn</span>
+   <h1>Tømrer og snedker <span>i Fiktivby</span></h1>
+   <p>Vi laver køkkener, tage, terrasser, vinduer og gulve for private i Fiktivby og omegn. Du får en fast pris på skrift, før vi går i gang.</p>
    <div class="ctas"><a class="btn" href="#tilbud">Få et gratis tilbud →</a><a class="btn line" href="tel:12345678">Ring 12 34 56 78</a></div>
    <div class="trust"><span>Fast pris inden start</span><span>Én fast kontaktperson</span><span>Vi rydder op efter os</span></div>
   </div>
  </section>
 
  <section id="ydelser" class="wrap svc">
-  <div class="sec-h"><div><span class="kick">Det laver vi</span><h2 class="rv">Ingen opgave for lille.<br>Ingen for stor.</h2></div><p class="rv d1">Vi klarer det hele selv. Har vi brug for en elektriker eller VVS'er, koordinerer vi det for dig.</p></div>
+  <div class="sec-h"><div><span class="kick">Ydelser</span><h2 class="rv">Det kan vi<br>hjælpe med</h2></div><p class="rv d1">Vi klarer det hele selv. Har vi brug for en elektriker eller VVS'er, koordinerer vi det for dig.</p></div>
   <div class="grid">
    <article class="card rv"><span class="no">01</span><h3>Køkkener</h3><p>Montering af nyt køkken eller skræddersyede snedkerløsninger, der passer til millimeter.</p></article>
    <article class="card rv d1"><span class="no">02</span><h3>Tag &amp; terrasse</h3><p>Nyt tag, efterisolering, carport og terrasser i træ, der holder til danske vintre.</p></article>
    <article class="card rv d2"><span class="no">03</span><h3>Vinduer &amp; døre</h3><p>Udskiftning, der sænker varmeregningen og gør huset lunere, uden at du mærker til byggerod.</p></article>
    <article class="card rv"><span class="no">04</span><h3>Gulve</h3><p>Plankegulve, sildeben og afslibning. Vi hjælper dig med at vælge træ og finish.</p></article>
    <article class="card rv d1"><span class="no">05</span><h3>Tilbygning</h3><p>Fra første skitse til nøglen i hånden. Vi hjælper også med byggetilladelsen.</p></article>
-   <article class="card cta rv d2"><span class="no">→</span><h3>Noget helt andet?</h3><p>Skriv kort, hvad du drømmer om, så ringer vi dig op og giver et ærligt bud.</p></article>
+   <article class="card cta rv d2"><span class="no">→</span><h3>Noget helt andet?</h3><p>Skriv kort, hvad du har brug for, så ringer vi dig op og giver et bud.</p></article>
   </div>
  </section>
 
  <section id="proces" class="split">
-  <figure><img src="img/vaerksted.webp" alt="Tømrer arbejder i værkstedet" width="1200" height="800" loading="lazy"></figure>
+  <figure><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1200/800"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></figure>
   <div class="txt">
    <span class="kick">Sådan arbejder vi</span>
-   <h2 class="rv">Fra opkald til <span>færdig opgave</span></h2>
+   <h2 class="rv">Fra første opkald til <span>færdig opgave</span></h2>
    <ol>
     <li class="rv"><div><h3>Gratis besigtigelse</h3><p>Vi kommer ud, måler op og lytter til, hvad du vil have.</p></div></li>
     <li class="rv d1"><div><h3>Fast pris på skrift</h3><p>Du får et klart tilbud med pris og tidsplan og ingen ekstraregninger.</p></div></li>
@@ -166,13 +169,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  </section>
 
  <section id="projekter" class="wrap work">
-  <div class="sec-h"><div><span class="kick">Projekter</span><h2 class="rv">Arbejde, vi er<br>stolte af</h2></div><p class="rv d1">Her viser vi dine egne færdige projekter med før- og efterbilleder. Det sælger bedre end nogen tekst.</p></div>
+  <div class="sec-h"><div><span class="kick">Projekter</span><h2 class="rv">Opgaver, vi<br>har lavet</h2></div><p class="rv d1">Et udvalg af køkkener, gulve og snedkerarbejde, vi har lavet for kunder i området.</p></div>
   <div class="photos rv">
-   <figure><img src="img/koekken.webp" alt="Lyst køkken med træskabe" width="1400" height="934" loading="lazy"><figcaption><small>Køkken ·</small> Eksempelbillede</figcaption></figure>
-   <figure><img src="img/stue.webp" alt="Lyst køkken-alrum" width="1200" height="791" loading="lazy"><figcaption><small>Alrum ·</small> Eksempelbillede</figcaption></figure>
-   <figure><img src="img/hero.webp" alt="Bearbejdning af træ" width="1600" height="1067" loading="lazy"><figcaption><small>Snedkeri ·</small> Eksempelbillede</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1400/934"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><figcaption><small>Køkken ·</small> Eksempelbillede</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1200/791"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><figcaption><small>Alrum ·</small> Eksempelbillede</figcaption></figure>
+   <figure><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1600/1067"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><figcaption><small>Snedkeri ·</small> Eksempelbillede</figcaption></figure>
   </div>
-  <p class="note">Billederne er stockfotos brugt som eksempler.</p>
+  <p class="note">Her kommer dine egne billeder af færdige opgaver.</p>
  </section>
 
  <section id="tilbud" class="quote">

@@ -12,14 +12,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#2b1a12">
 <!--
-  DEMO — fiktiv virksomhed. Navn, adresse, menu og priser er opdigtede eksempler.
-  Billeder: Pexels (gratis licens, pexels.com/license):
-   hero.webp      — Ahmet Yüksek, pexels.com/photo/29784882
-   bord.webp      — miniperde, pexels.com/photo/30180369
-   juice.webp     — Vural Kayıtmaz, pexels.com/photo/33687951
-   bar.webp       — Nur, pexels.com/photo/36038129
-   croissant.webp — pexels.com/photo/27969785
-   bagvaerk.webp  — pexels.com/photo/32846791
+  DEMO: fiktiv virksomhed. Navn, adresse, menu og priser er opdigtede eksempler.
+  Billederne er pladsholdere. Kunden leverer sine egne billeder.
 -->
 <style>
 :root{--dark:#2b1a12;--dark2:#3a2419;--cream:#f7ecd9;--paper:#fbf5ea;--orange:#e5673a;--olive:#7d8a4e;--mute:#a08b78;
@@ -54,7 +48,7 @@ header{padding:54px 0 0;position:relative;z-index:3}
 .hero .open::before{content:"";width:10px;height:10px;border-radius:50%;background:#8fd16a;box-shadow:0 0 0 4px rgba(143,209,106,.25)}
 .stack{position:relative;height:600px}
 .stack figure{position:absolute;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.7);will-change:transform}
-.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack figure .ph{width:100%;height:100%;object-fit:cover}
 .stack .a{width:68%;height:82%;right:0;top:0;transform:rotate(3deg)}
 .stack .b{width:48%;height:52%;left:0;bottom:0;transform:rotate(-6deg);border:8px solid var(--dark2)}
 .stamp{position:absolute;left:30%;top:6%;width:140px;height:140px;z-index:3;animation:spin 18s linear infinite}
@@ -86,12 +80,12 @@ header{padding:54px 0 0;position:relative;z-index:3}
 /* scroll-billeder */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 0 110px;align-items:center}
 .duo figure{border-radius:32px;overflow:hidden;aspect-ratio:3/4}
-.duo figure img{width:100%;height:100%;object-fit:cover}
+.duo figure .ph{width:100%;height:100%;object-fit:cover}
 .duo .txt h2{font:400 clamp(40px,5vw,72px)/.98 var(--display);margin-bottom:22px}
 .duo .txt p{font-size:19px;color:#6d5444;max-width:40ch}
 .slide-l,.slide-r{will-change:transform}
 .wide{margin:0 20px;border-radius:40px;overflow:hidden;height:70vh;position:relative}
-.wide img{width:100%;height:130%;object-fit:cover;will-change:transform}
+.wide .ph{width:100%;height:130%;object-fit:cover;will-change:transform}
 .wide .over{position:absolute;inset:0;display:flex;align-items:flex-end;padding:48px;background:linear-gradient(to top,rgba(43,26,18,.75),transparent 60%);color:var(--cream)}
 .wide .over p{font:400 clamp(32px,4.4vw,64px)/1 var(--display);max-width:16ch}
 /* book bord */
@@ -128,6 +122,13 @@ footer{padding:30px 0 110px;color:var(--mute);font-size:14px}
  .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}}
+
+/* billedpladsholdere: kunden leverer egne billeder */
+.ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;aspect-ratio:var(--ar,3/2);background:linear-gradient(145deg,#f3e4cc,#ead6b8);color:#7a5440;text-align:center;overflow:hidden}
+.ph i{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.5)}
+.ph svg{width:26px;height:26px}
+.ph span{font:600 13px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.wide .ph{background:linear-gradient(145deg,#c98a5e,#9c5a39);color:#fbf5ea;justify-content:flex-start;padding-top:14vh}.wide .ph i{background:rgba(255,255,255,.18)}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -142,24 +143,24 @@ footer{padding:30px 0 110px;color:var(--mute);font-size:14px}
  </header>
  <div class="wrap hero-grid">
   <div>
-   <h1>Kaffe, kager <span>&amp; lange</span> morgener.</h1>
-   <p>Nybagte croissanter fra kl. 7, kaffe brygget med omhu og brunch, der er værd at stå op til. Kom som du er. Vi har altid en plads ved vinduet.</p>
+   <h1>Café og brunch <span>i Fiktivby</span></h1>
+   <p>Vi bager croissanter og boller hver morgen fra kl. 7 og serverer brunch hele dagen. Book et bord online, eller kig bare forbi.</p>
    <div class="ctas"><a class="btn" href="#bord">Book bord til brunch</a><a class="btn cream" href="#menu">Se menuen</a></div>
    <p class="open">Åbent i dag kl. 7 til 17</p>
   </div>
   <div class="stack">
-   <svg class="stamp" viewBox="0 0 140 140" aria-hidden="true"><defs><path id="c" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><circle cx="70" cy="70" r="68" fill="#e5673a"/><text font-family="Trebuchet MS,sans-serif" font-weight="700" font-size="13" fill="#fff"><textPath href="#c" textLength="320" lengthAdjust="spacing">BAGT HER · HVER MORGEN · SIDEN KL. 7 ·</textPath></text><text x="70" y="80" text-anchor="middle" font-size="30" fill="#fff">☕</text></svg>
-   <figure class="a" data-float="-0.06"><img src="img/hero.webp" alt="Cappuccino med latte art og stearinlys" width="1100" height="1649" fetchpriority="high"></figure>
-   <figure class="b" data-float="0.08"><img src="img/croissant.webp" alt="Nybagte croissanter" width="1400" height="934"></figure>
+   <svg class="stamp" viewBox="0 0 140 140" aria-hidden="true"><defs><path id="c" d="M70,70 m-52,0 a52,52 0 1,1 104,0 a52,52 0 1,1 -104,0"/></defs><circle cx="70" cy="70" r="68" fill="#e5673a"/><text font-family="Trebuchet MS,sans-serif" font-weight="700" font-size="13" fill="#fff"><textPath href="#c" textLength="320" lengthAdjust="spacing">BAGT HER HVER MORGEN · CAFÉ KORNBLOMST ·</textPath></text><text x="70" y="80" text-anchor="middle" font-size="30" fill="#fff">☕</text></svg>
+   <figure class="a" data-float="-0.06"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1100/1649"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></figure>
+   <figure class="b" data-float="0.08"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1400/934"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></figure>
   </div>
  </div>
 </section>
 
 <main>
  <section class="wrap usp">
-  <div class="rv"><span class="ico">🥐</span><h3>Bagt her. Hver dag.</h3><p>Vores bagværk kommer ikke i en kasse. Det kommer ud af ovnen, mens du venter.</p></div>
-  <div class="rv d1"><span class="ico">☕</span><h3>Kaffe med karakter</h3><p>Bønner fra små ristere, brygget af folk der elsker det. Spørg endelig om dagens filterkaffe.</p></div>
-  <div class="rv d2"><span class="ico">🌿</span><h3>Plads til alle</h3><p>Hunde, barnevogne og bærbare er velkomne. Vi har gratis wifi og stikkontakter ved hvert bord.</p></div>
+  <div class="rv"><span class="ico">🥐</span><h3>Vi bager selv</h3><p>Croissanter, boller og kager bliver bagt i vores eget køkken hver morgen.</p></div>
+  <div class="rv d1"><span class="ico">☕</span><h3>Kaffe fra små ristere</h3><p>Vi køber vores bønner hos små ristere. Spørg gerne om dagens filterkaffe.</p></div>
+  <div class="rv d2"><span class="ico">🌿</span><h3>Hunde og barnevogne er velkomne</h3><p>Der er gratis wifi og stikkontakter ved de fleste borde.</p></div>
  </section>
 
  <section id="menu" class="wrap menu">
@@ -194,27 +195,27 @@ footer{padding:30px 0 110px;color:var(--mute);font-size:14px}
  </section>
 
  <section class="wrap duo">
-  <figure class="slide-l" data-slide="-1"><img src="img/bar.webp" alt="Kaffebar med kopper og latte" width="900" height="1200" loading="lazy"></figure>
+  <figure class="slide-l" data-slide="-1"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:900/1200"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></figure>
   <div class="txt">
-   <h2 class="rv">Dit faste sted. Bare hyggeligere.</h2>
-   <p class="rv d1">Uanset om du skal mødes med en veninde, arbejde en time i fred eller bare nyde en kop kaffe alene, så føles Kornblomst som at komme hjem, bare med bedre kaffe.</p>
+   <h2 class="rv">Kom forbi til en kop kaffe</h2>
+   <p class="rv d1">Mange af vores gæster kommer for at mødes med venner, arbejde en times tid eller læse avisen. Du er velkommen, også hvis du bare skal have en kop kaffe med.</p>
   </div>
  </section>
 
- <div class="wide"><img src="img/croissant.webp" alt="Croissanter på et bræt" width="1400" height="934" loading="lazy" data-pan><div class="over"><p>Duften af smør kl. 7 om morgenen.</p></div></div>
+ <div class="wide"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1400/934"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><div class="over"><p>Croissanterne kommer ud af ovnen kl. 7.</p></div></div>
 
  <section class="wrap duo">
   <div class="txt">
-   <h2 class="rv">Brunch, der samler folk.</h2>
-   <p class="rv d1">Fødselsdag, barselsgruppe eller bare søndag? Vi dækker gerne op til grupper på op til 12 personer. Book bordet online, så står det klar, når I kommer.</p>
+   <h2 class="rv">Brunch for grupper</h2>
+   <p class="rv d1">Vi dækker gerne op til fødselsdage, barselsgrupper og andre selskaber på op til 12 personer. Book bordet online, så står det klar, når I kommer.</p>
   </div>
-  <figure class="slide-r" data-slide="1"><img src="img/juice.webp" alt="Latte og friskpresset juice på træbord" width="900" height="1200" loading="lazy"></figure>
+  <figure class="slide-r" data-slide="1"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:900/1200"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></figure>
  </section>
 
  <section id="bord" class="table">
   <div class="wrap">
    <div>
-    <h2 class="rv">Book et bord. Det tager 20 sekunder.</h2>
+    <h2 class="rv">Book et bord online</h2>
     <p class="rv d1">Vi holder bordet i 15 minutter. Kommer I flere end 12? Ring til os, så finder vi en løsning.</p>
    </div>
    <form class="rv d2" onsubmit="event.preventDefault();this.querySelector('.msg').textContent='Dette er en demo. Her ville gæsten få en bekræftelse på SMS.'">

@@ -12,12 +12,8 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#eef4f1">
 <!--
-  DEMO — fiktiv virksomhed. Navn, adresse, telefon og priser er opdigtede eksempler.
-  Billeder: Pexels (gratis licens, pexels.com/license):
-   hero.webp          — Funkcinės Terapijos Centras, pexels.com/photo/20860594
-   behandling.webp    — Funkcinės Terapijos Centras, pexels.com/photo/20860606
-   massage.webp       — Ryutaro Tsukata, pexels.com/photo/5473177
-   genoptraening.webp — Jonathan Borba, pexels.com/photo/27730554
+  DEMO: fiktiv virksomhed. Navn, adresse, telefon og priser er opdigtede eksempler.
+  Billederne er pladsholdere. Kunden leverer sine egne billeder.
 -->
 <style>
 :root{--bg:#eef4f1;--white:#fff;--ink:#0f2b26;--teal:#1f7a68;--teal2:#16604f;--mint:#cfe6dc;--sky:#dfeaf6;--mute:#5d746e;--line:#d6e3dd;
@@ -52,7 +48,7 @@ header{padding:50px 0 0}
 .checks li::before{content:"✓";color:var(--teal);font-weight:700;margin-right:8px}
 .hero-img{position:relative;border-radius:36px;overflow:hidden;aspect-ratio:4/4.4;clip-path:inset(0 0 0 0 round 36px);animation:open 1.2s cubic-bezier(.6,0,.2,1) both}
 @keyframes open{from{clip-path:inset(40% 30% 40% 30% round 36px)}to{clip-path:inset(0 0 0 0 round 36px)}}
-.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-img .ph{width:100%;height:100%;object-fit:cover}
 .float{position:absolute;background:var(--white);border-radius:20px;padding:16px 18px;box-shadow:0 20px 40px -20px rgba(15,43,38,.45);font-size:14px;display:flex;gap:12px;align-items:center;z-index:2}
 .float b{display:block;font-size:16px}
 .float .ic{width:40px;height:40px;border-radius:12px;background:var(--mint);display:grid;place-items:center;font-size:20px}
@@ -75,8 +71,8 @@ header{padding:50px 0 0}
 /* scroll-fortælling */
 .story{display:grid;grid-template-columns:1fr 1fr;gap:70px}
 .story .sticky{position:sticky;top:80px;height:calc(100vh - 160px);max-height:620px;border-radius:32px;overflow:hidden}
-.story .sticky img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.2s}
-.story .sticky img.on{opacity:1;transform:scale(1)}
+.story .sticky .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.08);transition:opacity .8s,transform 1.2s}
+.story .sticky .ph.on{opacity:1;transform:scale(1)}
 .story .steps{padding:12vh 0}
 .step{min-height:56vh;display:flex;flex-direction:column;justify-content:center;opacity:.3;transition:opacity .5s}
 .step.on{opacity:1}
@@ -101,7 +97,7 @@ header{padding:50px 0 0}
 .faq details{background:var(--white);border-radius:20px;padding:22px 26px;margin-top:12px}
 .faq summary{font-weight:600;font-size:18px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
 .faq summary::after{content:"+";color:var(--teal);font-size:24px;line-height:1}
-.faq details[open] summary::after{content:"–"}
+.faq details[open] summary::after{content:"−"}
 .faq details p{color:var(--mute);margin-top:12px}
 footer{padding:40px 0 110px;color:var(--mute);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
@@ -118,12 +114,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  .sec{padding:80px 0}
  .story{grid-template-columns:1fr}.story .sticky{display:none}.story .steps{padding:0}
  .step{min-height:0;opacity:1;padding:24px 0}
- .step .m-img{display:block;border-radius:24px;aspect-ratio:16/10;object-fit:cover;width:100%;margin-bottom:22px}
+ .step .m-img{display:flex;border-radius:24px;aspect-ratio:16/10;object-fit:cover;width:100%;margin-bottom:22px}
  .book{margin:0 10px;padding:70px 0;border-radius:28px}
  .ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}
 }
 @media (max-width:560px){.cards{grid-template-columns:1fr}.c{min-height:0}.days{grid-template-columns:repeat(3,1fr)}.slots{grid-template-columns:repeat(2,1fr)}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}.step{opacity:1}.bar{display:none}}
+
+/* billedpladsholdere: kunden leverer egne billeder */
+.ph{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;aspect-ratio:var(--ar,3/2);background:linear-gradient(145deg,#e3f0ea,#d3e7de);color:#16604f;text-align:center;overflow:hidden}
+.ph i{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.6)}
+.ph svg{width:26px;height:26px}
+.ph span{font:600 13px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;opacity:.85}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -140,13 +142,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  <section class="wrap hero">
   <div>
    <span class="pill">● Ledige tider i denne uge</span>
-   <h1>Kom af med smerten. <span>Og bliv fri af den.</span></h1>
-   <p>Vi finder årsagen, ikke bare symptomet. Du får en grundig undersøgelse, en plan du forstår og øvelser, der passer ind i din hverdag.</p>
+   <h1>Fysioterapi <span>i Fiktivby</span></h1>
+   <p>Vi behandler smerter i ryg, nakke, skuldre og knæ og hjælper med genoptræning efter skader og operationer. Du kan booke tid uden henvisning.</p>
    <div class="ctas"><a class="btn" href="#book">Book første konsultation →</a><a class="btn soft" href="#behandlinger">Se behandlinger</a></div>
    <ul class="checks"><li>Ingen henvisning nødvendig</li><li>Tid inden for få dage</li><li>Aftensåbent</li></ul>
   </div>
   <div class="hero-col">
-   <div class="hero-img"><img src="img/hero.webp" alt="Fysioterapeut instruerer patient i en øvelse" width="1600" height="1067" fetchpriority="high"></div>
+   <div class="hero-img"><div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1600/1067"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div></div>
    <div class="float f2 rv d2"><span class="ic">📅</span><div><b>Book online</b>Døgnet rundt</div></div>
    <div class="float f1 rv d3"><span class="ic">💬</span><div><b>Gratis telefonsnak</b>Er fysioterapi noget for dig?</div></div>
   </div>
@@ -159,8 +161,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  </div>
 
  <section id="behandlinger" class="wrap sec">
-  <h2 class="rv">Behandling, der passer til dig og din krop</h2>
-  <p class="sub rv d1">Uanset om det er ryggen efter en lang arbejdsdag, knæet efter løbeturen eller genoptræning efter en operation.</p>
+  <h2 class="rv">Behandlinger og priser</h2>
+  <p class="sub rv d1">Vi hjælper med smerter i hverdagen, sportsskader og genoptræning efter en operation.</p>
   <div class="cards">
    <article class="c rv"><span class="ic">🦴</span><h3>Fysioterapi</h3><p>Undersøgelse og behandling af smerter i ryg, nakke, skuldre og led.</p><span class="pr">Fra 450 kr</span></article>
    <article class="c rv d1"><span class="ic">🏃</span><h3>Sportsskader</h3><p>Hurtigt tilbage til din sport med en plan, der forebygger nye skader.</p><span class="pr">Fra 450 kr</span></article>
@@ -173,21 +175,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <h2 class="rv">Sådan foregår dit forløb</h2>
   <div class="story">
    <div class="sticky" aria-hidden="true">
-    <img src="img/behandling.webp" alt="" width="1000" height="667" class="on" loading="lazy">
-    <img src="img/massage.webp" alt="" width="1000" height="667" loading="lazy">
-    <img src="img/genoptraening.webp" alt="" width="900" height="1349" loading="lazy">
+    <div class="ph on" role="img" aria-label="Pladsholder til billede" style="--ar:1000/667"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div>
+    <div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:1000/667"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div>
+    <div class="ph" role="img" aria-label="Pladsholder til billede" style="--ar:900/1349"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div>
    </div>
    <div class="steps">
-    <div class="step on" data-i="0"><img class="m-img" src="img/behandling.webp" alt="Fysioterapeut undersøger patient" width="1000" height="667" loading="lazy"><span class="n">01 · Undersøgelse</span><h3>Vi finder ud af, hvad der er galt</h3><p>Første gang bruger vi god tid på at lytte, undersøge og forklare. Du går hjem med en klar forståelse af dit problem.</p></div>
-    <div class="step" data-i="1"><img class="m-img" src="img/massage.webp" alt="Behandling på briks" width="1000" height="667" loading="lazy"><span class="n">02 · Behandling</span><h3>En plan, du kan se dig selv i</h3><p>Vi kombinerer behandling og øvelser, så du mærker fremskridt hurtigt og ved, hvorfor du gør, som du gør.</p></div>
-    <div class="step" data-i="2"><img class="m-img" src="img/genoptraening.webp" alt="Genoptræning af ben" width="900" height="1349" loading="lazy"><span class="n">03 · Selvhjulpen</span><h3>Du klarer dig selv bagefter</h3><p>Målet er, at du ikke har brug for os. Du får et øvelsesprogram i en app, så du kan fortsætte derhjemme.</p></div>
+    <div class="step on" data-i="0"><div class="ph m-img" role="img" aria-label="Pladsholder til billede" style="--ar:1000/667"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><span class="n">01 · Undersøgelse</span><h3>Første konsultation</h3><p>Første gang bruger vi en time på at snakke, undersøge dig og forklare, hvad vi finder.</p></div>
+    <div class="step" data-i="1"><div class="ph m-img" role="img" aria-label="Pladsholder til billede" style="--ar:1000/667"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><span class="n">02 · Behandling</span><h3>Behandling og øvelser</h3><p>Vi lægger en plan sammen med dig og kombinerer behandling på klinikken med øvelser. Planen justerer vi undervejs.</p></div>
+    <div class="step" data-i="2"><div class="ph m-img" role="img" aria-label="Pladsholder til billede" style="--ar:900/1349"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M20.5 15.5l-4.6-4.6a1.2 1.2 0 0 0-1.7 0L6.5 19"/></svg></i><span>Dit billede her</span></div><span class="n">03 · Træning hjemme</span><h3>Øvelser til derhjemme</h3><p>Du får et øvelsesprogram i en app, så du kan træne videre derhjemme, når forløbet er slut.</p></div>
    </div>
   </div>
  </section>
 
  <section id="book" class="book">
   <div class="wrap">
-   <div><h2 class="rv">Book din første tid på under et minut</h2><p class="sub rv d1">Vælg en dag og et tidspunkt. Du får en bekræftelse og en påmindelse på SMS dagen før.</p></div>
+   <div><h2 class="rv">Book din første tid online</h2><p class="sub rv d1">Vælg en dag og et tidspunkt. Du får en bekræftelse og en påmindelse på SMS dagen før.</p></div>
    <form class="cal rv d1" onsubmit="event.preventDefault();this.querySelector('.msg').textContent='Dette er en demo. Her ville patienten få en bekræftelse på SMS.'">
     <h3>Første konsultation · 60 min</h3>
     <div class="days" data-group><button type="button" class="day" aria-pressed="true">Man<small>Uge 1</small></button><button type="button" class="day" aria-pressed="false">Tir<small>Uge 1</small></button><button type="button" class="day" aria-pressed="false">Ons<small>Uge 1</small></button><button type="button" class="day" aria-pressed="false">Tor<small>Uge 1</small></button><button type="button" class="day" aria-pressed="false">Fre<small>Uge 1</small></button></div>
@@ -199,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  </section>
 
  <section id="faq" class="wrap sec">
-  <h2 class="rv">Gode spørgsmål</h2>
+  <h2 class="rv">Ofte stillede spørgsmål</h2>
   <div class="faq rv d1">
    <details><summary>Skal jeg have en henvisning?</summary><p>Nej, du kan altid booke direkte. Har du en henvisning fra din læge, kan du dog få tilskud til behandlingen.</p></details>
    <details><summary>Hvad skal jeg have på?</summary><p>Behageligt tøj, du kan bevæge dig i. Shorts er en fordel, hvis det drejer sig om knæ eller hofte.</p></details>
@@ -217,7 +219,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
  var els=document.querySelectorAll('.rv');
  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});els.forEach(function(e){io.observe(e)});
- var imgs=document.querySelectorAll('.story .sticky img'),steps=document.querySelectorAll('.step');
+ var imgs=document.querySelectorAll('.story .sticky .ph'),steps=document.querySelectorAll('.step');
  var so=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){var i=+e.target.dataset.i;steps.forEach(function(s){s.classList.toggle('on',s===e.target)});imgs.forEach(function(im,k){im.classList.toggle('on',k===i)})}})},{rootMargin:'-45% 0px -45% 0px'});
  steps.forEach(function(s){so.observe(s)});
  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
