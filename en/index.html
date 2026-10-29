@@ -9,9 +9,9 @@
 <link rel="alternate" hreflang="da" href="https://edwebworks.com/">
 <link rel="alternate" hreflang="en" href="https://edwebworks.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://edwebworks.com/">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=3">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="da_DK">
@@ -19,172 +19,319 @@
 <meta property="og:url" content="https://edwebworks.com/en/">
 <meta property="og:title" content="ED. Web Works | Websites for businesses, built remotely from Copenhagen">
 <meta property="og:description" content="Simple, fast websites for all kinds of businesses, wherever you are. Fixed price, a free demo before you pay and weekly status updates. Based in Copenhagen, Denmark.">
-<meta property="og:image" content="https://edwebworks.com/og.png?v=2">
+<meta property="og:image" content="https://edwebworks.com/og.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="ED. Web Works. Websites for businesses">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#141f4f">
+<meta name="theme-color" content="#f4f1ec">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#16181a;--grey:#686c6f;--grey-l:#85898c;--line:#ececec;--soft:#f3f3f2;--act:#d4420f;--act-h:#b8380b;--trust:#141f4f;--trust-2:#1c2a66;--trust-link:#2e3fa3;--trust-mute:#b4bbe0;--trust-tint:#eef0fa;--f:"Geist",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;--pad:24px}
+:root{--bg:#f4f1ec;--ink:#141414;--g:#5f5b55;--gl:#8a857c;--line:#d9d3c9;--soft:#e9e5de;--dark:#141414;--on-dark:#cfc9bf;
+ --f:"Geist",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;--pad:clamp(20px,3.2vw,44px)}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--f);color:var(--ink);background:#fff;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-::selection{background:var(--act);color:#fff}
-.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:99px;z-index:99}.skip:focus{left:8px}
-:focus-visible{outline:2px solid var(--act);outline-offset:3px}
-.px{padding-left:var(--pad);padding-right:var(--pad)}
-.wrap{max-width:1200px;margin:0 auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px)}
-.nav{display:flex;justify-content:space-between;align-items:center;height:68px;max-width:1200px;margin:0 auto}
-.logo{font-size:22px;font-weight:500;letter-spacing:-.03em}.logo i{font-style:normal;color:var(--act)}
-.pill{display:inline-flex;align-items:center;gap:10px;font:400 14px/1 var(--f);padding:11px 16px 11px 18px;border-radius:99px;background:var(--ink);color:#fff;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
-.pill .plus{display:inline-block;transition:transform .25s}.pill:hover .plus{transform:rotate(90deg)}
-.pill.light{background:var(--soft);color:var(--ink)}.pill.light:hover{background:var(--trust-tint);color:var(--trust)}
-.pill.go{background:var(--act);color:#fff;box-shadow:0 8px 22px -10px rgba(212,66,15,.65)}.pill.go:hover{background:var(--act-h);transform:translateY(-1px)}
-.pill.lg{font-size:16px;padding:16px 22px 16px 26px}
-.reassure{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--grey);margin-top:12px}
-.reassure::before{content:"";width:14px;height:14px;flex:none;border-radius:50%;background:var(--trust-tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6'%3E%3Cpath d='M1 3l2 2 4-4' fill='none' stroke='%232e3fa3' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center}
-.crumbs{font-size:13px;color:var(--grey);padding-top:28px}.crumbs ol{list-style:none;display:flex;gap:8px;flex-wrap:wrap}.crumbs li+li::before{content:"/";margin-right:8px;color:var(--grey-l)}.crumbs a{color:var(--trust-link)}
-.hero{position:relative;padding-top:12vh;padding-bottom:88px;overflow:hidden}
-.hero::before{content:"";position:absolute;right:-12%;top:-18%;width:62vw;height:62vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(46,63,163,.13),rgba(46,63,163,.05) 55%,transparent 75%);pointer-events:none;z-index:-1}
-.kicker{font-size:14px;color:var(--grey);margin-bottom:22px;display:flex;align-items:center;gap:10px}.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--act)}
-.hero h1{font-weight:400;font-size:clamp(40px,5.6vw,84px);line-height:1.02;letter-spacing:-.045em;max-width:15ch}
-.hero h1 span{color:var(--act)}
-.hero .lead{font-size:20px;line-height:1.45;color:#3c4043;max-width:60ch;margin-top:36px}
-.cta{display:flex;gap:8px;flex-wrap:wrap;margin-top:32px}
-.usp{list-style:none;display:flex;gap:10px 28px;flex-wrap:wrap;margin-top:40px;font-size:15px;color:#3c4043}
-.usp li{display:flex;gap:10px;align-items:center}.usp li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--trust-link)}
-section.blk{padding-top:112px}
-.h2{font-weight:400;font-size:clamp(32px,4vw,56px);line-height:1.04;letter-spacing:-.04em;max-width:20ch}
-.h2 span{color:var(--grey-l)}
-.intro{color:#55595c;max-width:62ch;margin-top:18px;font-size:17px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px}
-.card{background:var(--soft);border-radius:4px;padding:28px}
-.card h3{font-weight:400;font-size:26px;letter-spacing:-.03em;margin-bottom:8px}
-.card p{color:#55595c}
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:40px}
-.plan{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column}
-.plan.dark{background:linear-gradient(170deg,var(--trust-2),var(--trust));color:#fff}
-.plan .top{font-size:13px;color:var(--grey)}.plan.dark .top{color:var(--trust-mute)}
-.plan h3{font-weight:400;font-size:32px;letter-spacing:-.035em;margin:28px 0 4px}
-.plan .price{font-size:22px;letter-spacing:-.02em}.plan .price small{font-size:13px;color:var(--grey)}.plan.dark .price small{color:var(--trust-mute)}
-.plan .desc{color:#55595c;margin:12px 0 18px;font-size:15px}.plan.dark .desc{color:#c8cdea}
-.plan ul{list-style:none;flex:1;margin-bottom:24px;font-size:15px}
-.plan li{padding:8px 0;border-top:1px solid rgba(0,0,0,.08);display:flex;gap:10px}.plan.dark li{border-color:rgba(255,255,255,.14)}
-.plan li::before{content:"+";color:var(--grey)}.plan.dark li::before{color:#ff8a5c}
-.plan .pill{align-self:flex-start}.plan .pill.light{background:#fff}
-.note{font-size:14px;color:var(--grey);margin-top:16px}
-.band{background:var(--trust);color:#fff;border-radius:6px;margin:112px var(--pad) 0;position:relative;overflow:hidden}
-.band::before{content:"";position:absolute;left:-10%;bottom:-60%;width:70%;height:140%;background:radial-gradient(closest-side,rgba(110,128,230,.28),transparent 70%);pointer-events:none}
-.band .in{position:relative;padding:88px 40px;max-width:1200px;margin:0 auto}
-.band .h2 span{color:var(--trust-mute)}
-.steps{list-style:none;margin-top:40px;border-top:1px solid rgba(255,255,255,.55);counter-reset:s}
-.steps li{display:grid;grid-template-columns:80px 1fr 1.3fr;gap:var(--pad);padding:26px 0;border-bottom:1px solid rgba(255,255,255,.14);align-items:baseline;counter-increment:s}
-.steps li::before{content:"0" counter(s);font-size:14px;color:var(--trust-mute)}
-.steps h3{font-weight:400;font-size:26px;letter-spacing:-.03em}.steps p{color:#c8cdea}
-.demos{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:40px}
-.demo{background:var(--soft);border-radius:4px;padding:26px;display:flex;flex-direction:column;gap:8px}
-.demo .meta{font-size:13px;color:var(--grey);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.demo .ex{color:var(--trust-link);background:var(--trust-tint);border-radius:99px;padding:3px 10px}
-.demo h3{font-weight:400;font-size:26px;letter-spacing:-.03em}
-.demo p{color:#55595c;flex:1}
-.demo .pill{align-self:flex-start;background:#fff;color:var(--ink);margin-top:8px}.demo .pill:hover{background:var(--trust);color:#fff}
-.faq{margin-top:32px;border-top:1px solid var(--line);max-width:860px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;position:relative}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--f);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100%}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+::selection{background:var(--ink);color:#fff}
+:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.skip{position:absolute;left:8px;top:8px;transform:translateY(-200%);background:var(--ink);color:#fff;padding:8px 14px;z-index:99}
+.skip:focus{transform:none}
+.w{padding-left:var(--pad);padding-right:var(--pad)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.grid>*{min-width:0}
+h1,h2,h3{overflow-wrap:break-word}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(244,241,236,.94);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.logo{font-size:18px;font-weight:500;letter-spacing:-.02em;text-decoration:none}
+.links{display:flex;gap:28px;list-style:none;font-size:15px}
+.links a{text-decoration:none;color:var(--g)}
+.links a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;font:400 15px/1 var(--f);padding:13px 20px;border-radius:99px;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:#000}
+.btn.sm{font-size:14px;padding:10px 16px}
+.btn.inv{background:#fff;color:var(--ink)}
+.btn.inv:hover{background:var(--soft)}
+.tl{color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.tl:hover{text-decoration-thickness:2px}
+
+/* hero */
+.hero{padding-top:clamp(88px,17vh,180px);padding-bottom:clamp(64px,10vh,120px)}
+.hero h1{grid-column:1/-1;font-weight:400;font-size:clamp(38px,5.9vw,88px);line-height:1.02;letter-spacing:-.045em;max-width:22ch}
+.hero h1 span{color:var(--gl)}
+.hero-foot{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:clamp(48px,8vh,88px);align-items:end}
+.hero-foot p{grid-column:7/13;justify-self:end;text-align:right;font-size:19px;line-height:1.45;color:#3a3733}
+.hero-cta{grid-column:7/13;display:flex;justify-content:flex-end;align-items:center;gap:28px;margin-top:28px;flex-wrap:wrap}
+.small{font-size:14px;color:var(--g)}
+
+/* sections */
+.sec{border-top:1px solid var(--line);padding-top:28px;padding-bottom:clamp(80px,12vh,140px)}
+.label{grid-column:1/4;font-size:14px;color:var(--g);display:flex;gap:14px}
+.label b{font-weight:400;color:var(--ink)}
+.body{grid-column:4/13}
+h2{font-weight:400;font-size:clamp(30px,3.7vw,54px);line-height:1.06;letter-spacing:-.035em;max-width:20ch}
+.intro{max-width:46ch;color:var(--g);margin-top:22px}
+
+/* eksempler */
+
+.demo .shot{display:block;background:#e3ded5;aspect-ratio:16/10;overflow:hidden}
+.demo .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.demo .shot:hover img{transform:scale(1.025)}
+.demo .cap{display:flex;justify-content:space-between;gap:16px;margin-top:16px;align-items:baseline}
+.demo h3{font-weight:400;font-size:22px;letter-spacing:-.02em}
+.demo .cat{font-size:14px;color:var(--g)}
+.demo p{color:var(--g);margin-top:4px}
+.demo .tl{display:inline-block;margin-top:12px;font-size:15px}
+
+
+/* proces */
+.steps{list-style:none;margin-top:56px;border-bottom:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:80px minmax(0,1fr) minmax(0,1.3fr);gap:24px;align-items:baseline;border-top:1px solid var(--line);padding:26px 0}
+.steps .n{font-size:14px;color:var(--g)}
+.steps h3{font-weight:400;font-size:clamp(28px,3vw,44px);letter-spacing:-.03em;line-height:1}
+.steps p{color:var(--g)}
+
+/* priser */
+.plans{margin-top:56px;border-bottom:1px solid var(--line)}
+.plan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr) 230px;gap:24px 32px;border-top:1px solid var(--line);padding:36px 0}
+.plan h3{font-weight:400;font-size:clamp(30px,3.2vw,46px);letter-spacing:-.035em;line-height:1}
+.plan .for{font-size:14px;color:var(--g);margin-top:10px}
+.plan .rec{display:inline-block;font-size:13px;line-height:1;padding:6px 10px;border:1px solid var(--ink);border-radius:99px;margin-top:14px}
+.plan .price{font-size:22px;letter-spacing:-.02em}
+.plan .price small{font-size:14px;color:var(--g);letter-spacing:0}
+.plan .desc{color:var(--g);margin-top:6px;max-width:40ch}
+.plan ul{list-style:none;margin-top:18px;columns:2;column-gap:24px;font-size:15px}
+.plan li{padding:5px 0;break-inside:avoid}
+.plan li::before{content:"+ ";color:var(--gl)}
+.plan li.inc::before{content:"↳ "}
+.plan .act{align-self:start;justify-self:end;white-space:nowrap;font-size:15px}
+.pk-note{margin-top:28px;font-size:15px;color:var(--g)}
+
+/* om */
+.about{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));column-gap:24px;align-items:start}
+.about figure{grid-column:1/4}
+.about figure img{width:100%;aspect-ratio:382/434;object-fit:cover;filter:grayscale(.15)}
+.about .txt{grid-column:5/10}
+.about .txt p{margin-top:22px;max-width:52ch;color:#3a3733}
+.facts{margin-top:36px;border-bottom:1px solid var(--line)}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:16px;border-top:1px solid var(--line);padding:14px 0;font-size:15px}
+.facts dt{color:var(--g)}
+
+/* kontakt */
+.contact{background:var(--dark);color:#fff;padding-top:clamp(80px,12vh,140px);padding-bottom:40px}
+.contact h2{grid-column:1/8;font-size:clamp(38px,5.6vw,84px);line-height:1.02;letter-spacing:-.045em;max-width:14ch}
+.contact .side{grid-column:1/6;margin-top:32px;color:var(--on-dark);max-width:40ch}
+.contact .side ul{list-style:none;margin-top:18px;font-size:15px}
+.contact .side li{padding:4px 0}
+.contact .side li::before{content:"+ ";color:#8f897f}
+.contact .side a{color:#fff}
+form{grid-column:8/13;grid-row:1/3;display:grid;gap:26px;align-self:start}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+label{display:block;font-size:13px;color:var(--on-dark);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:#fff;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.35);padding:10px 0;border-radius:0;outline:none}
+select option{color:#141414}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-bottom-color:#fff}
+input::placeholder,textarea::placeholder{color:#8f897f}
+.send{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.send .small{color:var(--on-dark)}
+.hp{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.form-status{font-size:14px;color:var(--on-dark)}
+.form-status.err{color:#f0b4a0}
+.form-done h3{font-weight:400;font-size:28px;letter-spacing:-.02em}
+.form-done p{color:var(--on-dark);margin-top:10px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);margin-top:clamp(80px,12vh,140px);padding-top:22px;font-size:14px;color:var(--on-dark)}
+.foot a{color:#fff}
+.foot nav{display:flex;gap:24px}
+
+@media (max-width:860px){
+ body{font-size:16px}
+ .links{display:none}
+ .hero{padding-top:64px}
+ .hero-foot{margin-top:32px}
+ .hero h1{font-size:clamp(36px,10.4vw,56px);line-height:1.04}
+ .hero-foot p,.hero-cta{grid-column:1/-1;justify-self:start;text-align:left;justify-content:flex-start}
+ .hero-cta{gap:20px}
+ .label,.body{grid-column:1/-1}
+ .label{margin-bottom:28px}
+ 
+ .steps li{grid-template-columns:44px 1fr;gap:8px 16px}
+ .steps p{grid-column:2}
+ .plan{grid-template-columns:1fr;gap:16px}
+ .plan ul{columns:1}
+ .plan .act{justify-self:start}
+ .about{grid-template-columns:1fr}
+ .about figure{grid-column:1;max-width:320px}
+ .about .txt{grid-column:1;margin-top:32px}
+ .facts div{grid-template-columns:120px 1fr}
+ .contact h2,.contact .side,form{grid-column:1/-1}
+ form{grid-row:auto;margin-top:48px}
+ .row2{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* logo */
+.logo{display:inline-flex;align-items:center;gap:10px}
+.logo svg{width:30px;height:30px;flex:none}
+/* demo-rail */
+.ex-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.arrows{display:flex;gap:8px}
+.arr{width:44px;height:44px;border-radius:50%;border:1px solid var(--ink);background:transparent;color:var(--ink);font:400 18px/1 var(--f);cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s,opacity .2s}
+.arr:hover:not(:disabled){background:var(--ink);color:#fff}
+.arr:disabled{opacity:.3;cursor:default}
+.rail-wrap{grid-column:1/-1;margin-top:48px;margin-right:calc(-1*var(--pad));min-width:0;max-width:calc(100% + var(--pad));overflow:hidden}
+.rail:focus:not(:focus-visible){outline:none}
+.rail{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scroll-padding-left:0;padding-right:var(--pad);padding-bottom:18px;list-style:none;scrollbar-width:thin;scrollbar-color:var(--gl) transparent;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{height:4px}.rail::-webkit-scrollbar-thumb{background:var(--gl)}
+.rail>li{flex:0 0 calc((100% - 2*24px - var(--pad)) / 2.5);scroll-snap-align:start;min-width:0}
+
+@media (max-width:860px){.rail>li{flex-basis:78%}.rail{gap:16px}.arr{width:40px;height:40px}.ex-top h2{max-width:none}}
+/* faq (en) */
+.faq{margin-top:56px;border-bottom:1px solid var(--line)}
+.faq details{border-top:1px solid var(--line);padding:22px 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:baseline}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:18px;font-size:24px;color:var(--act);transition:transform .2s}
-.faq details[open] summary::after{transform:rotate(45deg)}
-.faq h3{font-weight:400;font-size:20px;letter-spacing:-.02em}
-.faq p{color:#55595c;padding:0 40px 24px 0;max-width:70ch}
-.faq a,.intro a{color:var(--trust-link);text-decoration:underline}
-.contact{background:var(--trust);color:#fff;margin-top:112px;padding-top:96px;padding-bottom:28px;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;right:-10%;top:-30%;width:60%;height:90%;background:radial-gradient(closest-side,rgba(212,66,15,.22),transparent 70%);pointer-events:none}
-.contact > *{position:relative}
-.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px;max-width:1200px;margin:0 auto}
-.contact .h2 em{font-style:normal;color:#ff8a5c}
-.contact .side{color:#c8cdea;margin-top:24px;font-size:17px;max-width:44ch}.contact .tel{color:#fff;text-decoration:underline;white-space:nowrap}
-form{display:grid;gap:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:28px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{display:block;font-size:13px;color:var(--trust-mute);margin-bottom:8px}
-input,select,textarea{width:100%;font:400 16px/1.4 var(--f);color:#fff;background:rgba(10,16,48,.55);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px;appearance:none}
-select option{color:#16181a;background:#fff}
-textarea{min-height:120px;resize:vertical}
-input:focus,select:focus,textarea:focus{outline:none;border-color:#ff8a5c;box-shadow:0 0 0 3px rgba(255,138,92,.18)}
-input::placeholder,textarea::placeholder{color:#8a92c4}
-.send{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.contact .reassure{margin:0;color:var(--trust-mute)}.contact .reassure::before{background-color:rgba(255,255,255,.12)}
-.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
-.form-status{font-size:15px}.form-status.err{color:#ffb59a}.form-status a{text-decoration:underline}
-button[disabled]{opacity:.6;cursor:wait}
-footer.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:96px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.14);font-size:14px;color:var(--trust-mute)}
-footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-decoration:underline}footer.foot a:hover{color:#fff}
-@media (max-width:1000px){.plans{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:1fr}}
-@media (max-width:720px){:root{--pad:18px}.nav{height:60px}.hero{padding-top:48px;padding-bottom:56px}.hero .lead{font-size:18px}section.blk{padding-top:80px}.grid,.plans,.demos{grid-template-columns:1fr}.band{margin:80px 10px 0}.band .in{padding:64px 18px}.steps li{grid-template-columns:1fr;gap:6px}.contact{margin-top:80px;padding-top:72px}.row2{grid-template-columns:1fr}form{padding:20px}}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-.navr{display:flex;align-items:center;gap:14px}.lang{font-size:14px;color:var(--grey)}.lang a{text-decoration:underline}.contact .lang{color:var(--trust-mute)}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:40px}
-@media (max-width:720px){.about{grid-template-columns:1fr}.navr .lang{display:none}}
+.faq summary h3{font-weight:400;font-size:clamp(20px,2vw,26px);letter-spacing:-.02em;line-height:1.2}
+.faq summary::after{content:"+";color:var(--gl);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{color:var(--g);margin-top:12px;max-width:62ch}
+.contact .side a.tel{text-decoration:underline}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://edwebworks.com/#ed","name":"ED. Web Works","alternateName":"ED.","url":"https://edwebworks.com/","email":"edwebworks@outlook.com","telephone":"+45 26 57 94 81","contactPoint":{"@type":"ContactPoint","contactType":"customer service","telephone":"+45 26 57 94 81","email":"edwebworks@outlook.com","availableLanguage":["da","en"],"hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"20:00"}},"description":"Simple, fast websites for all kinds of businesses. Fixed price, a free demo before you pay and weekly status updates. Based in Copenhagen, Denmark, working remotely."},{"@type":"WebPage","@id":"https://edwebworks.com/en/","url":"https://edwebworks.com/en/","name":"ED. Web Works | Websites for businesses, built remotely from Copenhagen","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://edwebworks.com/#website","url":"https://edwebworks.com/","name":"ED. Web Works"},"about":{"@id":"https://edwebworks.com/#ed"}},{"@type":"FAQPage","@id":"https://edwebworks.com/en/#faq","mainEntity":[{"@type":"Question","name":"How much does a website cost?","acceptedAnswer":{"@type":"Answer","text":"Basic is from $799 and Growth is from $1,499. Custom is quoted on request, and Care is an optional monthly add on at $49 a month. All prices are excl. VAT, so send me a message and you will get a clear, fixed price before we begin."}},{"@type":"Question","name":"What is included in the price?","acceptedAnswer":{"@type":"Answer","text":"Setting up your site is included. Domain and hosting are covered by the Care add on, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately."}},{"@type":"Question","name":"Do you work with businesses outside Denmark?","acceptedAnswer":{"@type":"Answer","text":"Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link."}},{"@type":"Question","name":"Do I have to pay for the demo?","acceptedAnswer":{"@type":"Answer","text":"No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price."}},{"@type":"Question","name":"How fast can my site be ready?","acceptedAnswer":{"@type":"Answer","text":"Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way."}},{"@type":"Question","name":"What kinds of businesses do you build for?","acceptedAnswer":{"@type":"Answer","text":"All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics."}},{"@type":"Question","name":"Can you help me get found on Google?","acceptedAnswer":{"@type":"Answer","text":"Every site is built to be fast and mobile friendly. With Growth I also write SEO copy. Nobody can promise a specific ranking on Google, but a good site makes it easier for customers to find you."}},{"@type":"Question","name":"Are the example sites in English?","acceptedAnswer":{"@type":"Answer","text":"The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak."}}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="px"><div class="nav"><a class="logo" href="/en/" aria-label="ED. home">ED<i>.</i></a><div class="navr"><span class="lang"><a href="/" hreflang="da" lang="da">DA</a> / EN</span><a class="pill go" href="#contact">Get a free demo <span class="plus" aria-hidden="true">+</span></a></div></div></header>
+<header class="w">
+ <div class="nav">
+  <a class="logo" href="/en/" aria-label="ED. Web Works, home"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#141414"/><text x="12" y="44" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#fff" letter-spacing="-1">ED</text><circle cx="52" cy="41" r="4.5" fill="#fff"/></svg><span>Web Works</span></a>
+  <nav aria-label="Main menu"><ul class="links"><li><a href="#examples">Examples</a></li><li><a href="#process">Process</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#about">About</a></li></ul></nav>
+  <a class="btn sm" href="#contact">Book a chat</a>
+ </div>
+</header>
+
 <main id="main">
- <section class="hero px wrap" aria-labelledby="h1">
-  <p class="kicker">For all kinds of businesses</p>
-  <h1 id="h1">Your site. <span>Done right.</span></h1>
-  <p class="lead">I build simple, fast websites for businesses of every kind, including the smaller shops that often get overlooked. I am based in Copenhagen, Denmark, and work remotely, so it does not matter where you are. You get a free demo before you pay anything.</p>
-  <div class="cta"><a class="pill go lg" href="#contact">Get a free demo <span class="plus" aria-hidden="true">+</span></a><a class="pill light lg" href="#pricing">See the packages</a></div>
-  <ul class="usp"><li>Fixed price</li><li>Free demo before you pay</li><li>Weekly status updates</li></ul>
- </section>
- <section class="blk px wrap" aria-labelledby="feat-h">
-  <h2 class="h2" id="feat-h">A site that works for you. <span>Not just one that exists.</span></h2>
-  <p class="intro">Not a generic template, but a site that fits your business, your customers and what you want people to do when they land on it.</p>
-  <div class="grid"><article class="card"><h3>The important things first</h3><p>What you offer, what it costs and how to reach you are clear right away.</p></article><article class="card"><h3>Easy contact or booking</h3><p>A clear button to call, write or book, so customers never have to search.</p></article><article class="card"><h3>Fast on mobile</h3><p>The site is light and simple, so it opens quickly on any phone.</p></article><article class="card"><h3>Easier to find on Google</h3><p>With Growth I write SEO copy for your site, so customers can find you more easily.</p></article></div>
- </section>
- <section class="blk px wrap" id="pricing" aria-labelledby="pris-h">
-  <h2 class="h2" id="pris-h">Clear prices. <span>No surprises.</span></h2>
-  <p class="intro">These are from prices, and all prices are excl. VAT. Ask for a quote and you will get a clear, fixed price before we start.</p>
-  <div class="plans"><article class="plan"><p class="top">01 · Your business card online</p><h3>Basic</h3><p class="price">from $799 <small>excl. VAT</small></p><p class="desc">For you if you need a professional online business card.</p><ul><li>Up to 5 pages</li><li>Custom design</li><li>Contact form</li><li>Calendar integration</li><li>Mobile friendly</li></ul><a class="pill light" href="#contact" data-pakke="Basic">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan dark"><p class="top">02 · For growth</p><h3>Growth</h3><p class="price">from $1,499 <small>excl. VAT</small></p><p class="desc">For the business that wants to turn visitors into customers.</p><ul><li>Everything in Basic</li><li>Up to 10 pages</li><li>Payment link</li><li>Blog / news</li><li>SEO copy</li><li>Help setting up your Google Business Profile</li><li>One year of guidance</li></ul><a class="pill go" href="#contact" data-pakke="Growth">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">03 · Something all your own</p><h3>Custom</h3><p class="price">Quote on request</p><p class="desc">For the business that wants something entirely its own.</p><ul><li>Everything in Growth</li><li>App</li><li>Unlimited pages</li><li>Custom integrations</li><li>Multiple languages if needed</li><li>A dedicated sounding board</li><li>Social media setup</li><li>Guidance by agreement</li></ul><a class="pill light" href="#contact" data-pakke="Custom">Get a quote <span class="plus" aria-hidden="true">+</span></a></article><article class="plan"><p class="top">Add on</p><h3>Care</h3><p class="price">$49/mo <small>excl. VAT</small></p><p class="desc">I look after your site so you can focus on running your business.</p><ul><li>Domain</li><li>Hosting</li><li>Edits and updates</li></ul><a class="pill light" href="#contact" data-pakke="Care">Get a quote <span class="plus" aria-hidden="true">+</span></a></article></div>
-  <p class="note">Need more pages, an app or something special? Custom is for you, and I will put together a quote that fits.</p>
- </section>
- <section class="band" aria-labelledby="step-h"><div class="in">
-  <h2 class="h2" id="step-h">How it works. <span>From first chat to finished site.</span></h2>
-  <ol class="steps">
-   <li><h3>We talk</h3><p>We go through your business, which pages you need and how your customers should contact you or book. By phone or video, wherever you are.</p></li>
-   <li><h3>You get a free demo</h3><p>I make a demo of your new site. You see it before you pay anything, and you are free to say no thanks.</p></li>
-   <li><h3>I build the site</h3><p>When you say yes, I finish the site with your copy, prices and photos. You get a status update every week.</p></li>
-   <li><h3>Your site goes live</h3><p>We test it together on mobile and desktop, and then it goes live. If you want help afterwards, you can add Care.</p></li>
-  </ol>
- </div></section>
- <section class="blk px wrap" aria-labelledby="demo-h">
-  <h2 class="h2" id="demo-h">See examples I have made.</h2>
-  <p class="intro">The businesses are fictional and the sites are in Danish, but the design and features could be yours, adapted to your business.</p>
-  <div class="demos"><article class="demo"><p class="meta"><span>Hair salon</span><span class="ex">Example. Fictional business</span></p><h3>Saks &amp; Sølv</h3><p>Prices that are easy to scan, booking straight from the front page and photos of the salon's work.</p><a class="pill" href="/demoer/frisor/" hreflang="da" aria-label="See the Saks & Sølv example (in Danish)">See example <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Café and brunch</span><span class="ex">Example. Fictional business</span></p><h3>Café Kornblomst</h3><p>A tabbed menu, table booking and photos that show the atmosphere.</p><a class="pill" href="/demoer/cafe/" hreflang="da" aria-label="See the Café Kornblomst example (in Danish)">See example <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Carpentry and trades</span><span class="ex">Example. Fictional business</span></p><h3>Kvist &amp; Søn</h3><p>Clear services, a fixed price as the main message and a quote form that is easy to fill in.</p><a class="pill" href="/demoer/tomrer/" hreflang="da" aria-label="See the Kvist & Søn example (in Danish)">See example <span class="plus" aria-hidden="true">→</span></a></article><article class="demo"><p class="meta"><span>Physio clinic</span><span class="ex">Example. Fictional business</span></p><h3>Klinik Kerne</h3><p>Treatments with prices, frequently asked questions and easy booking.</p><a class="pill" href="/demoer/fysio/" hreflang="da" aria-label="See the Klinik Kerne example (in Danish)">See example <span class="plus" aria-hidden="true">→</span></a></article></div>
- </section>
- <section class="blk px wrap" aria-labelledby="about-h">
-  <h2 class="h2" id="about-h">About me. <span>Between pricey agencies and impersonal templates.</span></h2>
-  <p class="intro">I started ED. Web Works because I saw a gap between expensive agencies with long waiting times and impersonal template solutions. With me there is no queue of several weeks. I usually finish within a few days, and I can work on your site on weekends and holidays if that is what it takes to hit your deadline.</p>
-  <div class="about"><article class="card"><h3>Marketing background</h3><p>I hold a master's degree in marketing (cand.merc.) and work as a project manager alongside ED. So I do not just build a good looking site. I also understand how it should work with your business and your customers.</p></article><article class="card"><h3>You talk to me</h3><p>No account managers or middlemen. You talk directly with the person who builds your site.</p></article></div>
- </section>
- <section class="blk px wrap" aria-labelledby="faq-h">
-  <h2 class="h2" id="faq-h">Frequently asked questions</h2>
-  <div class="faq"><details><summary><h3>How much does a website cost?</h3></summary><p>Basic is from $799 and Growth is from $1,499. Custom is quoted on request, and Care is an optional monthly add on at $49 a month. All prices are excl. VAT, so send me a message and you will get a clear, fixed price before we begin.</p></details><details><summary><h3>What is included in the price?</h3></summary><p>Setting up your site is included. Domain and hosting are covered by the Care add on, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately.</p></details><details><summary><h3>Do you work with businesses outside Denmark?</h3></summary><p>Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link.</p></details><details><summary><h3>Do I have to pay for the demo?</h3></summary><p>No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price.</p></details><details><summary><h3>How fast can my site be ready?</h3></summary><p>Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way.</p></details><details><summary><h3>What kinds of businesses do you build for?</h3></summary><p>All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics.</p></details><details><summary><h3>Can you help me get found on Google?</h3></summary><p>Every site is built to be fast and mobile friendly. With Growth I also write SEO copy. Nobody can promise a specific ranking on Google, but a good site makes it easier for customers to find you.</p></details><details><summary><h3>Are the example sites in English?</h3></summary><p>The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak.</p></details></div>
- </section>
- <section id="contact" class="contact px" aria-labelledby="contact-h">
-  <div class="cgrid">
-   <div>
-    <h2 class="h2" id="contact-h">Get a free demo of <em>your new site.</em></h2>
-    <p class="side">Tell me a little about your business and I will get back to you as soon as I can. You talk directly with me, the person who builds the site.</p>
-    <p class="side">The contact form is open around the clock. If you would rather call, the phone is open every day from 6 am to 8 pm Danish time on <a class="tel" href="tel:+4526579481">+45 26 57 94 81</a>.</p>
+ <section class="hero w grid" aria-labelledby="hero-title">
+  <h1 id="hero-title">I build websites for businesses <span>that would rather spend their time on customers than on their website.</span></h1>
+  <div class="hero-foot">
+   <p>You talk directly with me, the person who builds your site.</p>
+   <div class="hero-cta">
+    <a class="btn" href="#contact">Book a free chat</a>
+    <a class="tl" href="#examples">See examples</a>
    </div>
+  </div>
+ </section>
+
+ <section id="examples" class="sec w grid" aria-labelledby="examples-title">
+  <p class="label"><span>01</span><b>Examples</b></p>
+  <div class="body ex-top">
+   <h2 id="examples-title">See what it could become</h2>
+   <div class="arrows"><button class="arr" type="button" data-dir="-1" aria-controls="rail" aria-label="Previous example">←</button><button class="arr" type="button" data-dir="1" aria-controls="rail" aria-label="Next example">→</button></div>
+  </div>
+  <div class="rail-wrap">
+   <ul class="rail" id="rail" tabindex="0" aria-label="Website examples, scroll sideways">
+    <li class="demo">
+     <a class="shot" href="/demoer/frisor/" hreflang="da" tabindex="-1" aria-hidden="true"><img src="/demoer/thumbs/frisor.webp?v=3" alt="" width="800" height="500" loading="lazy" decoding="async"></a>
+     <div class="cap"><h3>Saks &amp; Sølv</h3><span class="cat">Hair salon</span></div>
+     <a class="tl" href="/demoer/frisor/" hreflang="da" aria-label="See the Saks and Sølv hair salon demo (in Danish)">See demo →</a>
+    </li>
+    <li class="demo">
+     <a class="shot" href="/demoer/cafe/" hreflang="da" tabindex="-1" aria-hidden="true"><img src="/demoer/thumbs/cafe.webp?v=3" alt="" width="800" height="500" loading="lazy" decoding="async"></a>
+     <div class="cap"><h3>Café Kornblomst</h3><span class="cat">Café &amp; brunch</span></div>
+     <a class="tl" href="/demoer/cafe/" hreflang="da" aria-label="See the Café Kornblomst demo (in Danish)">See demo →</a>
+    </li>
+    <li class="demo">
+     <a class="shot" href="/demoer/tomrer/" hreflang="da" tabindex="-1" aria-hidden="true"><img src="/demoer/thumbs/tomrer.webp?v=3" alt="" width="800" height="500" loading="lazy" decoding="async"></a>
+     <div class="cap"><h3>Kvist &amp; Søn</h3><span class="cat">Carpentry &amp; trades</span></div>
+     <a class="tl" href="/demoer/tomrer/" hreflang="da" aria-label="See the Kvist and Søn carpentry demo (in Danish)">See demo →</a>
+    </li>
+    <li class="demo">
+     <a class="shot" href="/demoer/fysio/" hreflang="da" tabindex="-1" aria-hidden="true"><img src="/demoer/thumbs/fysio.webp?v=3" alt="" width="800" height="500" loading="lazy" decoding="async"></a>
+     <div class="cap"><h3>Klinik Kerne</h3><span class="cat">Physio clinic</span></div>
+     <a class="tl" href="/demoer/fysio/" hreflang="da" aria-label="See the Klinik Kerne physio clinic demo (in Danish)">See demo →</a>
+    </li>
+   </ul>
+  </div>
+ </section>
+
+ <section id="process" class="sec w grid" aria-labelledby="process-title">
+  <p class="label"><span>02</span><b>Process</b></p>
+  <div class="body">
+   <h2 id="process-title">Usually ready in a few days</h2>
+   <ol class="steps">
+    <li><span class="n">01</span><h3>Talk</h3><p>We figure out what you need, by phone or video.</p></li>
+    <li><span class="n">02</span><h3>Demo</h3><p>You see a free demo before you pay anything.</p></li>
+    <li><span class="n">03</span><h3>Build</h3><p>I build, and you get a status update every week.</p></li>
+    <li><span class="n">04</span><h3>Live</h3><p>We test it together, and the site goes live.</p></li>
+   </ol>
+  </div>
+ </section>
+
+ <section id="pricing" class="sec w grid" aria-labelledby="pricing-title">
+  <p class="label"><span>03</span><b>Pricing</b></p>
+  <div class="body">
+   <h2 id="pricing-title">Fixed prices from the start</h2>
+   <div class="plans">
+    <article class="plan">
+     <div><h3>Basic</h3></div>
+     <div><p class="price">from $799 <small>excl. VAT</small></p><p class="desc">A professional business card online.</p>
+      <ul><li>Up to 5 pages</li><li>Custom design</li><li>Contact form</li><li>Calendar integration</li><li>Mobile friendly</li></ul></div>
+     <a class="act tl" href="#contact" data-pakke="Basic">Get a quote</a>
+    </article>
+    <article class="plan">
+     <div><h3>Growth</h3><span class="rec">Right for most</span></div>
+     <div><p class="price">from $1,499 <small>excl. VAT</small></p><p class="desc">Turn more visitors into customers.</p>
+      <ul><li class="inc">Everything in Basic</li><li>Up to 10 pages</li><li>Payment link</li><li>Blog / news</li><li>SEO copy</li><li>Help setting up your Google Business Profile</li><li>One year of guidance</li></ul></div>
+     <a class="act btn" href="#contact" data-pakke="Growth">Get a quote</a>
+    </article>
+    <article class="plan">
+     <div><h3>Custom</h3></div>
+     <div><p class="price">Quote on request</p><p class="desc">Something entirely your own.</p>
+      <ul><li class="inc">Everything in Growth</li><li>App</li><li>Unlimited pages</li><li>Custom integrations</li><li>Multiple languages if needed</li><li>A dedicated sounding board</li><li>Social media setup</li><li>Guidance by agreement</li></ul></div>
+     <a class="act tl" href="#contact" data-pakke="Custom">Book a meeting</a>
+    </article>
+    <article class="plan">
+     <div><h3>Care</h3><p class="for">Add on</p></div>
+     <div><p class="price">$49/mo <small>excl. VAT</small></p><p class="desc">Domain, hosting, edits and updates.</p></div>
+     <a class="act tl" href="#contact" data-pakke="Care">Get a quote</a>
+    </article>
+   </div>
+   <p class="pk-note">You get a clear, fixed price after a short chat.</p>
+  </div>
+ </section>
+
+ <section id="about" class="sec w grid" aria-labelledby="about-title">
+  <p class="label"><span>04</span><b>About</b></p>
+  <div class="body about">
+   <figure><picture><source srcset="/edin.webp" type="image/webp"><img src="/edin.jpg" alt="Edin, founder of ED. Web Works" width="382" height="434" loading="lazy" decoding="async"></picture></figure>
+   <div class="txt">
+    <h2 id="about-title">Hi, I am Edin</h2>
+    <p>I build every site myself from Copenhagen, so you talk to the person doing the work, wherever you are.</p>
+    <dl class="facts">
+     <div><dt>Education</dt><dd>Master's in Marketing (cand.merc.)</dd></div>
+     <div><dt>Delivery</dt><dd>Usually within a few days</dd></div>
+     <div><dt>Flexibility</dt><dd>Weekends and holidays too</dd></div>
+    </dl>
+   </div>
+  </div>
+ </section>
+
+ <section id="faq" class="sec w grid" aria-labelledby="faq-title">
+  <p class="label"><span>05</span><b>FAQ</b></p>
+  <div class="body">
+   <h2 id="faq-title">Questions</h2>
+   <div class="faq"><details><summary><h3>How much does a website cost?</h3></summary><p>Basic is from $799 and Growth is from $1,499. Custom is quoted on request, and Care is an optional monthly add on at $49 a month. All prices are excl. VAT, so send me a message and you will get a clear, fixed price before we begin.</p></details><details><summary><h3>What is included in the price?</h3></summary><p>Setting up your site is included. Domain and hosting are covered by the Care add on, so you do not pay for them anywhere else. You can use your own logo and photos. If you do not have a logo, I can design one for you by agreement. Photography can be arranged separately.</p></details><details><summary><h3>Do you work with businesses outside Denmark?</h3></summary><p>Yes. I am based in Copenhagen, Denmark, and I work remotely, so it does not matter where your business is. We can talk by phone or video, and you follow the progress through a link.</p></details><details><summary><h3>Do I have to pay for the demo?</h3></summary><p>No. The demo is free and there is no commitment. You see what your site could look like, and only if you want to continue do we agree on a package and a price.</p></details><details><summary><h3>How fast can my site be ready?</h3></summary><p>Usually within a few days once I have your copy, prices and photos. You get a status update every week along the way.</p></details><details><summary><h3>What kinds of businesses do you build for?</h3></summary><p>All kinds, big and small. Smaller shops that often get overlooked are especially welcome. Hair and beauty salons are my main focus, but I also build for cafés, tradespeople and clinics.</p></details><details><summary><h3>Can you help me get found on Google?</h3></summary><p>Every site is built to be fast and mobile friendly. With Growth I also write SEO copy. Nobody can promise a specific ranking on Google, but a good site makes it easier for customers to find you.</p></details><details><summary><h3>Are the example sites in English?</h3></summary><p>The four example sites are in Danish, because they were made for the Danish market. Your site will be written in the language your customers speak.</p></details></div>
+ </div>
+ </section>
+
+ <section id="contact" class="contact w" aria-labelledby="contact-title">
+  <div class="grid">
+   <h2 id="contact-title">Tell me about your business</h2>
+   <div class="side"><p>Write a few lines about your project. I will reply as soon as I can.</p><p style="margin-top:14px">Rather call? Every day from 6 am to 8 pm Danish time on <a class="tel" href="tel:+4526579481">+45 26 57 94 81</a>.</p></div>
    <form id="kontaktform" action="https://formsubmit.co/8f6b2cd857b41da52beb4443be0fed0d" method="POST">
     <input type="hidden" name="_subject" value="New inquiry from edwebworks.com/en/">
     <input type="hidden" name="_template" value="table">
@@ -200,21 +347,27 @@ footer.foot nav{display:flex;gap:18px;flex-wrap:wrap}footer.foot .lang a{text-de
     <div><label for="form-pakke">Which package are you interested in?</label>
      <select id="form-pakke" name="pakke"><option>Basic</option><option>Growth</option><option>Custom</option><option>Care</option><option value="Not sure yet" selected>Not sure yet</option></select></div>
     <div><label for="form-besked">Message</label><textarea id="form-besked" name="besked" placeholder="Tell me briefly about your business and what the site should do..." required></textarea></div>
-    <div class="send"><button class="pill go lg" type="submit">Send message <span class="plus" aria-hidden="true">→</span></button><p class="reassure">No commitment of any kind</p></div>
+    <div class="send"><button class="btn inv" type="submit">Send message</button><p class="small">No commitment.</p></div>
     <p class="form-status" role="status" aria-live="polite"></p>
    </form>
   </div>
-  <footer class="foot"><span>© 2026 ED. Web Works</span><nav aria-label="More pages"><a href="#main">Back to top ↑</a><span class="lang"><a href="/" hreflang="da" lang="da">DA</a> / EN</span></nav></footer>
+  <footer class="foot"><span>© 2026 ED. Web Works</span><nav aria-label="More pages"><a href="#main">Back to top ↑</a><span><a href="/" hreflang="da" lang="da">DA</a> / EN</span></nav></footer>
  </section>
 </main>
 <script>
 (function(){var f=document.getElementById('kontaktform');if(!f||!window.fetch)return;var st=f.querySelector('.form-status'),btn=f.querySelector('button[type=submit]');
-f.addEventListener('submit',function(e){e.preventDefault();if(f._honey&&f._honey.value)return;st.className='form-status';st.textContent='Sending...';btn.disabled=true;
+f.addEventListener('submit',function(e){e.preventDefault();if(f._honey&&f._honey.value)return;if(!f.checkValidity()){f.reportValidity();return}st.className='form-status';st.textContent='Sending...';btn.disabled=true;
 fetch('https://formsubmit.co/ajax/8f6b2cd857b41da52beb4443be0fed0d',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json().then(function(d){if(!r.ok||String(d.success)==='false')throw d;return d})})
-.then(function(){f.innerHTML='<div><h3 style="font-weight:400;font-size:32px;letter-spacing:-.03em">Thank you! I will get back to you soon.</h3><p style="color:#c8cdea;margin-top:10px">Your message has been sent.</p></div>'})
-.catch(function(){btn.disabled=false;st.className='form-status err';st.innerHTML='The message could not be sent. Please try again, or email me directly at <a href="mailto:edwebworks@outlook.com">edwebworks@outlook.com</a>.'})})})();
+.then(function(){f.innerHTML='<div class="form-done"><h3>Thank you, I will get back to you soon.</h3><p>Your message has been sent. You talk directly with the person who builds your site.</p></div>'})
+.catch(function(){btn.disabled=false;st.className='form-status err';st.innerHTML='The message could not be sent. Please try again, or email me directly at <a href="mailto:edwebworks@outlook.com" style="text-decoration:underline">edwebworks@outlook.com</a>.'})})})();
 document.querySelectorAll('[data-pakke]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('form-pakke').value=a.dataset.pakke})});
+(function(){var r=document.getElementById('rail');if(!r)return;var b=document.querySelectorAll('.arr');
+function step(){var li=r.querySelector('li');return li?li.getBoundingClientRect().width+parseFloat(getComputedStyle(r).columnGap||24):r.clientWidth*.8}
+function upd(){b[0].disabled=r.scrollLeft<4;b[1].disabled=r.scrollLeft+r.clientWidth>=r.scrollWidth-4}
+b.forEach(function(x){x.addEventListener('click',function(){r.scrollBy({left:step()*+x.dataset.dir,behavior:'smooth'})})});
+r.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();r.scrollBy({left:step()*(e.key==='ArrowRight'?1:-1),behavior:'smooth'})}});
+r.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});window.addEventListener('resize',upd);upd()})();
 </script>
 </body>
 </html>
