@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzeria Lucca | Pizzeria (demo af ED. Web Works)</title>
+<meta name="description" content="Eksempel på en hjemmeside til et pizzeria, lavet af ED. Web Works. Fiktiv virksomhed.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://edwebworks.com/demoer/pizza/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f2ece2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<!--
+  DEMO: fiktiv virksomhed. Navn, adresse, telefon og priser er opdigtede eksempler.
+  Billederne er pladsholdere. Kunden leverer sine egne billeder.
+-->
+<style>
+:root{--bg:#f2ece2;--ink:#1e1a15;--g:#6d655a;--line:rgba(30,26,21,.14);--red:#c3381f;--red2:#a02c16;--ph:#e2dacd;--paper:#fffdf8;
+--f:"Bricolage Grotesque",system-ui,-apple-system,Helvetica,Arial,sans-serif;--mono:"Courier Prime","Courier New",monospace;--pad:clamp(18px,3vw,40px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--f);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.flag{background:var(--ink);color:var(--bg);text-align:center;font:500 11px/1 var(--f);letter-spacing:.12em;text-transform:uppercase;padding:9px 12px}
+.w{padding-left:var(--pad);padding-right:var(--pad);max-width:1440px;margin:0 auto}
+header{position:sticky;top:0;z-index:20;background:rgba(242,236,226,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:-.02em}
+.brand i{width:12px;height:12px;border-radius:50%;background:var(--red)}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:15px;font-weight:500}
+.nav ul a:hover{color:var(--red)}
+.nav .call{background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;font-weight:500;white-space:nowrap}
+.cap{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g)}
+/* hero */
+.hero{padding-top:clamp(48px,9vh,110px);padding-bottom:clamp(36px,6vh,72px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end}
+.hero .cap{grid-column:1/-1}
+.hero h1{grid-column:1/10;font-weight:800;font-size:clamp(48px,8.4vw,136px);line-height:.92;letter-spacing:-.045em}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero .lead{grid-column:10/13;color:var(--g);font-size:17px}
+.hero .lead a{display:inline-block;margin-top:14px;color:var(--ink);font-weight:500;border-bottom:2px solid var(--red);padding-bottom:2px}
+/* builder */
+.builder{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr);gap:24px;align-items:start;padding-bottom:clamp(64px,10vh,120px)}
+.bhead{grid-column:1/-1;display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:1px solid var(--ink);padding-top:18px;margin-bottom:8px}
+.bhead h2{font-weight:700;font-size:clamp(28px,3vw,44px);letter-spacing:-.03em;line-height:1}
+.bhead p{color:var(--g);max-width:36ch;font-size:15px}
+.panel h3,.rc h3{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:14px}
+.tops{list-style:none;display:grid;gap:8px}
+.tb{width:100%;display:grid;grid-template-columns:40px minmax(0,1fr) auto 30px;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:8px 10px 8px 8px;cursor:pointer;text-align:left;transition:border-color .2s,background .2s,transform .15s}
+.tb:hover{border-color:var(--ink)}
+.tb:active{transform:scale(.98)}
+.tb svg{width:40px;height:40px;display:block;background:var(--bg);border-radius:10px}
+.tb .n{font-weight:500;font-size:16px;line-height:1.15}
+.tb .p{font-size:14px;color:var(--g);white-space:nowrap}
+.tb .pl{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:18px;line-height:1;transition:background .2s,color .2s,transform .3s}
+.tb[aria-pressed="true"]{background:#fff;border-color:var(--ink)}
+.tb[aria-pressed="true"] .pl{background:var(--red);border-color:var(--red);color:#fff;transform:rotate(45deg)}
+.hint{margin-top:14px;font-size:14px;color:var(--g)}
+/* stage */
+.stage{--bx:min(440px,calc(100% - 64px));position:relative;border-radius:22px;overflow:hidden;padding:calc(var(--bx)*.42 + 28px) 0 34px;display:flex;justify-content:center;perspective:1700px;-webkit-perspective:1700px;
+background:radial-gradient(ellipse 60% 40% at 28% 18%,rgba(255,255,255,.55),transparent 70%),radial-gradient(ellipse 50% 50% at 80% 90%,rgba(0,0,0,.08),transparent 70%),repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 1px,rgba(0,0,0,.035) 1px 3px),linear-gradient(140deg,#b8bcbf,#dcdfe1 45%,#b1b5b8);box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.flour{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.box{position:relative;width:var(--bx);aspect-ratio:1/1;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .75s cubic-bezier(.55,0,.35,1)}
+.base{position:absolute;inset:0;border-radius:6px;background:linear-gradient(135deg,#c79d68,#b88c55);box-shadow:0 26px 40px -18px rgba(0,0,0,.45),0 4px 10px rgba(0,0,0,.15)}
+.tray{position:absolute;inset:4%;border-radius:3px;background:#d6b583;box-shadow:inset 0 0 0 1px rgba(90,60,25,.25),inset 0 10px 18px -8px rgba(90,60,25,.45),inset 0 -6px 14px -8px rgba(90,60,25,.3)}
+.pz{position:absolute;inset:7%;width:86%;height:86%;overflow:visible}
+.lid{position:absolute;left:0;right:0;bottom:100%;height:100%;transform-origin:50% 100%;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;transition:transform .95s cubic-bezier(.6,0,.3,1)}
+.face{position:absolute;inset:0;border-radius:6px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.in{background:linear-gradient(180deg,#cfab78,#d9b988);box-shadow:inset 0 0 0 1px rgba(90,60,25,.2)}
+.face.in::after{content:"";position:absolute;inset:4%;border:1px dashed rgba(90,60,25,.25);border-radius:3px}
+.face.out{transform:rotateX(180deg);background:linear-gradient(135deg,#c99f6a,#bb8f58);display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(90,60,25,.25)}
+.stamp{width:62%;aspect-ratio:1/1;border:3px solid var(--red);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--red);font-weight:800;letter-spacing:-.02em;line-height:.95;font-size:calc(var(--bx)*.085);opacity:.88}
+.stamp small{display:block;font:700 calc(var(--bx)*.03)/1.2 var(--mono);letter-spacing:.14em;margin-top:8px}
+.stage.closed .lid{transform:rotateX(-180deg)}
+.stage.gone .box{transform:translate3d(150%,0,0) rotate(7deg)}
+.stage.left .box{transform:translate3d(-150%,0,0) rotate(-7deg)}
+.done{position:absolute;inset:0;display:grid;place-items:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.stage.showmsg .done{opacity:1;visibility:visible}
+.done div{background:var(--paper);border-radius:18px;padding:26px 26px 22px;max-width:340px;text-align:center;box-shadow:0 20px 50px -20px rgba(0,0,0,.4)}
+.done b{display:block;font-size:24px;letter-spacing:-.02em;line-height:1.1}
+.done p{color:var(--g);margin-top:8px;font-size:15px}
+.done button{margin-top:16px;background:var(--ink);color:var(--bg);border:0;border-radius:99px;padding:12px 20px;font-weight:500;cursor:pointer}
+.instant,.instant *{transition:none!important}
+/* toppings */
+.pc{opacity:0;transform:scale(2.6);transition:transform .3s ease-in var(--o,0ms),opacity .25s linear var(--o,0ms)}
+.tp.on .pc{opacity:1;transform:none;transition:transform .62s cubic-bezier(.3,1.45,.55,1) var(--d,0ms),opacity .18s linear var(--d,0ms)}
+/* receipt */
+.rc{position:relative}
+.paper{background:var(--paper);padding:22px 20px 26px;font:400 14px/1.5 var(--mono);box-shadow:0 14px 30px -18px rgba(0,0,0,.35);position:relative}
+.paper::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(135deg,var(--paper) 50%,transparent 50%) 0 0/12px 8px,linear-gradient(-135deg,var(--paper) 50%,transparent 50%) 0 0/12px 8px}
+.paper .hd{text-align:center;line-height:1.35}
+.paper .hd b{font-size:16px;letter-spacing:.06em}
+.sep{border-top:1px dashed #b9b0a2;margin:14px 0}
+.lines{list-style:none;min-height:9em}
+.lines li{display:flex;justify-content:space-between;gap:10px}
+.lines li.new{animation:in .45s ease}
+@keyframes in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:17px}
+.tot.bump{animation:bump .35s ease}
+@keyframes bump{50%{transform:scale(1.05)}}
+.vat{display:flex;justify-content:space-between;color:#7b7366;font-size:13px}
+.order{margin-top:26px;width:100%;background:var(--red);color:#fff;border:0;border-radius:99px;padding:18px 20px;font:700 17px/1 var(--f);letter-spacing:.02em;cursor:pointer;transition:background .2s,transform .15s}
+.order:hover{background:var(--red2)}
+.order:active{transform:scale(.98)}
+.order:disabled{opacity:.5;cursor:default}
+.demo-note{margin-top:10px;font-size:13px;color:var(--g);text-align:center}
+/* sections */
+.sec{padding-top:clamp(64px,10vh,120px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.sec>.cap{grid-column:1/-1;border-top:1px solid var(--ink);padding-top:18px}
+.sec h2{grid-column:1/-1;font-weight:700;font-size:clamp(36px,5vw,76px);line-height:.98;letter-spacing:-.04em;margin-top:12px}
+.menu{grid-column:1/-1;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;margin-top:28px}
+.menu li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:4px 12px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.menu .no{font:400 14px/1 var(--mono);color:var(--g)}
+.menu b{font-weight:700;font-size:21px;letter-spacing:-.02em}
+.menu .pr{font-weight:500;font-size:18px;white-space:nowrap}
+.menu span.i{grid-column:2/4;color:var(--g);font-size:15px}
+.menu-note{grid-column:1/-1;color:var(--g);font-size:15px;margin-top:8px}
+.ph{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:var(--ar,4/3);background:var(--ph);color:#8b8274;border-radius:18px}
+.ph span{font:500 12px/1.2 var(--f);letter-spacing:.14em;text-transform:uppercase}
+.about .ph{grid-column:1/7;margin-top:28px}
+.about .txt{grid-column:8/12;margin-top:28px;align-self:center}
+.about .txt p+p{margin-top:14px}
+.about .txt p{color:var(--g)}
+.about .txt p.big{color:var(--ink);font-size:clamp(22px,2vw,28px);line-height:1.25;letter-spacing:-.02em;font-weight:500}
+.info{grid-column:1/-1;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;margin-top:28px}
+.hours{grid-column:1/6;list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.hours li:first-child{border-top:1px solid var(--line)}
+.hours li span:last-child{font-weight:500}
+.find{grid-column:7/13}
+.find .ph{--ar:16/10}
+.find p{margin-top:14px;color:var(--g)}
+.find p b{color:var(--ink);font-weight:500}
+.contact{background:var(--ink);color:var(--bg);margin-top:clamp(80px,12vh,140px);padding-top:clamp(56px,9vh,110px);padding-bottom:28px}
+.contact .in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.contact .cap{grid-column:1/-1;color:#a69d8f}
+.contact h2{grid-column:1/8;font-weight:700;font-size:clamp(36px,5vw,76px);line-height:.98;letter-spacing:-.04em;margin-top:12px}
+.contact .ci{grid-column:1/6;margin-top:28px;color:#bdb4a6}
+.contact .ci b{display:block;color:var(--bg);font-size:28px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+form{grid-column:7/13;display:grid;gap:18px;margin-top:28px}
+label{display:block;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#a69d8f;margin-bottom:6px}
+input,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid #4a443c;color:var(--bg);font:400 17px/1.4 var(--f);padding:8px 0;border-radius:0;-webkit-appearance:none;appearance:none}
+textarea{min-height:90px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
+.send{justify-self:start;background:var(--red);color:#fff;border:0;border-radius:99px;padding:15px 24px;font-weight:700;cursor:pointer}
+.sent{font-size:22px;font-weight:500;line-height:1.3}
+footer{grid-column:1/-1;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid #3a352e;margin-top:clamp(64px,10vh,120px);padding-top:18px;font-size:13px;color:#a69d8f}
+@media (max-width:1100px){
+ .builder{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .stage{grid-column:1/-1;order:1}
+ .panel{order:2}.rc{order:3}
+ .bhead{order:0}
+}
+@media (max-width:860px){
+ .nav ul{display:none}
+ .hero h1,.hero .lead{grid-column:1/-1}
+ .builder{grid-template-columns:minmax(0,1fr);gap:22px}
+ .bhead{flex-direction:column;align-items:flex-start;gap:8px}
+ .stage{--bx:min(310px,calc(100% - 56px));border-radius:16px;padding-top:calc(var(--bx)*.2 + 18px);padding-bottom:22px}
+ .tops{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tb{grid-template-columns:34px minmax(0,1fr);gap:4px 10px;padding:8px;border-radius:12px;position:relative}
+ .tb svg{width:34px;height:34px;grid-row:1/3}
+ .tb .n{font-size:15px;padding-right:26px}
+ .tb .p{font-size:13px;grid-column:2}
+ .tb .pl{position:absolute;top:8px;right:8px;width:24px;height:24px;font-size:15px}
+ .menu{grid-template-columns:minmax(0,1fr)}
+ .about .ph,.about .txt,.hours,.find,.contact h2,.contact .ci,form{grid-column:1/-1}
+ .find{margin-top:20px}
+}
+@media (prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{transition-duration:.01ms!important;transition-delay:0ms!important;animation:none!important}
+}
+/* ED.-banner (samme som de andre demoer) */
+.ed-banner{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;background:#16181a;color:#fff;font:400 14px/1.3 system-ui,sans-serif;padding:10px 10px 10px 18px;border-radius:99px;box-shadow:0 14px 40px -12px rgba(0,0,0,.45);width:max-content;max-width:calc(100% - 24px);letter-spacing:0;text-transform:none}
+.ed-banner b{font-weight:600}.ed-banner b i{font-style:normal;color:#ff8a5c}
+.ed-banner a{background:#d4420f;color:#fff;text-decoration:none;padding:8px 14px;border-radius:99px;white-space:nowrap;font-weight:500}
+.ed-banner a:hover{background:#b8380b}
+body{padding-bottom:76px}
+@media (max-width:560px){.ed-banner{font-size:12.5px;padding:8px 8px 8px 14px;gap:8px}.ed-banner .long{display:none}}
+</style>
+</head>
+<body>
+<div class="flag">Eksempel · Fiktiv virksomhed</div>
+<header class="w"><div class="nav"><a class="brand" href="#"><i aria-hidden="true"></i>Pizzeria Lucca</a><ul><li><a href="#byg">Byg din pizza</a></li><li><a href="#menu">Menu</a></li><li><a href="#find">Åbningstider</a></li><li><a href="#kontakt">Kontakt</a></li></ul><a class="call" href="#kontakt">Ring 12 34 56 78</a></div></header>
+<main>
+ <section class="hero w" aria-labelledby="h1">
+  <p class="cap">Pizzeria i Fiktivby · Afhentning og levering</p>
+  <h1 id="h1">Pizza fra stenovnen, <em>lige rundt om hjørnet</em></h1>
+  <p class="lead">Vi laver dejen selv og lader den hvile i to døgn, før den kommer i ovnen. Byg din egen pizza herunder, eller vælg en fra menuen.<br><a href="#byg">Byg din pizza</a></p>
+ </section>
+
+ <section id="byg" class="builder w" aria-labelledby="byg-h">
+  <div class="bhead"><h2 id="byg-h">Byg din egen pizza</h2><p>Tryk på det fyld, du vil have. Tryk igen for at fjerne det.</p></div>
+  <div class="panel">
+   <h3>Vælg fyld</h3>
+   <ul class="tops" id="tops"></ul>
+   <p class="hint">Alle pizzaer starter med vores bund og tomatsauce.</p>
+  </div>
+  <div class="stage" id="stage">
+   <svg class="flour" id="flour" aria-hidden="true" preserveAspectRatio="xMidYMid slice" viewBox="0 0 600 700"></svg>
+   <div class="box" id="box">
+    <div class="lid" aria-hidden="true"><div class="face in"></div><div class="face out"><div class="stamp"><span>Pizzeria<br>Lucca<small>FIKTIVBY</small></span></div></div></div>
+    <div class="base"><div class="tray"></div>
+     <svg class="pz" id="pz" viewBox="0 0 400 400" role="img" aria-label="Din pizza set oppefra">
+      <defs>
+       <radialGradient id="crust" cx="50%" cy="50%" r="50%"><stop offset="78%" stop-color="#f0d39c"/><stop offset="90%" stop-color="#dca865"/><stop offset="100%" stop-color="#b87a3e"/></radialGradient>
+       <radialGradient id="sauce" cx="45%" cy="40%" r="60%"><stop offset="0%" stop-color="#cf4527"/><stop offset="100%" stop-color="#ad2f18"/></radialGradient>
+      </defs>
+      <circle cx="200" cy="200" r="182" fill="url(#crust)"/>
+      <g id="char" fill="#8c5427" opacity=".45"></g>
+      <circle cx="200" cy="200" r="154" fill="url(#sauce)" stroke="#9c2a14" stroke-width="2"/>
+      <g id="sauceTex"></g>
+      <g id="toppings" transform="translate(200 200)"></g>
+     </svg>
+    </div>
+   </div>
+   <div class="done" id="done" role="status" aria-live="polite"><div><b>Tak for bestillingen</b><p>Dette er en demo, så der er ikke bestilt noget. På en rigtig side ville du nu få en bekræftelse.</p><button type="button" id="again">Lav en ny pizza</button></div></div>
+  </div>
+  <div class="rc">
+   <h3>Din bestilling</h3>
+   <div class="paper">
+    <div class="hd"><b>PIZZERIA LUCCA</b><br>Eksempelvej 12, Fiktivby<br>Tlf. 12 34 56 78</div>
+    <div class="sep"></div>
+    <ul class="lines" id="lines" aria-live="polite"></ul>
+    <div class="sep"></div>
+    <div class="tot" id="tot"><span>I ALT</span><span id="sum">75,00 kr.</span></div>
+    <div class="vat"><span>Heraf moms</span><span id="vat">15,00 kr.</span></div>
+   </div>
+   <button class="order" type="button" id="order">Bestil</button>
+   <p class="demo-note">Det her er en demo. Der bliver ikke bestilt noget.</p>
+  </div>
+ </section>
+
+ <section id="menu" class="sec w" aria-labelledby="menu-h">
+  <p class="cap">Menu</p>
+  <h2 id="menu-h">Det bager vi hver dag</h2>
+  <ul class="menu">
+   <li><span class="no">01</span><b>Margherita</b><span class="pr">85 kr.</span><span class="i">Tomat, mozzarella og frisk basilikum</span></li>
+   <li><span class="no">02</span><b>Pepperoni</b><span class="pr">95 kr.</span><span class="i">Tomat, mozzarella og pepperoni</span></li>
+   <li><span class="no">03</span><b>Funghi</b><span class="pr">95 kr.</span><span class="i">Tomat, mozzarella og champignon</span></li>
+   <li><span class="no">04</span><b>Prosciutto</b><span class="pr">95 kr.</span><span class="i">Tomat, mozzarella og skinke</span></li>
+   <li><span class="no">05</span><b>Capricciosa</b><span class="pr">105 kr.</span><span class="i">Tomat, mozzarella, skinke, champignon, artiskok og oliven</span></li>
+   <li><span class="no">06</span><b>Diavola</b><span class="pr">105 kr.</span><span class="i">Tomat, mozzarella, stærk salami, chili og rødløg</span></li>
+   <li><span class="no">07</span><b>Quattro formaggi</b><span class="pr">110 kr.</span><span class="i">Mozzarella, gorgonzola, parmesan og ricotta</span></li>
+   <li><span class="no">08</span><b>Vegetariana</b><span class="pr">100 kr.</span><span class="i">Tomat, mozzarella, peberfrugt, champignon, rødløg og oliven</span></li>
+   <li><span class="no">09</span><b>Børnepizza</b><span class="pr">65 kr.</span><span class="i">Lille pizza med tomat, ost og skinke</span></li>
+   <li><span class="no">10</span><b>Tiramisu</b><span class="pr">45 kr.</span><span class="i">Lavet her i huset</span></li>
+  </ul>
+  <p class="menu-note">Glutenfri bund koster 20 kr. ekstra. Spørg os gerne om allergener.</p>
+ </section>
+
+ <section class="sec w about" aria-labelledby="om-h">
+  <p class="cap">Om os</p>
+  <h2 id="om-h">En lille pizzeria med en stor ovn</h2>
+  <div class="ph" role="img" aria-label="Pladsholder til billede"><span>Dit billede her</span></div>
+  <div class="txt">
+   <p class="big">Vi er et lille sted med seks borde og en stenovn, der er varm fra eftermiddagen til vi lukker.</p>
+   <p>Du kan spise her, hente selv eller få pizzaen bragt ud i Fiktivby. Ringer du, er den som regel klar på 20 minutter.</p>
+  </div>
+ </section>
+
+ <section id="find" class="sec w" aria-labelledby="find-h">
+  <p class="cap">Åbningstider og adresse</p>
+  <h2 id="find-h">Her finder du os</h2>
+  <div class="info">
+   <ul class="hours">
+    <li><span>Mandag</span><span>Lukket</span></li>
+    <li><span>Tirsdag til torsdag</span><span>16.00 til 21.00</span></li>
+    <li><span>Fredag og lørdag</span><span>12.00 til 22.00</span></li>
+    <li><span>Søndag</span><span>12.00 til 21.00</span></li>
+   </ul>
+   <div class="find">
+    <div class="ph" role="img" aria-label="Pladsholder til kort eller billede"><span>Dit billede her</span></div>
+    <p><b>Eksempelvej 12, 1234 Fiktivby</b><br>Der er gratis parkering i gården bag huset.</p>
+   </div>
+  </div>
+ </section>
+</main>
+
+<section id="kontakt" class="contact" aria-labelledby="k-h">
+ <div class="in w">
+  <p class="cap">Kontakt</p>
+  <h2 id="k-h">Skal I bruge pizza til et arrangement?</h2>
+  <div class="ci"><b>12 34 56 78</b>Ring og bestil til afhentning. Skriv til os, hvis I skal bruge mange pizzaer til en fest eller et firmaarrangement.</div>
+  <form id="f" novalidate>
+   <div><label for="n">Navn</label><input id="n" name="n" autocomplete="name" required></div>
+   <div><label for="t">Telefon</label><input id="t" name="t" type="tel" autocomplete="tel" required></div>
+   <div><label for="m">Hvad skal I bruge?</label><textarea id="m" name="m"></textarea></div>
+   <button class="send" type="submit">Send forespørgsel</button>
+  </form>
+  <footer><span>© Pizzeria Lucca. En fiktiv virksomhed brugt som eksempel</span><span>Eksempel lavet af ED. Web Works</span></footer>
+ </div>
+</section>
+
+<div class="ed-banner"><span>Demo <span class="long">lavet </span>af <b>ED<i>.</i></b> Vil du have en side som denne?</span><a href="https://edwebworks.com/#kontakt">Kontakt ED.</a></div>
+<script>
+(function(){
+ var f=document.getElementById('f');
+ f.addEventListener('submit',function(e){e.preventDefault();f.innerHTML='<p class="sent">Tak. Dette er en eksempelside, så beskeden er ikke sendt.</p>'});
+})();
+(function(){
+ var NS='http://www.w3.org/2000/svg';
+ var rm=window.matchMedia('(prefers-reduced-motion: reduce)');
+ function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+ var BASE=75;
+ var T=[
+  {id:'ost',name:'Mozzarella',price:15,n:10,md:46,shape:'<ellipse rx="19" ry="15" fill="#f6eedb"/><ellipse cx="5" cy="-3" rx="11" ry="9" fill="#fdf8ec"/><circle cx="-7" cy="5" r="2.5" fill="#e2c38c"/>'},
+  {id:'champ',name:'Champignon',price:10,n:9,md:40,shape:'<path d="M-16 2C-16-13 16-13 16 2Z" fill="#ece1cb" stroke="#9a7f5c" stroke-width="1.5"/><path d="M-5 2L-6 13Q0 16 6 13L5 2Z" fill="#ece1cb" stroke="#9a7f5c" stroke-width="1.5"/><path d="M-12 1H12" stroke="#b79d78" stroke-width="1.2"/>'},
+  {id:'pep',name:'Pepperoni',price:15,n:11,md:40,shape:'<circle r="17" fill="#ad2d1a"/><circle r="16" fill="none" stroke="#7c1d10" stroke-width="2"/><circle cx="-6" cy="-5" r="2.6" fill="#e08a70" opacity=".8"/><circle cx="6" cy="3" r="2" fill="#e08a70" opacity=".8"/><circle cx="-2" cy="8" r="1.6" fill="#e08a70" opacity=".8"/><circle cx="7" cy="-7" r="1.4" fill="#e08a70" opacity=".8"/>'},
+  {id:'log',name:'Rødløg',price:8,n:8,md:38,shape:'<path d="M-15 6A15 15 0 0 1 15 6" fill="none" stroke="#8e3b74" stroke-width="4" stroke-linecap="round"/><path d="M-9 6A9.5 9.5 0 0 1 9 6" fill="none" stroke="#c286ad" stroke-width="2.4" stroke-linecap="round"/>'},
+  {id:'oliven',name:'Sorte oliven',price:10,n:12,md:30,shape:'<circle r="7" fill="none" stroke="#2b2522" stroke-width="5"/><path d="M-4-5A6 6 0 0 1 3-6" stroke="#6b625c" stroke-width="1.4" fill="none"/>'},
+  {id:'basil',name:'Frisk basilikum',price:8,n:7,md:46,shape:'<path d="M-17 0C-9-11 9-11 17 0C9 11-9 11-17 0Z" fill="#3f7c37"/><path d="M-15 0C-5-3 5-3 15 0" stroke="#2b5a26" stroke-width="1.3" fill="none"/><path d="M-12-3C-5-8 5-8 12-3" stroke="#5f9a52" stroke-width="1" fill="none" opacity=".6"/>'}
+ ];
+ var on={},tg=document.getElementById('toppings'),tops=document.getElementById('tops');
+ // flour
+ (function(){var s=document.getElementById('flour'),r=rng(7),h='<defs><radialGradient id="fl"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>';
+  [[90,120,110],[520,90,90],[470,610,130],[70,560,90],[300,40,70]].forEach(function(c){h+='<circle cx="'+c[0]+'" cy="'+c[1]+'" r="'+c[2]+'" fill="url(#fl)"/>'});
+  for(var i=0;i<260;i++){var x=r()*600,y=r()*700;h+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+(r()*1.6+.4).toFixed(2)+'" fill="#fff" opacity="'+(r()*.5+.25).toFixed(2)+'"/>'}
+  s.innerHTML=h})();
+ // crust char + sauce texture
+ (function(){var r=rng(3),c='',t='';for(var i=0;i<26;i++){var a=r()*6.283,d=164+r()*14;c+='<ellipse cx="'+(200+Math.cos(a)*d).toFixed(1)+'" cy="'+(200+Math.sin(a)*d).toFixed(1)+'" rx="'+(2+r()*4).toFixed(1)+'" ry="'+(1.5+r()*2.5).toFixed(1)+'" transform="rotate('+(a*57.3).toFixed(0)+' '+(200+Math.cos(a)*d).toFixed(1)+' '+(200+Math.sin(a)*d).toFixed(1)+')"/>'}
+  for(i=0;i<40;i++){var a2=r()*6.283,d2=Math.sqrt(r())*140;t+='<circle cx="'+(200+Math.cos(a2)*d2).toFixed(1)+'" cy="'+(200+Math.sin(a2)*d2).toFixed(1)+'" r="'+(2+r()*7).toFixed(1)+'" fill="'+(r()<.5?'#dd5a35':'#962611')+'" opacity=".35"/>'}
+  document.getElementById('char').innerHTML=c;document.getElementById('sauceTex').innerHTML=t})();
+ // toppings
+ T.forEach(function(t,k){
+  var r=rng(11+k*17),pts=[],tries=0;
+  while(pts.length<t.n&&tries<4000){tries++;var a=r()*6.283,d=Math.sqrt(r())*132,x=Math.cos(a)*d,y=Math.sin(a)*d,ok=true;
+   for(var j=0;j<pts.length;j++){var dx=pts[j][0]-x,dy=pts[j][1]-y;if(dx*dx+dy*dy<t.md*t.md){ok=false;break}}
+   if(ok)pts.push([x,y])}
+  var g=document.createElementNS(NS,'g');g.setAttribute('class','tp');g.setAttribute('data-id',t.id);
+  var h='';pts.forEach(function(p,i){var d=Math.round(i*55+r()*40);h+='<g transform="translate('+p[0].toFixed(1)+' '+p[1].toFixed(1)+') rotate('+Math.round(r()*360)+')"><g class="pc" style="--d:'+d+'ms;--o:'+Math.round(d/4)+'ms">'+t.shape+'</g></g>'});
+  g.innerHTML=h;tg.appendChild(g);t.g=g;
+  var li=document.createElement('li');
+  li.innerHTML='<button class="tb" type="button" aria-pressed="false" data-id="'+t.id+'"><svg viewBox="-24 -24 48 48" aria-hidden="true">'+t.shape+'</svg><span class="n">'+t.name+'</span><span class="p">+ '+t.price+' kr.</span><span class="pl" aria-hidden="true">+</span></button>';
+  tops.appendChild(li);t.btn=li.firstChild;
+  t.btn.addEventListener('click',function(){toggle(t)});
+ });
+ var lines=document.getElementById('lines'),sum=document.getElementById('sum'),vat=document.getElementById('vat'),tot=document.getElementById('tot');
+ function kr(n){return n.toFixed(2).replace('.',',')+' kr.'}
+ function render(newId){
+  var h='<li><span>Pizzabund m. tomat</span><span>'+kr(BASE)+'</span></li>',s=BASE;
+  T.forEach(function(t){if(on[t.id]){s+=t.price;h+='<li'+(t.id===newId?' class="new"':'')+'><span>'+t.name+'</span><span>'+kr(t.price)+'</span></li>'}});
+  lines.innerHTML=h;sum.textContent=kr(s);vat.textContent=kr(s*.2);
+  tot.classList.remove('bump');void tot.offsetWidth;tot.classList.add('bump');
+ }
+ function toggle(t){if(busy)return;on[t.id]=!on[t.id];t.g.classList.toggle('on',on[t.id]);t.btn.setAttribute('aria-pressed',on[t.id]?'true':'false');render(on[t.id]?t.id:null)}
+ render();
+ // order
+ var stage=document.getElementById('stage'),order=document.getElementById('order'),busy=false;
+ function w(ms){return rm.matches?0:ms}
+ order.addEventListener('click',function(){
+  if(busy)return;busy=true;order.disabled=true;
+  var r=stage.getBoundingClientRect(),pre=0;
+  if(r.top<60||r.bottom>window.innerHeight){stage.scrollIntoView({behavior:rm.matches?'auto':'smooth',block:'center'});pre=w(650)}
+  setTimeout(function(){stage.classList.add('closed');
+  setTimeout(function(){stage.classList.add('gone');
+   setTimeout(function(){stage.classList.add('showmsg');document.getElementById('again').focus({preventScroll:true})},w(700));
+  },w(1050));
+  },pre);
+ });
+ document.getElementById('again').addEventListener('click',function(){
+  stage.classList.remove('showmsg');
+  stage.classList.add('instant');
+  T.forEach(function(t){on[t.id]=false;t.g.classList.remove('on');t.btn.setAttribute('aria-pressed','false')});render();
+  stage.classList.remove('gone');stage.classList.add('left');void stage.offsetWidth;
+  stage.classList.remove('instant');
+  requestAnimationFrame(function(){stage.classList.remove('left');
+   setTimeout(function(){stage.classList.remove('closed');setTimeout(function(){busy=false;order.disabled=false},w(900))},w(800));
+  });
+ });
+})();
+</script>
+</body>
+</html>
