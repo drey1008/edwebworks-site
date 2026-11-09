@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Forslag til ny hjemmeside til café deilig</title>
+<meta name="description" content="Et forslag til en ny hjemmeside til café deilig i H.C. Andersen Haven, med menu, bordreservation og bestilling fra bordet. Lavet af ED. Web Works.">
+<link rel="canonical" href="https://edwebworks.com/forslag/cafedeilig/">
+<link rel="icon" href="img/logo-groen.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ED. Web Works">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://edwebworks.com/forslag/cafedeilig/">
+<meta property="og:title" content="Forslag til ny hjemmeside til café deilig">
+<meta property="og:description" content="Se et forslag til en ny hjemmeside med menu, bordreservation og bestilling fra bordet. Lavet af ED. Web Works.">
+<meta property="og:image" content="https://edwebworks.com/forslag/cafedeilig/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Forsiden af forslaget til café deilig">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forslag til ny hjemmeside til café deilig">
+<meta name="twitter:description" content="Se et forslag til en ny hjemmeside med menu, bordreservation og bestilling fra bordet.">
+<meta name="twitter:image" content="https://edwebworks.com/forslag/cafedeilig/og.jpg">
+<meta name="theme-color" content="#f4f0e6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,500&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/haven.webp">
+<!--
+  FORSLAG: pitch-demo for café deilig, lavet af ED. Web Works (edwebworks.com).
+  Navn, adresse, telefon, e-mail, CVR, åbningstider, retter og priser er hentet fra deilig.dk (nov. 2026).
+  Billederne er caféens egne fra deilig.dk, brugt i dette forslag til dem.
+  Formularerne sender intet. Bordreservation og QR-bestilling er demos.
+  Ikke virksomhedens officielle side. Må ikke indekseres.
+-->
+<style>
+:root{
+  --bg:#f4f0e6;--bg2:#ebe4d4;--ink:#1f2a1c;--mut:#5c6658;--line:rgba(31,42,28,.14);
+  --green:#2f5e3a;--green2:#244a2e;--leaf:#6f8f62;--cream:#f4f0e6;--white:#fffcf5;
+  --serif:"Alegreya",Georgia,"Times New Roman",serif;
+  --sans:"Alegreya Sans",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --pad:clamp(18px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+section[id]{scroll-margin-top:78px}
+body{background:var(--bg);color:var(--ink);font:400 17.5px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip;padding-bottom:78px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.w{padding-left:var(--pad);padding-right:var(--pad);max-width:1180px;margin:0 auto}
+.flag{background:var(--ink);color:var(--cream);text-align:center;font:700 11.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:9px 14px}
+header{position:sticky;top:0;z-index:40;background:rgba(244,240,230,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:48px;width:auto}
+.logo b{font:700 20px/1 var(--serif);letter-spacing:-.02em}
+.nav ul{display:none;list-style:none;gap:26px;font-weight:700;font-size:15px}
+.nav ul a{color:var(--mut)}.nav ul a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 22px;font:700 15px/1 var(--sans);border:1.5px solid var(--green);background:var(--green);color:#fff;cursor:pointer;transition:background .2s,transform .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--green2);border-color:var(--green2);transform:translateY(-1px)}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:var(--cream)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgba(255,252,245,.45)}
+.btn.ghost:hover{background:var(--cream);color:var(--ink)}
+.btn.sm{padding:10px 16px;font-size:14px}
+.btn:disabled,.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none}
+.cap{font:700 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.hero{display:grid;gap:28px;padding-top:clamp(28px,5vh,56px);padding-bottom:clamp(40px,7vh,72px)}
+.hero-copy h1{font:600 clamp(42px,8vw,78px)/1.02 var(--serif);letter-spacing:-.03em;margin-top:14px}
+.hero-copy h1 em{font-style:italic;color:var(--green)}
+.hero-copy .lead{color:var(--mut);font-size:clamp(17px,1.5vw,20px);margin-top:18px;max-width:42ch}
+.hero-copy .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero-media{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:var(--bg2)}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:14px;bottom:14px;background:rgba(244,240,230,.94);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:700 13px/1 var(--sans)}
+.strip{display:grid;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.strip>div{padding:18px 0}
+.strip b{display:block;font:600 20px/1.15 var(--serif)}
+.strip span{color:var(--mut);font-size:14.5px}
+.sec{padding-top:clamp(56px,9vh,100px);padding-bottom:clamp(8px,2vh,20px)}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.sh h2{font:600 clamp(34px,5vw,58px)/1.05 var(--serif);letter-spacing:-.03em;margin-top:10px}
+.sh p{color:var(--mut);max-width:42ch}
+.cards{display:grid;gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:grid}
+.card .ph{aspect-ratio:16/11;overflow:hidden;background:var(--bg2)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .t{padding:20px 20px 22px}
+.card h3{font:600 28px/1.1 var(--serif)}
+.card p{color:var(--mut);margin:8px 0 16px;font-size:15.5px}
+.menu{display:grid;gap:18px}
+.mc{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px}
+.mc h3{font:600 26px/1.1 var(--serif);padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.mc>p{color:var(--mut);font-size:15px;margin:10px 0 4px}
+.mc ul{list-style:none;margin-top:6px}
+.mc li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 14px;padding:13px 0;border-bottom:1px solid var(--line)}
+.mc li b{font-weight:700;font-size:16.5px}
+.mc li .pr{font-weight:700;white-space:nowrap}
+.mc li small{grid-column:1/-1;color:var(--mut);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
+.chip{background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;font:700 14px var(--sans);color:var(--mut);cursor:pointer}
+.chip.on{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.about{display:grid;gap:24px;align-items:center}
+.about .copy p{color:var(--mut);margin-top:14px;max-width:48ch}
+.about .copy p.big{color:var(--ink);font:500 clamp(22px,2.4vw,30px)/1.3 var(--serif)}
+.facts{display:grid;gap:12px;margin-top:22px;list-style:none}
+.facts li{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.facts b{display:block;font:700 15px/1.2 var(--sans);margin-bottom:4px}
+.facts span{color:var(--mut);font-size:14.5px}
+.about .ph{border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:var(--bg2)}
+.about .ph img{width:100%;height:100%;object-fit:cover}
+.band{margin-top:clamp(48px,8vh,80px);background:var(--green);color:var(--cream);border-radius:24px;padding:clamp(28px,5vw,44px);display:grid;gap:18px}
+.band h2{font:600 clamp(30px,4.5vw,46px)/1.1 var(--serif)}
+.band p{color:rgba(255,252,245,.84);max-width:48ch}
+.band .acts{display:flex;flex-wrap:wrap;gap:10px}
+.book{display:grid;gap:24px}
+.book form{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:14px}
+label{display:grid;gap:6px;font:700 12px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+input,select,textarea{font:400 16px var(--sans);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 12px;width:100%}
+textarea{min-height:100px;resize:vertical}
+.two{display:grid;gap:14px}
+.note{font-size:14px;color:var(--mut)}
+.ok{display:none;border:1.5px solid var(--green);background:#eef5ef;padding:14px 16px;border-radius:12px;color:var(--ink)}
+.qr-wrap{display:grid;gap:18px}
+.phone{max-width:340px;margin:0 auto;background:#121812;border-radius:36px;padding:14px;box-shadow:0 18px 50px rgba(31,42,28,.28)}
+.phone-in{background:var(--bg);border-radius:26px;overflow:hidden;min-height:520px;display:flex;flex-direction:column}
+.phone-top{background:var(--green);color:#fff;padding:18px 16px 14px}
+.phone-top .tiny{font:700 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.phone-top h3{font:600 24px/1.1 var(--serif);margin-top:6px}
+.phone-top p{font-size:13.5px;opacity:.9;margin-top:4px}
+.qr-list{padding:12px;display:grid;gap:8px;flex:1}
+.qr-item{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:12px}
+.qr-item b{display:block;font-size:15px}
+.qr-item small{color:var(--mut);font-size:13px}
+.qr-item button{border:0;background:var(--green);color:#fff;border-radius:999px;padding:8px 12px;font:700 13px var(--sans);cursor:pointer}
+.qr-item button.added{background:var(--ink)}
+.phone-bot{border-top:1px solid var(--line);padding:12px;background:var(--white);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.phone-bot strong{font:600 18px/1 var(--serif)}
+.scan{display:flex;gap:14px;align-items:center;background:var(--white);border:1px dashed var(--leaf);border-radius:18px;padding:16px}
+.scan .box{width:72px;height:72px;border-radius:12px;background:
+  linear-gradient(#1f2a1c,#1f2a1c) 0 0/22px 22px no-repeat,
+  linear-gradient(#1f2a1c,#1f2a1c) calc(100% - 0px) 0/22px 22px no-repeat,
+  linear-gradient(#1f2a1c,#1f2a1c) 0 calc(100% - 0px)/22px 22px no-repeat,
+  linear-gradient(#1f2a1c,#1f2a1c) 100% 100%/22px 22px no-repeat,
+  repeating-linear-gradient(90deg,#1f2a1c 0 4px,transparent 4px 8px) 8px 8px/56px 4px no-repeat,
+  repeating-linear-gradient(0deg,#1f2a1c 0 4px,transparent 4px 8px) 8px 8px/4px 56px no-repeat,
+  #ebe4d4;flex:0 0 auto}
+.find{display:grid;gap:24px}
+.hours{list-style:none;margin-top:18px}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.hours li:first-child{border-top:1px solid var(--line)}
+.hours li span:last-child{font-weight:700;white-space:nowrap}
+.map{min-height:280px;border-radius:20px;display:flex;align-items:center;justify-content:center;text-decoration:none;background:
+  radial-gradient(circle at 30% 40%,rgba(47,94,58,.18),transparent 40%),
+  linear-gradient(90deg,transparent 48%,rgba(47,94,58,.22) 48% 52%,transparent 52%) 0 0/40px 40px,
+  linear-gradient(0deg,transparent 48%,rgba(31,42,28,.08) 48% 52%,transparent 52%) 0 0/40px 40px,
+  var(--bg2)}
+.pin{background:var(--ink);color:var(--cream);padding:16px 18px;border-radius:14px;text-align:center}
+.pin b{display:block;font:600 22px/1.1 var(--serif);margin-bottom:4px}
+footer{margin-top:clamp(48px,8vh,80px);padding:36px var(--pad) 28px;border-top:1px solid var(--line);color:var(--mut);font-size:14.5px}
+footer .inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.credit{font-size:12.5px;opacity:.75}.credit a{text-decoration:underline}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1.35fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(244,240,230,.96);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+.bar .btn{padding:14px 10px;width:100%}
+@media(min-width:760px){
+  body{padding-bottom:0}.bar{display:none}.nav ul{display:flex}
+  .hero{grid-template-columns:1.05fr .95fr;align-items:center;gap:40px}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .strip>div+div{border-left:1px solid var(--line);padding-left:24px}
+  .strip>div{padding:22px 0}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .menu{grid-template-columns:1.1fr .9fr}
+  .about{grid-template-columns:1.05fr .95fr;gap:48px}
+  .book{grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+  .two{grid-template-columns:1fr 1fr}
+  .qr-wrap{grid-template-columns:1fr 1fr;align-items:center;gap:36px}
+  .find{grid-template-columns:1fr 1fr;gap:40px}
+  footer .inner{flex-direction:row;justify-content:space-between;align-items:end}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="flag">Forslag til ny hjemmeside · Lavet af ED. Web Works · Sender ikke noget</div>
+<header>
+  <nav class="nav w" aria-label="Hovedmenu">
+    <a class="logo" href="#top" aria-label="café deilig"><img src="img/logo-groen.webp" alt="café deilig" width="160" height="89"></a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#om">Om caféen</a></li>
+      <li><a href="#book">Book bord</a></li>
+      <li><a href="#qr">Bestil fra bordet</a></li>
+      <li><a href="#find">Find os</a></li>
+    </ul>
+    <a class="btn sm" href="#book">Book bord</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero w">
+    <div class="hero-copy">
+      <div class="cap">Café · H.C. Andersen Haven · Odense</div>
+      <h1>Velkommen indenfor i en <em>eventyrlig</em> café</h1>
+      <p class="lead">Brunch, frokost og aftenmad lavet fra bunden af sæsonens råvarer. Midt i haven, få minutters gang fra gågaden.</p>
+      <div class="cta">
+        <a class="btn" href="#book">Reservér bord</a>
+        <a class="btn line" href="#menu">Se menuen</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="img/haven.webp" alt="De runde caféhuse med grønne tage i H.C. Andersen Haven" width="1125" height="750">
+      <span class="badge">H.C. Andersen Haven 3</span>
+    </div>
+  </section>
+
+  <div class="strip w" aria-label="Hurtige fakta">
+    <div><b>Brunch</b><span>Byg selv 3, 5 eller 7 elementer</span></div>
+    <div><b>Frokost</b><span>Smørrebrød og retter med eventyrnavne</span></div>
+    <div><b>Aften</b><span>11 serveringer fre–lør kl. 17–22</span></div>
+  </div>
+
+  <section class="sec w" id="menu">
+    <div class="sh">
+      <div>
+        <div class="cap">Menu</div>
+        <h2>Hvad har du lyst til?</h2>
+      </div>
+      <p>Et udsnit af menukortet fra deilig.dk. Priser og retter følger sæsonen.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="ph"><img src="img/brunch.webp" alt="Brunchbræt fra café deilig" loading="lazy" width="596" height="400"></div>
+        <div class="t">
+          <h3>Brunch</h3>
+          <p>Hverdage fra kl. 10, weekend fra kl. 9. Byg din egen brunch.</p>
+          <a class="btn line sm" href="#brunch">Se brunch</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="img/frokost.webp" alt="Frokostret fra café deilig" loading="lazy" width="640" height="430"></div>
+        <div class="t">
+          <h3>Frokost</h3>
+          <p>Smørrebrød og frokostretter inspireret af H.C. Andersens eventyr.</p>
+          <a class="btn line sm" href="#frokost">Se frokost</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="ph"><img src="img/aften-aperol.webp" alt="Aftenstemning på café deilig" loading="lazy" width="800" height="600"></div>
+        <div class="t">
+          <h3>Aften</h3>
+          <p>Elleve serveringer som to-share. Fredag og lørdag kl. 17–22.</p>
+          <a class="btn line sm" href="#aften">Se aftenmenu</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="chips" role="group" aria-label="Skift menukort" style="margin-top:28px">
+      <button class="chip on" type="button" data-menu="brunch">Brunch</button>
+      <button class="chip" type="button" data-menu="frokost">Frokost</button>
+      <button class="chip" type="button" data-menu="aften">Aften</button>
+    </div>
+
+    <div class="menu">
+      <div class="mc" id="brunch" data-panel="brunch">
+        <h3>Byg din egen brunch</h3>
+        <p>3 stk. 120,- / 5 stk. 160,- / 7 stk. 190,- · Menuen gælder fra 3. november til 31. december 2026</p>
+        <ul>
+          <li><b>Hjemmebag</b><span class="pr">inkl.</span><small>Økologisk bolle, rugbrød og øko-smør</small></li>
+          <li><b>Croissant</b><span class="pr">inkl.</span><small>Sprød og luftig</small></li>
+          <li><b>Avokado</b><span class="pr">inkl.</span><small>deiligs vinaigrette, sesam og cashews</small></li>
+          <li><b>Cremet røræg</b><span class="pr">inkl.</span><small>Med revet ost og purløg</small></li>
+          <li><b>Bacon</b><span class="pr">inkl.</span><small>Sprødt og lækkert</small></li>
+          <li><b>Lakserilette</b><span class="pr">inkl.</span><small>Friskost, sylt og rugbrødscrumble</small></li>
+          <li><b>Æbleskivevafler</b><span class="pr">inkl.</span><small>Brunsvigersovs og flormelis</small></li>
+        </ul>
+      </div>
+
+      <div class="mc" id="frokost" data-panel="frokost" hidden>
+        <h3>Smørrebrød og frokostretter</h3>
+        <p>Menuen gælder fra 1. oktober til 31. december 2026. Vi anbefaler 2 stk. smørrebrød pr. person.</p>
+        <ul>
+          <li><b>Hvad Havet Fortæller</b><span class="pr">135,-</span><small>Paneret rødspætte med grov remoulade af dild og blomkål</small></li>
+          <li><b>Den store søslange</b><span class="pr">125,-</span><small>Lakserilette med friskost, purløg og dild</small></li>
+          <li><b>Fra Andegaarden</b><span class="pr">115,-</span><small>Hønsesalat med stegte svampe, baconknas og Arla efterglød</small></li>
+          <li><b>Den sidste perle</b><span class="pr">185,-</span><small>Oksekødsburgerbøf i øko. kartoffelbolle med pommes og aioli</small></li>
+          <li><b>Prinsessen på ærten</b><span class="pr">155,-</span><small>Cæsarsalat med paneret kylling, bacon og efterglød</small></li>
+          <li><b>Nattergalen</b><span class="pr">155,-</span><small>Pasta i cremet svampesauce med salsiccia</small></li>
+        </ul>
+      </div>
+
+      <div class="mc" id="aften" data-panel="aften" hidden>
+        <h3>En deilig aften</h3>
+        <p>349,- pr. person · Fredag og lørdag kl. 17–22 · Kan laves vegetarisk</p>
+        <ul>
+          <li><b>Hjemmelavede tortilla-chips</b><span class="pr">start</span><small>Med ananas-salsa</small></li>
+          <li><b>Finthakket laksetatar</b><span class="pr">start</span><small>Med ponzu og friske urter</small></li>
+          <li><b>Citronmarineret kyllingeoverlår</b><span class="pr">hoved</span><small>Og peberfrugt</small></li>
+          <li><b>Stracciatella</b><span class="pr">hoved</span><small>Og bagte tomater</small></li>
+          <li><b>Citrontærte</b><span class="pr">sødt</span><small>Med brændt marengs</small></li>
+          <li><b>Mørk chokolademousse</b><span class="pr">sødt</span><small>Med syltet hybenrose og havsalt</small></li>
+        </ul>
+      </div>
+
+      <div class="mc" aria-hidden="false">
+        <h3>Godt at vide</h3>
+        <p>Praktisk info gæsterne ofte spørger om.</p>
+        <ul>
+          <li><b>Brunch-tider</b><span class="pr"></span><small>Hverdage 10.00–11.45, weekend 09.00–11.45. Bordet er jeres i 1½ time.</small></li>
+          <li><b>Allergier</b><span class="pr"></span><small>Skriv det, når du booker. Der findes også en allergener-side.</small></li>
+          <li><b>Selskaber</b><span class="pr"></span><small>Hold selskab uden for normal åbningstid i caféen.</small></li>
+          <li><b>Gavekort</b><span class="pr"></span><small>Kan købes online via deres nuværende gavekortsløsning.</small></li>
+        </ul>
+        <p class="note" style="margin-top:14px">Tekster og priser er hentet fra deilig.dk. På den færdige side kan I selv opdatere sæsonmenuen, eller jeg gør det for jer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec w" id="om">
+    <div class="about">
+      <div class="copy">
+        <div class="cap">Om caféen</div>
+        <h2 style="font:600 clamp(34px,5vw,58px)/1.05 var(--serif);letter-spacing:-.03em;margin-top:10px">Stedet, hvor mad møder eventyr</h2>
+        <p class="big">Vi holder til i de runde huse med de grønne tage midt i H.C. Andersen Haven.</p>
+        <p>Højt til loftet, lyst træ og vinduer hele vejen rundt, så haven er med ved bordet året rundt. Alt laves fra bunden af lokale råvarer, med vægt på økologi og velsmag.</p>
+        <ul class="facts">
+          <li><b>Lokale råvarer</b><span>Sæsonens råvarer i høj kvalitet, med vægt på økologi.</span></li>
+          <li><b>Lavet fra bunden</b><span>Fra brød og smør til desserter, i eget køkken.</span></li>
+          <li><b>Plads til alle</b><span>Middag for to, frokost med vennerne eller brunch med familien.</span></li>
+        </ul>
+      </div>
+      <div class="ph"><img src="img/bygningen.webp" alt="Cafébygningen i H.C. Andersen Haven" loading="lazy" width="900" height="700"></div>
+    </div>
+
+    <div class="band">
+      <div>
+        <div class="cap" style="color:#c7dbc8">Ét sted til det hele</div>
+        <h2>Book bord, se menuen og bestil fra bordet</h2>
+        <p>I forslaget samler vi hjemmeside, reservation og QR-bestilling, så gæsterne ikke skal hoppe mellem tre forskellige steder.</p>
+      </div>
+      <div class="acts">
+        <a class="btn ghost" href="#book">Prøv book-demo</a>
+        <a class="btn ghost" href="#qr">Prøv QR-demo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec w" id="book">
+    <div class="book">
+      <div>
+        <div class="cap">Bordreservation</div>
+        <h2 style="font:600 clamp(34px,5vw,58px)/1.05 var(--serif);letter-spacing:-.03em;margin-top:10px">Vi har gemt en plads til dig</h2>
+        <p class="note" style="margin-top:14px;font-size:17px;color:var(--mut);max-width:42ch">Reservér online, så er bordet klar, når du kommer. Vi anbefaler at booke i god tid, især i weekenden.</p>
+        <p class="note" style="margin-top:14px">I bruger allerede DinnerBooking i dag. På den færdige side kan knappen pege direkte derhen, eller vi sætter en indlejret booking op, hvis I vil have det på jeres egen side.</p>
+        <p class="note" style="margin-top:10px">Ring hellere? <a href="tel:+4522250240" style="text-decoration:underline;font-weight:700">22 25 02 40</a> · <a href="mailto:info@deilig.dk" style="text-decoration:underline;font-weight:700">info@deilig.dk</a></p>
+      </div>
+      <form id="bookform" action="#" method="dialog" novalidate onsubmit="return false">
+        <div class="two">
+          <label>Navn<input name="navn" autocomplete="name" placeholder="Dit navn"></label>
+          <label>Telefon<input name="tlf" autocomplete="tel" placeholder="20 00 00 00"></label>
+        </div>
+        <div class="two">
+          <label>Dato<input type="date" name="dato"></label>
+          <label>Tidspunkt
+            <select name="tid">
+              <option>Brunch (før kl. 12)</option>
+              <option>Frokost</option>
+              <option>Aften (fre/lør)</option>
+            </select>
+          </label>
+        </div>
+        <div class="two">
+          <label>Antal gæster
+            <select name="gaester">
+              <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option>
+            </select>
+          </label>
+          <label>E-mail<input type="email" name="mail" autocomplete="email" placeholder="dig@mail.dk"></label>
+        </div>
+        <label>Bemærkning<textarea name="note" placeholder="Allergier, barnevogn, særlige ønsker …"></textarea></label>
+        <button class="btn" type="submit">Send reservation</button>
+        <div class="ok" id="bookok" role="status">Tak! <strong>Dette er en demo</strong>, og formularen sender ikke noget. På den rigtige side lander bookingen i jeres system.</div>
+        <p class="note">Demo-formular. Sender intet.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec w" id="qr">
+    <div class="sh">
+      <div>
+        <div class="cap">QR-bestilling</div>
+        <h2>Bestil fra bordet</h2>
+      </div>
+      <p>Gæsten scanner QR-koden på bordet, vælger retter og sender ordren. Selve systemet kobles på jeres kasse, så vi vælger leverandør sammen, når vi ved hvilket kassesystem I har.</p>
+    </div>
+    <div class="qr-wrap">
+      <div>
+        <div class="scan">
+          <div class="box" aria-hidden="true"></div>
+          <div>
+            <b style="font:600 22px/1.1 var(--serif)">Bord 7</b>
+            <p class="note" style="margin-top:6px">Scan koden, så åbner menukortet på mobilen. Ingen app. Ingen ekstra login.</p>
+          </div>
+        </div>
+        <ul class="facts" style="margin-top:18px">
+          <li><b>Bordnummer følger med</b><span>Køkkenet kan se, hvor ordren skal hen.</span></li>
+          <li><b>Samme menukort</b><span>I opdaterer priser ét sted.</span></li>
+          <li><b>Tilvalg</b><span>Prisen afhænger af leverandør og jeres kasse. Se prisforslaget.</span></li>
+        </ul>
+      </div>
+      <div class="phone" aria-label="Demo af bestilling fra bordet">
+        <div class="phone-in">
+          <div class="phone-top">
+            <div class="tiny">café deilig · bord 7</div>
+            <h3>Bestil fra bordet</h3>
+            <p>Tryk på retterne. Det er kun en demo.</p>
+          </div>
+          <div class="qr-list" id="qrlist">
+            <div class="qr-item"><div><b>Hvad Havet Fortæller</b><small>135,- · Smørrebrød</small></div><button type="button" data-p="135">Tilføj</button></div>
+            <div class="qr-item"><div><b>Fra Andegaarden</b><small>115,- · Smørrebrød</small></div><button type="button" data-p="115">Tilføj</button></div>
+            <div class="qr-item"><div><b>Den sidste perle</b><small>185,- · Burger</small></div><button type="button" data-p="185">Tilføj</button></div>
+            <div class="qr-item"><div><b>Pommes frites</b><small>45,- · Side</small></div><button type="button" data-p="45">Tilføj</button></div>
+            <div class="qr-item"><div><b>Flat white</b><small>42,- · Kaffe</small></div><button type="button" data-p="42">Tilføj</button></div>
+          </div>
+          <div class="phone-bot">
+            <div><span class="note">I kurven</span><br><strong id="qrtotal">0,-</strong></div>
+            <button class="btn sm" type="button" id="qrsend">Send ordre</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note" id="qrok" style="margin-top:14px;display:none;border:1.5px solid var(--green);background:#eef5ef;padding:14px 16px;border-radius:12px">Ordren er “sendt” i demoen. På den rigtige løsning lander den i køkkenet eller kassen.</p>
+  </section>
+
+  <section class="sec w" id="find">
+    <div class="find">
+      <div>
+        <div class="cap">Find os</div>
+        <h2 style="font:600 clamp(34px,5vw,58px)/1.05 var(--serif);letter-spacing:-.03em;margin-top:10px">H.C. Andersen Haven 3</h2>
+        <p class="note" style="margin-top:12px;font-size:17px">5000 Odense C · Få minutters gang fra gågaden og Odense Banegård Center.</p>
+        <p class="note" style="margin-top:10px"><a href="tel:+4522250240" style="font-weight:700;text-decoration:underline">22 25 02 40</a><br><a href="mailto:info@deilig.dk" style="font-weight:700;text-decoration:underline">info@deilig.dk</a></p>
+        <p class="cap" style="margin-top:28px">Åbningstider · 1. november til 31. december</p>
+        <ul class="hours">
+          <li><span>Mandag</span><span>Lukket</span></li>
+          <li><span>Tirsdag</span><span>10–16</span></li>
+          <li><span>Onsdag</span><span>10–16</span></li>
+          <li><span>Torsdag</span><span>10–16</span></li>
+          <li><span>Fredag</span><span>10–17 og 17.30–22</span></li>
+          <li><span>Lørdag</span><span>09–17 og 17.30–22</span></li>
+          <li><span>Søndag</span><span>09–17</span></li>
+        </ul>
+        <p class="note" style="margin-top:12px">Lukket 24., 25. og 31. december. Ekstra åbent 28. december kl. 10–16.</p>
+      </div>
+      <a class="map" href="https://maps.google.com/?q=H.C.+Andersen+Haven+3,+5000+Odense+C" target="_blank" rel="noopener">
+        <span class="pin"><b>Åbn i Maps</b>H.C. Andersen Haven 3</span>
+      </a>
+    </div>
+    <div style="margin-top:28px;border-radius:20px;overflow:hidden;aspect-ratio:21/9;background:var(--bg2)">
+      <img src="img/selskab.webp" alt="Interiør og selskab i café deilig" loading="lazy" width="1200" height="514" style="width:100%;height:100%;object-fit:cover">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="inner">
+    <div>
+      <b style="color:var(--ink);font:600 18px var(--serif)">café deilig</b>
+      <p>H.C. Andersen Haven 3 · 5000 Odense C · CVR 43703919</p>
+    </div>
+    <p class="credit">Forslag lavet af <a href="https://edwebworks.com">ED. Web Works</a>. Tekster, priser og billeder fra deilig.dk. Formularerne sender ikke noget. Siden er noindex og må ikke publiceres uden aftale.</p>
+  </div>
+</footer>
+
+<div class="bar" aria-label="Hurtige knapper">
+  <a class="btn line" href="tel:+4522250240">Ring</a>
+  <a class="btn" href="#book">Book bord</a>
+</div>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.chip[data-menu]');
+  var panels=document.querySelectorAll('[data-panel]');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.toggle('on',x===c)});
+      panels.forEach(function(p){p.hidden=p.getAttribute('data-panel')!==c.getAttribute('data-menu')});
+    });
+  });
+  var form=document.getElementById('bookform');
+  var ok=document.getElementById('bookok');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      ok.style.display='block';
+      form.querySelector('button[type=submit]').disabled=true;
+    });
+  }
+  var total=0;
+  var totalEl=document.getElementById('qrtotal');
+  document.querySelectorAll('#qrlist button').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      if(btn.classList.contains('added')){
+        total-=Number(btn.dataset.p)||0;
+        btn.classList.remove('added');
+        btn.textContent='Tilføj';
+      }else{
+        total+=Number(btn.dataset.p)||0;
+        btn.classList.add('added');
+        btn.textContent='Valgt';
+      }
+      totalEl.textContent=total+',-';
+    });
+  });
+  var send=document.getElementById('qrsend');
+  var qrok=document.getElementById('qrok');
+  if(send){
+    send.addEventListener('click',function(){
+      qrok.style.display='block';
+      send.textContent='Sendt (demo)';
+      send.disabled=true;
+    });
+  }
+})();
+</script>
+</body>
+</html>
