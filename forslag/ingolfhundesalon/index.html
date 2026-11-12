@@ -118,6 +118,15 @@ section{padding:clamp(56px,8vw,104px) 0}
 .about p{margin-top:16px;color:var(--mut);max-width:34em}
 .about p strong{color:var(--ink);font-weight:500}
 
+.about .team{margin-top:clamp(40px,6vw,72px);display:grid;gap:20px}
+.person{background:var(--white);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid}
+.person .pimg{aspect-ratio:4/3;background:var(--bg)}
+.person .pimg img{width:100%;height:100%;object-fit:cover}
+.person .ptxt{padding:22px 24px 26px}
+.person h3{font-size:34px}
+.person .role{margin:6px 0 12px;font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.person .ptxt p{margin-top:10px;font-size:16.5px}
+.person .ptxt p.role{margin-top:6px}
 .know ul{list-style:none;margin-top:24px;display:grid;gap:12px;max-width:44em}
 .know li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px;color:var(--mut)}
 .know li b{color:var(--ink);font-weight:500}
@@ -186,7 +195,10 @@ html.intro-done .intro{display:none!important}
   .facts ul{grid-template-columns:repeat(3,1fr);gap:32px}
   .cards{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:repeat(3,1fr)}
-  .about .wrap{grid-template-columns:1fr 1fr;gap:64px}
+  .about .wrap:not(.team){grid-template-columns:1fr 1fr;gap:64px}
+  .about .team{grid-template-columns:1fr 1fr}
+  .person{grid-template-columns:1fr 1fr}
+  .person .pimg{aspect-ratio:auto;min-height:100%}
   .find .wrap{grid-template-columns:1fr 1fr;gap:64px}
 }
 @media(min-width:1000px){
@@ -345,10 +357,29 @@ html.intro-done .intro{display:none!important}
     <div>
       <p class="eyebrow">Om salonen</p>
       <h2>Opkaldt efter Ingolf</h2>
-      <p>Salonen er opkaldt efter Ingolf, <strong>Caroline Strands egen hund</strong>. Det startede i forældrenes kælder, og i dag er der egen salon, butik og en ansat.</p>
-      <p>Caroline ser hver behandling som noget, der skal være roligt og trygt for hunden. Ingen hunde er ens, så hun tilpasser altid klippet efter hundens behov og temperament.</p>
-      <p><strong>Tiphaine</strong> er groomer i salonen. Hun har flere års erfaring, har arbejdet 5 år på Island og klipper også udstillingshunde. Hun taler primært engelsk.</p>
+      <p>Salonen er opkaldt efter Ingolf, <strong>Carolines egen hund</strong>. Det startede i forældrenes kælder, og i dag er der egen salon, butik og en ansat.</p>
+      <p>Hver hund er forskellig, så klippet tilpasses altid hundens behov, temperament og tålmodighed.</p>
     </div>
+  </div>
+  <div class="wrap team">
+    <article class="person">
+      <div class="pimg"><img src="img/caroline.webp" alt="Caroline Strand klipper en hund i salonen" loading="lazy" width="800" height="1201" style="object-position:30% 30%"></div>
+      <div class="ptxt">
+        <h3>Caroline Strand</h3>
+        <p class="role">Indehaver</p>
+        <p>Jeg går utrolig meget op i detaljerne og nærværet, og i at alle hunde bliver mødt med omsorg og respekt gennem hele behandlingen.</p>
+        <p>Jeg står altid inde for mit arbejde med en 100 % tilfredshedsgaranti.</p>
+      </div>
+    </article>
+    <article class="person">
+      <div class="pimg"><img src="img/tiphaine.webp" alt="Tiphaine børster en shiba inu på klippebordet" loading="lazy" width="800" height="1200" style="object-position:35% 30%"></div>
+      <div class="ptxt">
+        <h3>Tiphaine</h3>
+        <p class="role">Groomer</p>
+        <p>Tiphaine har flere års erfaring og har blandt andet arbejdet 5 år på Island. Hun er også uddannet i klip af udstillingshunde og kendt for sin rolige og omsorgsfulde tilgang.</p>
+        <p>Hun kommer fra Frankrig og taler primært engelsk.</p>
+      </div>
+    </article>
   </div>
 </section>
 
