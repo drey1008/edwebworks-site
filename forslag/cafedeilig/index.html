@@ -198,37 +198,33 @@ html.intro-skip .intro{display:none!important}
 .intro{position:fixed;inset:0;z-index:80;background:#f4f0e6;color:#1f2a1c;display:flex;align-items:center;justify-content:center;overflow:hidden;clip-path:circle(150% at 50% 52%)}
 .intro-skip{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:6;background:rgba(244,240,230,.94);color:#1f2a1c;border:1.5px solid #1f2a1c;border-radius:999px;padding:10px 16px;font:700 15px/1 var(--sans);cursor:pointer}
 .intro-skip:hover{background:#1f2a1c;color:#f4f0e6}
-.intro-stage{position:relative;z-index:1;width:min(560px,88vw);display:flex;flex-direction:column;align-items:center;justify-content:center}
-.intro-pond{position:relative;width:100%;aspect-ratio:5/3.4;overflow:visible}
-.intro-swan{width:100%;height:100%;display:block;overflow:visible;animation:introFloat 3.2s ease-in-out .5s infinite alternate}
-.intro-swan .body-stroke{fill:none;stroke:#2d5a3d;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:introDraw 1.15s cubic-bezier(.45,.1,.2,1) .35s forwards}
-.intro-swan .body-fill{fill:#2d5a3d;opacity:0;animation:introFill .55s ease 1.15s forwards}
-.intro-swan .neck{fill:none;stroke:#2d5a3d;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:introDraw 1.15s cubic-bezier(.45,.1,.2,1) .08s forwards}
-.intro-swan .head,.intro-swan .beak{fill:#2d5a3d;opacity:0;animation:introFill .4s ease 1.05s forwards}
-.intro-swan .wing{fill:none;stroke:#1f3f2b;stroke-width:1.6;stroke-linecap:round;opacity:0;animation:introFill .45s ease 1.35s forwards}
-.intro-swan .eye{fill:#f4f0e6;stroke:none;opacity:0;animation:introFill .35s ease 1.25s forwards}
-.intro-reflect{opacity:0;animation:introFill .8s ease 1.15s forwards;pointer-events:none}
-.intro-reflect .body-fill{fill:url(#introFade);opacity:1;animation:none}
-.intro-water{position:absolute;left:8%;right:8%;top:68%;height:42%;pointer-events:none}
-.intro-water .rip{position:absolute;left:52%;top:14%;width:34%;aspect-ratio:3.6/1;border:1.6px solid rgba(45,90,61,.38);border-radius:50%;transform:translate(-50%,-50%) scale(.35);opacity:0;animation:introRipple 3.2s ease-out infinite}
-.intro-water .rip:nth-child(2){animation-delay:.7s;width:34%}
-.intro-water .rip:nth-child(3){animation-delay:1.4s;width:40%}
-.intro-water .rip:nth-child(4){animation-delay:2.1s;width:30%}
-.intro-line{position:absolute;left:6%;right:6%;top:70%;height:1px;background:linear-gradient(90deg,transparent,rgba(45,90,61,.28) 20%,rgba(45,90,61,.28) 80%,transparent);opacity:0;animation:introFill .8s ease .6s forwards}
-.intro-hello{margin:0 0 6px;text-align:center;font:500 clamp(20px,4.2vw,28px)/1.3 var(--serif);color:#2d5a3d;letter-spacing:-.02em;opacity:0;animation:introHello .7s ease 1.55s forwards}
+.intro-stage{position:relative;z-index:1;width:min(500px,80vw);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.intro-pond{position:relative;width:100%;aspect-ratio:340/258;overflow:visible;animation:introFloat 3.2s ease-in-out .5s infinite alternate}
+.intro-swan{width:100%;height:100%;display:block;overflow:visible}
+.intro-swan .body-stroke{fill:none;stroke:#2d5a3d;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:introDraw 1.45s cubic-bezier(.45,.1,.2,1) .1s forwards}
+.intro-swan .body-fill{fill:#fffdf8;opacity:0;animation:introFill .6s ease 1.2s forwards}
+.intro-swan .feather{fill:none;stroke:#2d5a3d;stroke-linecap:round;opacity:0;animation:introFill .45s ease 1.45s forwards}
+.intro-swan .eye{fill:#2d5a3d;opacity:0;animation:introFill .35s ease 1.4s forwards}
+.intro-reflect{opacity:0;animation:introFill .7s ease 1.25s forwards;pointer-events:none}
+.intro-waterline{stroke:#2d5a3d;stroke-opacity:.35;stroke-width:1.2;opacity:0;animation:introFill .8s ease .5s forwards}
+.intro-swan .rip{fill:none;stroke:#2d5a3d;stroke-width:1.15;transform-box:fill-box;transform-origin:center;opacity:0;animation:introRipple 3.2s ease-out infinite}
+.intro-swan .rip:nth-of-type(2){animation-delay:.7s}
+.intro-swan .rip:nth-of-type(3){animation-delay:1.4s}
+.intro-swan .rip:nth-of-type(4){animation-delay:2.1s}
+.intro-hello{margin:0 0 4px;text-align:center;font:500 clamp(20px,4.2vw,28px)/1.3 var(--serif);color:#2d5a3d;letter-spacing:-.02em;opacity:0;animation:introHello .7s ease 1.55s forwards}
 .intro.is-out{animation:introOpen .95s cubic-bezier(.22,.7,.18,1) forwards}
 .intro.is-out .intro-stage{animation:introLift .85s ease forwards}
 .intro.is-done{opacity:0;pointer-events:none}
 @keyframes introDraw{to{stroke-dashoffset:0}}
 @keyframes introFill{to{opacity:1}}
 @keyframes introHello{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@keyframes introFloat{from{transform:translateY(0)}to{transform:translateY(-6px)}}
-@keyframes introRipple{0%{transform:translate(-50%,-50%) scale(.32);opacity:.0}12%{opacity:.45}100%{transform:translate(-50%,-50%) scale(2.8);opacity:0}}
+@keyframes introFloat{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+@keyframes introRipple{0%{transform:scale(.35);opacity:0}12%{opacity:.42}100%{transform:scale(2.55);opacity:0}}
 @keyframes introOpen{to{clip-path:circle(0% at 50% 52%);opacity:0}}
 @keyframes introLift{to{opacity:0;transform:translateY(-12px) scale(.98)}}
 @media(max-width:759px){
-  .intro-stage{width:min(420px,90vw)}
-  .intro-hello{font-size:clamp(18px,5.6vw,24px);margin-top:6px}
+  .intro-stage{width:min(300px,72vw)}
+  .intro-hello{font-size:clamp(18px,5.6vw,24px);margin:0 0 2px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -244,27 +240,99 @@ html.intro-skip .intro{display:none!important}
   <div class="intro-stage">
     <p class="intro-hello" id="intro-title">Velkommen til café deilig</p>
     <div class="intro-pond" aria-hidden="true">
-      <div class="intro-line"></div>
-      <div class="intro-water">
-        <span class="rip"></span><span class="rip"></span><span class="rip"></span><span class="rip"></span>
-      </div>
-      <svg class="intro-swan" viewBox="70 40 250 230" role="img" aria-hidden="true">
+      <svg class="intro-swan" viewBox="10 8 340 258" role="img">
         <defs>
-          <linearGradient id="introFade" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#2d5a3d" stop-opacity=".28"/>
-            <stop offset="1" stop-color="#2d5a3d" stop-opacity="0"/>
+          <clipPath id="introAbove"><rect x="0" y="0" width="400" height="214"/></clipPath>
+          <clipPath id="introBelow"><rect x="0" y="214" width="400" height="28"/></clipPath>
+          <linearGradient id="introRefl" x1="0" y1="214" x2="0" y2="242" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fffdf8" stop-opacity=".48"/>
+            <stop offset="1" stop-color="#fffdf8" stop-opacity="0"/>
           </linearGradient>
         </defs>
-        <g class="intro-reflect" transform="matrix(1 0 0 -.34 0 340)">
-          <path class="body-fill" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
+        <g class="intro-reflect" clip-path="url(#introBelow)">
+          <g transform="matrix(1 0 0 -.32 0 282.48)">
+            <path d="M 42.0 132.0
+C 58.0 126.0 90.0 122.0 128.0 134.0
+C 156.0 144.0 176.0 156.0 188.5 169.2
+C 185.3 165.6 175.1 156.6 169.7 147.3
+C 164.3 137.9 156.7 124.8 155.9 113.2
+C 155.0 101.5 159.2 87.7 164.8 77.4
+C 170.4 67.1 179.9 58.0 189.3 51.2
+C 198.6 44.4 215.7 39.0 221.0 36.5
+C 229.5 32.5 240.0 22.0 250.0 26.0
+C 258.0 30.0 268.0 40.0 276.0 52.0
+C 268.0 56.0 256.0 54.0 244.0 48.0
+C 234.0 46.0 226.0 44.0 223.0 43.5
+C 218.5 46.1 203.2 52.6 195.9 59.4
+C 188.5 66.2 181.8 75.8 178.7 84.2
+C 175.5 92.6 175.0 102.3 176.9 109.9
+C 178.8 117.5 184.8 124.0 190.3 129.8
+C 195.8 135.7 202.9 139.8 209.7 145.1
+C 216.5 150.4 227.6 158.8 231.1 161.6
+C 250.0 176.0 266.0 198.0 254.0 216.0
+C 244.0 230.0 196.0 236.0 148.0 234.0
+C 100.0 232.0 68.0 216.0 54.0 190.0
+C 44.0 172.0 34.0 148.0 42.0 132.0
+Z" fill="url(#introRefl)" stroke="#2d5a3d" stroke-opacity=".16" stroke-width="1.5" stroke-linejoin="round"/>
+          </g>
         </g>
-        <path class="body-fill" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
-        <path class="body-stroke" pathLength="1000" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
-        <path class="neck" pathLength="1000" d="M216 180 C224 154 210 124 216 98 C222 82 236 72 250 74"/>
-        <ellipse class="head" cx="258" cy="76" rx="13" ry="11.5"/>
-        <path class="beak" d="M269 72 L290 78 L269 82 Z"/>
-        <path class="wing" d="M140 192 C158 184 176 186 190 196"/>
-        <circle class="eye" cx="261" cy="73" r="1.7"/>
+        <line class="intro-waterline" x1="24" y1="214" x2="336" y2="214"/>
+        <ellipse class="rip" cx="152" cy="214" rx="36" ry="7"/>
+        <ellipse class="rip" cx="152" cy="214" rx="36" ry="7"/>
+        <ellipse class="rip" cx="156" cy="214" rx="42" ry="8"/>
+        <ellipse class="rip" cx="148" cy="214" rx="32" ry="6"/>
+        <g clip-path="url(#introAbove)">
+          <path class="body-fill" d="M 42.0 132.0
+C 58.0 126.0 90.0 122.0 128.0 134.0
+C 156.0 144.0 176.0 156.0 188.5 169.2
+C 185.3 165.6 175.1 156.6 169.7 147.3
+C 164.3 137.9 156.7 124.8 155.9 113.2
+C 155.0 101.5 159.2 87.7 164.8 77.4
+C 170.4 67.1 179.9 58.0 189.3 51.2
+C 198.6 44.4 215.7 39.0 221.0 36.5
+C 229.5 32.5 240.0 22.0 250.0 26.0
+C 258.0 30.0 268.0 40.0 276.0 52.0
+C 268.0 56.0 256.0 54.0 244.0 48.0
+C 234.0 46.0 226.0 44.0 223.0 43.5
+C 218.5 46.1 203.2 52.6 195.9 59.4
+C 188.5 66.2 181.8 75.8 178.7 84.2
+C 175.5 92.6 175.0 102.3 176.9 109.9
+C 178.8 117.5 184.8 124.0 190.3 129.8
+C 195.8 135.7 202.9 139.8 209.7 145.1
+C 216.5 150.4 227.6 158.8 231.1 161.6
+C 250.0 176.0 266.0 198.0 254.0 216.0
+C 244.0 230.0 196.0 236.0 148.0 234.0
+C 100.0 232.0 68.0 216.0 54.0 190.0
+C 44.0 172.0 34.0 148.0 42.0 132.0
+Z"/>
+          <path class="body-stroke" pathLength="1000" d="M 42.0 132.0
+C 58.0 126.0 90.0 122.0 128.0 134.0
+C 156.0 144.0 176.0 156.0 188.5 169.2
+C 185.3 165.6 175.1 156.6 169.7 147.3
+C 164.3 137.9 156.7 124.8 155.9 113.2
+C 155.0 101.5 159.2 87.7 164.8 77.4
+C 170.4 67.1 179.9 58.0 189.3 51.2
+C 198.6 44.4 215.7 39.0 221.0 36.5
+C 229.5 32.5 240.0 22.0 250.0 26.0
+C 258.0 30.0 268.0 40.0 276.0 52.0
+C 268.0 56.0 256.0 54.0 244.0 48.0
+C 234.0 46.0 226.0 44.0 223.0 43.5
+C 218.5 46.1 203.2 52.6 195.9 59.4
+C 188.5 66.2 181.8 75.8 178.7 84.2
+C 175.5 92.6 175.0 102.3 176.9 109.9
+C 178.8 117.5 184.8 124.0 190.3 129.8
+C 195.8 135.7 202.9 139.8 209.7 145.1
+C 216.5 150.4 227.6 158.8 231.1 161.6
+C 250.0 176.0 266.0 198.0 254.0 216.0
+C 244.0 230.0 196.0 236.0 148.0 234.0
+C 100.0 232.0 68.0 216.0 54.0 190.0
+C 44.0 172.0 34.0 148.0 42.0 132.0
+Z"/>
+          <path class="feather" d="M 104 164 C 130 152 158 154 178 168" stroke-width="1.25"/>
+          <path class="feather" d="M 100 176 C 128 164 158 166 176 180" stroke-width="1.15"/>
+          <path class="feather" d="M 106 188 C 128 178 152 180 168 192" stroke-width="1.05"/>
+          <circle class="eye" cx="248" cy="32" r="2.05"/>
+        </g>
       </svg>
     </div>
   </div>
