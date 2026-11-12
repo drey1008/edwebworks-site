@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Forslag til ny hjemmeside til Ingolf Hundesalon</title>
+<meta name="description" content="Et forslag til en ny hjemmeside til Ingolf Hundesalon i Rungsted Kyst, med priser, om salonen og tidsbestilling. Lavet af ED. Web Works.">
+<link rel="canonical" href="https://edwebworks.com/forslag/ingolfhundesalon/">
+<link rel="icon" href="favicon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ED. Web Works">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://edwebworks.com/forslag/ingolfhundesalon/">
+<meta property="og:title" content="Forslag til ny hjemmeside til Ingolf Hundesalon">
+<meta property="og:description" content="Se et forslag til en ny hjemmeside med priser, om salonen og tidsbestilling. Lavet af ED. Web Works.">
+<meta property="og:image" content="https://edwebworks.com/forslag/ingolfhundesalon/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Forsiden af forslaget til Ingolf Hundesalon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forslag til ny hjemmeside til Ingolf Hundesalon">
+<meta name="twitter:description" content="Se et forslag til en ny hjemmeside med priser, om salonen og tidsbestilling.">
+<meta name="twitter:image" content="https://edwebworks.com/forslag/ingolfhundesalon/og.jpg">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
+<script>
+(function(){
+  var skip=false;
+  try{ if(sessionStorage.getItem("ingolfIntro")==="1") skip=true; }catch(e){}
+  try{ if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches) skip=true; }catch(e){}
+  try{
+    var q=location.search;
+    if(/[?&]intro=1(?:&|$)/.test(q)) skip=false;
+    if(/[?&]intro=0(?:&|$)/.test(q)) skip=true;
+  }catch(e){}
+  document.documentElement.classList.add(skip?"intro-done":"intro-play");
+})();
+</script>
+<!--
+  FORSLAG: pitch-demo for Ingolf Hundesalon, lavet af ED. Web Works (edwebworks.com).
+  Navn, adresse, telefon, e-mail, åbningstider, behandlinger og priser er hentet fra ingolfhundesalon.dk (nov. 2026).
+  Logo og billeder er salonens egne fra ingolfhundesalon.dk, brugt i dette forslag til dem.
+  Knappen "Book tid online" peger på salonens eksisterende booking hos Timma. Der er ingen formularer, og siden sender intet.
+  Ikke virksomhedens officielle side. Må ikke indekseres.
+-->
+<style>
+:root{
+  --bg:#f7f3ed;--bg2:#ece5da;--ink:#322923;--mut:#6f645b;--line:rgba(50,41,35,.14);
+  --accent:#8b7a68;--accent2:#5e5044;--white:#fffdf9;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Jost",system-ui,-apple-system,Helvetica,Arial,sans-serif;
+  --pad:clamp(18px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+section[id]{scroll-margin-top:84px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+.flag{background:var(--ink);color:#f2ebe0;text-align:center;font:500 13px/1.3 var(--sans);padding:8px 12px;letter-spacing:.02em}
+header.top{position:sticky;top:0;z-index:20;background:rgba(247,243,237,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand img{height:54px;width:auto}
+nav.main{display:none;gap:28px;font-size:15px;font-weight:500}
+nav.main a{text-decoration:none;color:var(--mut)}
+nav.main a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:#f7f3ed;border:1.5px solid var(--ink);border-radius:999px;padding:13px 24px;font:500 16px/1 var(--sans);text-decoration:none;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--accent2);border-color:var(--accent2)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#f7f3ed;border-color:var(--ink)}
+.btn.sm{padding:10px 18px;font-size:15px}
+.eyebrow{font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.05}
+h2{font-size:clamp(34px,4.6vw,54px);margin-top:10px}
+section{padding:clamp(56px,8vw,104px) 0}
+
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,6vw,80px)}
+.hero .wrap{display:grid;gap:32px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,84px);margin:14px 0 18px}
+.hero p.lead{font-size:19px;color:var(--mut);max-width:30em}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-photo{border-radius:240px 240px 24px 24px;overflow:hidden;background:var(--bg2);aspect-ratio:4/5;max-height:620px}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hours-mini{margin-top:30px;display:inline-grid;grid-template-columns:auto auto;gap:2px 22px;font-size:15px;color:var(--mut);border-top:1px solid var(--line);padding-top:16px}
+.hours-mini b{color:var(--ink);font-weight:500}
+
+.facts{background:var(--bg2);padding:26px 0}
+.facts ul{list-style:none;display:grid;gap:14px;text-align:left}
+.facts li{font-family:var(--serif);font-size:23px;font-weight:600;line-height:1.2}
+.facts li span{display:block;font:400 15px/1.4 var(--sans);color:var(--mut);margin-top:3px}
+
+.price-head{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-end;margin-bottom:30px}
+.tabs{display:inline-flex;background:var(--bg2);border-radius:999px;padding:4px}
+.tabs button{border:0;background:transparent;font:500 15px/1 var(--sans);color:var(--mut);padding:11px 18px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#f7f3ed}
+.price-note{color:var(--mut);font-size:15px;margin:-14px 0 26px}
+.cards{display:grid;gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:24px}
+.card h3{font-size:30px;margin-bottom:6px}
+.card p{color:var(--mut);font-size:15.5px;margin-bottom:14px}
+.rows{list-style:none}
+.rows li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid var(--line);font-size:16px}
+.rows li b{font-weight:500;white-space:nowrap}
+.panel[hidden]{display:none}
+.incl{margin-top:22px;font-size:15.5px;color:var(--mut)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:44px}
+.gallery img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:18px;background:var(--bg2)}
+
+.about{background:var(--bg2)}
+.about .wrap{display:grid;gap:34px;align-items:center}
+.about .photo{border-radius:24px;overflow:hidden;background:var(--bg)}
+.about .photo img{width:100%;height:auto}
+.about p{margin-top:16px;color:var(--mut);max-width:34em}
+.about p strong{color:var(--ink);font-weight:500}
+
+.know ul{list-style:none;margin-top:24px;display:grid;gap:12px;max-width:44em}
+.know li{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 20px;color:var(--mut)}
+.know li b{color:var(--ink);font-weight:500}
+
+.book{background:var(--ink);color:#f2ebe0;text-align:center}
+.book h2{color:#fbf6ee}
+.book p{color:#cfc4b6;margin:14px auto 0;max-width:30em}
+.book .eyebrow{color:#b9a993}
+.book .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.book .btn{background:#f7f3ed;color:var(--ink);border-color:#f7f3ed}
+.book .btn:hover{background:#fff}
+.book .btn.ghost{background:transparent;color:#f7f3ed;border-color:#f7f3ed}
+.book .btn.ghost:hover{background:#f7f3ed;color:var(--ink)}
+.todo{margin-top:30px;display:inline-block;border:1.5px dashed #8d7f70;border-radius:14px;padding:12px 18px;font-size:14.5px;color:#cfc4b6}
+
+.find .wrap{display:grid;gap:30px;align-items:start}
+.find dl{margin-top:22px;display:grid;gap:18px}
+.find dt{font:500 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.find dd{font-size:18px}
+.find dd a{text-underline-offset:3px}
+.find .hrs{display:grid;grid-template-columns:auto auto;gap:2px 22px;justify-content:start}
+.find .photo{border-radius:24px;overflow:hidden;background:var(--bg2)}
+.find .photo img{width:100%;height:auto}
+.mapph{margin-top:14px;border:1.5px dashed var(--accent);border-radius:16px;padding:16px 18px;color:var(--mut);font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mut);font-size:14.5px}
+footer .wrap{display:grid;gap:8px}
+
+/* intro */
+html.intro-play,html.intro-play body{overflow:hidden;height:100%;overscroll-behavior:none}
+html.intro-done .intro{display:none!important}
+@property --sweep{syntax:"<angle>";inherits:false;initial-value:0deg}
+.intro{position:fixed;inset:0;z-index:80;background:#f7f3ed;color:#322923;display:flex;align-items:center;justify-content:center;overflow:hidden;clip-path:circle(150% at 50% 50%)}
+.intro-skip{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:6;background:rgba(247,243,237,.94);color:#322923;border:1.5px solid #322923;border-radius:999px;padding:10px 16px;font:500 15px/1 var(--sans);cursor:pointer}
+.intro-skip:hover{background:#322923;color:#f7f3ed}
+.intro-stage{position:relative;z-index:1;width:min(430px,78vw);display:flex;flex-direction:column;align-items:center}
+.intro-logo{position:relative;width:100%;aspect-ratio:1/1}
+.intro-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;
+  -webkit-mask-image:conic-gradient(from 0deg at 50% 50%,#000 var(--sweep),transparent calc(var(--sweep) + 2deg));
+  mask-image:conic-gradient(from 0deg at 50% 50%,#000 var(--sweep),transparent calc(var(--sweep) + 2deg));
+  animation:introSweep 1.7s cubic-bezier(.5,.1,.3,1) 1.15s forwards}
+.intro-trail{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.intro-trail svg{position:absolute;width:26px;height:26px;fill:#322923;opacity:0;animation:introPaw 1.5s ease forwards}
+.intro-hello{margin-top:10px;text-align:center;font:600 clamp(24px,4.6vw,32px)/1.2 var(--serif);color:#5e5044;opacity:0;animation:introHello .7s ease 2.5s forwards}
+.intro.is-out{animation:introOpen .95s cubic-bezier(.22,.7,.18,1) forwards}
+.intro.is-out .intro-stage{animation:introLift .85s ease forwards}
+.intro.is-done{opacity:0;pointer-events:none}
+@keyframes introSweep{0%{--sweep:0deg;opacity:1}100%{--sweep:362deg;opacity:1}}
+@keyframes introPaw{0%{opacity:0;transform:translateY(8px) scale(.7) rotate(var(--r))}18%{opacity:.85;transform:none rotate(var(--r))}70%{opacity:.5}100%{opacity:0;transform:rotate(var(--r))}}
+@keyframes introHello{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes introOpen{to{clip-path:circle(0% at 50% 50%);opacity:0}}
+@keyframes introLift{to{opacity:0;transform:translateY(-12px) scale(.98)}}
+@media(max-width:759px){
+  .intro-stage{width:min(310px,76vw)}
+  .intro-trail svg{width:20px;height:20px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+  html.intro-play,html.intro-play body{overflow:unset;height:auto}
+}
+
+@media(min-width:760px){
+  nav.main{display:flex}
+  .hero .wrap{grid-template-columns:1.1fr .9fr;gap:56px}
+  .facts ul{grid-template-columns:repeat(3,1fr);gap:32px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+  .about .wrap{grid-template-columns:1fr 1fr;gap:64px}
+  .find .wrap{grid-template-columns:1fr 1fr;gap:64px}
+}
+@media(min-width:1000px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(6,1fr)}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="paw" viewBox="0 0 24 24">
+    <path d="M12 12.2c-3.1 0-6 3.2-6 5.9 0 2 1.5 3 3.3 3 1.1 0 1.9-.5 2.7-.5s1.6.5 2.7.5c1.8 0 3.3-1 3.3-3 0-2.7-2.9-5.9-6-5.9z"/>
+    <ellipse cx="4.6" cy="10.4" rx="2.1" ry="2.8" transform="rotate(-18 4.6 10.4)"/>
+    <ellipse cx="9" cy="5.6" rx="2.2" ry="3" transform="rotate(-6 9 5.6)"/>
+    <ellipse cx="15" cy="5.6" rx="2.2" ry="3" transform="rotate(6 15 5.6)"/>
+    <ellipse cx="19.4" cy="10.4" rx="2.1" ry="2.8" transform="rotate(18 19.4 10.4)"/>
+  </symbol>
+</svg>
+
+<div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+  <button type="button" class="intro-skip" id="intro-skip">Spring over</button>
+  <div class="intro-trail" aria-hidden="true">
+    <svg style="left:8%;top:78%;--r:62deg;animation-delay:.15s"><use href="#paw"/></svg>
+    <svg style="left:20%;top:70%;--r:50deg;animation-delay:.35s"><use href="#paw"/></svg>
+    <svg style="left:31%;top:75%;--r:70deg;animation-delay:.55s"><use href="#paw"/></svg>
+    <svg style="left:42%;top:66%;--r:55deg;animation-delay:.75s"><use href="#paw"/></svg>
+    <svg style="left:53%;top:71%;--r:75deg;animation-delay:.95s"><use href="#paw"/></svg>
+    <svg style="left:64%;top:62%;--r:58deg;animation-delay:1.15s"><use href="#paw"/></svg>
+    <svg style="left:75%;top:67%;--r:78deg;animation-delay:1.35s"><use href="#paw"/></svg>
+    <svg style="left:86%;top:58%;--r:60deg;animation-delay:1.55s"><use href="#paw"/></svg>
+  </div>
+  <div class="intro-stage">
+    <div class="intro-logo" aria-hidden="true"><img src="img/logo.webp" alt="" width="900" height="900"></div>
+    <p class="intro-hello" id="intro-title">Velkommen til Ingolf Hundesalon</p>
+  </div>
+</div>
+
+<div class="flag">Forslag til ny hjemmeside · Lavet af ED. Web Works</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ingolf Hundesalon, til toppen"><img src="img/logo.webp" alt="Ingolf Hundesalon" width="900" height="900"></a>
+    <nav class="main" aria-label="Menu">
+      <a href="#behandlinger">Behandlinger</a>
+      <a href="#om">Om salonen</a>
+      <a href="#book">Book tid</a>
+      <a href="#find">Find os</a>
+    </nav>
+    <a class="btn sm" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Hundesalon i Rungsted Kyst</p>
+      <h1>Hvor pelspleje bliver en fornøjelse</h1>
+      <p class="lead">Bamseklip, puddelklip, trim og hvalpeopstart. Altid tilpasset din hunds behov.</p>
+      <div class="cta">
+        <a class="btn" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a>
+        <a class="btn ghost" href="tel:+4530202770">Ring 30 20 27 70</a>
+      </div>
+      <div class="hours-mini">
+        <span>Man til fre</span><b>09:00 til 18:00</b>
+        <span>Lørdag</span><b>09:00 til 17:00</b>
+        <span>Søndag</span><b>Lukket</b>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="img/hero.webp" alt="Lille hvid og brun hund på klippebordet foran Ingolf Hundesalons skilt" width="1100" height="1650"></div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li>Tilfredshedsgaranti<span>Jeg fortsætter, til både du og din hund er glade.</span></li>
+      <li>Bad og føn er med<span>Alle klip inkluderer bad, føn, negleklip og potetrim.</span></li>
+      <li>Hvalpe er velkomne<span>Rolig hvalpeopstart for hvalpe under 6 måneder.</span></li>
+    </ul>
+  </div>
+</div>
+
+<section id="behandlinger">
+  <div class="wrap">
+    <div class="price-head">
+      <div>
+        <p class="eyebrow">Behandlinger</p>
+        <h2>Priser</h2>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Vælg prisliste">
+        <button type="button" role="tab" id="tab-nu" aria-selected="true" aria-controls="panel-nu">Nu</button>
+        <button type="button" role="tab" id="tab-ny" aria-selected="false" aria-controls="panel-ny">Fra 1. januar 2027</button>
+      </div>
+    </div>
+    <p class="price-note">Alle priser er vejledende og starter fra, i kroner. Nuværende priser gælder til og med 31. december 2026.</p>
+
+    <div class="panel" id="panel-nu" role="tabpanel" aria-labelledby="tab-nu">
+      <div class="cards">
+        <article class="card"><h3>Bamseklip</h3><p>Sød og blød klip. Samme længde over hele kroppen, runde poter og et sødt ansigt.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.200</b></li><li>Over 12 kg<b>1.400</b></li><li>Over 20 kg<b>1.800</b></li></ul></article>
+        <article class="card"><h3>Nedklip</h3><p>En ny start, når pelsen er filtret. Pelsen bliver silkeblød igen.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.200</b></li><li>Over 12 kg<b>1.400</b></li><li>Over 20 kg<b>1.800</b></li></ul></article>
+        <article class="card"><h3>KBH puddelklip</h3><p>Puddelklip i København-stil.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.400</b></li><li>Over 12 kg<b>1.600</b></li><li>Over 20 kg<b>1.800</b></li></ul></article>
+        <article class="card"><h3>Hvalpe</h3><p>Rolig start for hvalpe under 6 måneder. Prisen kan variere med størrelsen.</p>
+          <ul class="rows"><li>Hvalpeopstart<b>fra 150</b></li><li>Hvalpeklip, under 6 mdr.<b>750</b></li></ul></article>
+        <article class="card"><h3>Luksus soignering</h3><p>Vask, føntørring, børstning, potetrim og negleklip.</p>
+          <ul class="rows"><li>Under 12 kg<b>600</b></li><li>Over 12 kg<b>900</b></li><li>Over 20 kg<b>1.800</b></li></ul></article>
+        <article class="card"><h3>Trim</h3><p>Skånsom håndtrim, hvor de løse hår plukkes med fingrene.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.400</b></li><li>Over 12 kg<b>1.800</b></li></ul></article>
+        <article class="card"><h3>Andre ydelser</h3>
+          <ul class="rows"><li>Negleklip og potetrim<b>150</b></li><li>Negleklip<b>75</b></li><li>Ret af ansigt og intime dele<b>200</b></li></ul></article>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-ny" role="tabpanel" aria-labelledby="tab-ny" hidden>
+      <div class="cards">
+        <article class="card"><h3>Bamseklip</h3><p>Sød og blød klip. Samme længde over hele kroppen, runde poter og et sødt ansigt.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.300</b></li><li>12 til 20 kg<b>1.500</b></li><li>Over 20 kg<b>1.900</b></li></ul></article>
+        <article class="card"><h3>Bamseklip, doodle og puddelblandinger</h3><p>Fx labradoodle, goldendoodle, cockapoo og cavapoo. Prisen afhænger af størrelse, pelsmængde og pelsens stand.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.400</b></li><li>12 til 20 kg<b>1.650</b></li><li>Over 20 kg<b>2.000</b></li></ul></article>
+        <article class="card"><h3>Nedklip</h3><p>En ny start, når pelsen er filtret. Pelsen bliver silkeblød igen.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.350</b></li><li>12 til 20 kg<b>1.550</b></li><li>Over 20 kg<b>1.950</b></li></ul></article>
+        <article class="card"><h3>KBH puddelklip</h3><p>Puddelklip i København-stil.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.550</b></li><li>12 til 20 kg<b>1.750</b></li><li>Over 20 kg<b>2.000</b></li></ul></article>
+        <article class="card"><h3>Hvalpe</h3><p>Rolig start for hvalpe under 6 måneder. Prisen kan variere med størrelsen.</p>
+          <ul class="rows"><li>Hvalpeopstart<b>fra 250</b></li><li>Hvalpeklip, under 6 mdr.<b>850</b></li></ul></article>
+        <article class="card"><h3>Luksus soignering</h3><p>Vask, føntørring, børstning, potetrim og negleklip.</p>
+          <ul class="rows"><li>Under 12 kg<b>700</b></li><li>12 til 20 kg<b>1.000</b></li><li>Over 20 kg<b>fra 1.500</b></li></ul></article>
+        <article class="card"><h3>Trim</h3><p>Skånsom håndtrim, hvor de løse hår plukkes med fingrene.</p>
+          <ul class="rows"><li>Under 12 kg<b>1.550</b></li><li>Over 12 kg<b>1.950</b></li></ul></article>
+        <article class="card"><h3>Andre ydelser</h3>
+          <ul class="rows"><li>Negleklip og potetrim<b>200</b></li><li>Negleklip<b>100</b></li><li>Ret af ansigt og intime dele<b>350</b></li></ul></article>
+        <article class="card"><h3>Klippekort</h3><p>Betales samlet ved køb og gælder til samme hund.</p>
+          <ul class="rows"><li>10 x negleklip<b>750</b></li><li>10 x negleklip og potetrim<b>1.550</b></li></ul></article>
+      </div>
+    </div>
+
+    <p class="incl">Alle klip inkluderer bad, føn, negleklip og potetrim.</p>
+
+    <div class="gallery">
+      <img src="img/pudder.webp" alt="Pudder med nyklippet pels" loading="lazy" width="700" height="1052">
+      <img src="img/bichon.webp" alt="Lille hvid hund efter klip" loading="lazy" width="900" height="599">
+      <img src="img/blik.webp" alt="Hvid hund kigger op" loading="lazy" width="900" height="599">
+      <img src="img/toerring.webp" alt="Hund bliver føntørret" loading="lazy" width="1000" height="666">
+      <img src="img/gulv.webp" alt="Klippet hund på trægulv" loading="lazy" width="900" height="599">
+      <img src="img/hvid.webp" alt="Hvid hund i profil" loading="lazy" width="900" height="599">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="om">
+  <div class="wrap">
+    <div class="photo"><img src="img/skilt.webp" alt="Ingolf Hundesalons skilt på væggen i salonen" loading="lazy" width="1200" height="799"></div>
+    <div>
+      <p class="eyebrow">Om salonen</p>
+      <h2>Opkaldt efter Ingolf</h2>
+      <p>Salonen er opkaldt efter Ingolf, <strong>Caroline Strands egen hund</strong>. Det startede i forældrenes kælder, og i dag er der egen salon, butik og en ansat.</p>
+      <p>Caroline ser hver behandling som noget, der skal være roligt og trygt for hunden. Ingen hunde er ens, så hun tilpasser altid klippet efter hundens behov og temperament.</p>
+      <p><strong>Tiphaine</strong> er groomer i salonen. Hun har flere års erfaring, har arbejdet 5 år på Island og klipper også udstillingshunde. Hun taler primært engelsk.</p>
+    </div>
+  </div>
+</section>
+
+<section class="know" id="godt-at-vide">
+  <div class="wrap">
+    <p class="eyebrow">Godt at vide</p>
+    <h2>Før du kommer</h2>
+    <ul>
+      <li><b>Børst hunden igennem.</b> Er pelsen ikke børstet igennem, er der et filtergebyr på 200 kr. pr. påbegyndt time.</li>
+      <li><b>Ændring af service.</b> Ændrer du ønsket ved ankomst, kan der komme et gebyr.</li>
+      <li><b>Ekstra gebyrer.</b> Fx for bundfiltre og lopper eller parasitter. Du får besked, før et gebyr lægges på.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <p class="eyebrow">Book tid</p>
+    <h2>Book tid til din hund</h2>
+    <p>Book online, eller ring på 30 20 27 70.</p>
+    <div class="cta">
+      <a class="btn" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a>
+      <a class="btn ghost" href="tel:+4530202770">Ring 30 20 27 70</a>
+    </div>
+    <p class="todo">Her kan bookingen bygges ind direkte på siden, så man ikke forlader den.</p>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Find os</p>
+      <h2>Bolbrovej 64D</h2>
+      <dl>
+        <div><dt>Adresse</dt><dd>Bolbrovej 64D<br>2960 Rungsted Kyst</dd></div>
+        <div><dt>Telefon</dt><dd><a href="tel:+4530202770">30 20 27 70</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:info@ingolfhundesalon.dk">info@ingolfhundesalon.dk</a></dd></div>
+        <div><dt>Åbningstider</dt><dd class="hrs"><span>Mandag til fredag</span><span>09:00 til 18:00</span><span>Lørdag</span><span>09:00 til 17:00</span><span>Søndag</span><span>Lukket</span></dd></div>
+        <div><dt>Følg os</dt><dd><a href="https://www.instagram.com/ingolfhundesalon" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/profile.php?id=61552695270890" target="_blank" rel="noopener">Facebook</a></dd></div>
+      </dl>
+      <p class="mapph">Kort kommer her. <a href="https://www.google.com/maps/search/?api=1&query=Bolbrovej+64D+2960+Rungsted+Kyst" target="_blank" rel="noopener">Se adressen på Google Maps</a></p>
+    </div>
+    <div class="photo"><img src="img/skilt-hund.webp" alt="Sort hund foran Ingolf Hundesalons skilt" loading="lazy" width="800" height="1202"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Ingolf Hundesalon. Billeder og logo er salonens egne.</span>
+    <span>Dette er et forslag til en ny hjemmeside, lavet af ED. Web Works (edwebworks.com). Det er ikke salonens officielle side.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=[['tab-nu','panel-nu'],['tab-ny','panel-ny']];
+  tabs.forEach(function(t){
+    var b=document.getElementById(t[0]);
+    b.addEventListener('click',function(){
+      tabs.forEach(function(o){
+        var on=o[0]===t[0];
+        document.getElementById(o[0]).setAttribute('aria-selected',on?'true':'false');
+        document.getElementById(o[1]).hidden=!on;
+      });
+    });
+  });
+})();
+(function(){
+  var root=document.documentElement;
+  var intro=document.getElementById('intro');
+  var skipBtn=document.getElementById('intro-skip');
+  if(!intro) return;
+  var timers=[];
+  var ended=false;
+  function later(fn,ms){ var id=setTimeout(fn,ms); timers.push(id); return id; }
+  function clearTimers(){ timers.forEach(clearTimeout); timers=[]; }
+  function markSeen(){ try{ sessionStorage.setItem('ingolfIntro','1'); }catch(e){} }
+  function endIntro(){
+    if(ended) return;
+    ended=true;
+    clearTimers();
+    intro.classList.add('is-done');
+    intro.setAttribute('aria-hidden','true');
+    markSeen();
+    later(function(){
+      intro.hidden=true;
+      root.classList.remove('intro-play');
+      root.classList.add('intro-done');
+      if(skipBtn) skipBtn.blur();
+    }, 900);
+  }
+  if(root.classList.contains('intro-done')){
+    intro.hidden=true;
+    return;
+  }
+  intro.hidden=false;
+  later(function(){ intro.classList.add('is-out'); }, 3900);
+  later(endIntro, 4900);
+  if(skipBtn) skipBtn.addEventListener('click', endIntro);
+  intro.addEventListener('keydown', function(e){ if(e.key==='Escape') endIntro(); });
+})();
+</script>
+</body>
+</html>
