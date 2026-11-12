@@ -27,8 +27,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,500&family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/haven.webp">
-<link rel="preload" as="image" href="img/intro-scene.webp">
-<link rel="preload" as="image" href="img/intro-bog.webp">
 <script>
 (function(){
   var skip=false;
@@ -47,7 +45,7 @@
   Navn, adresse, telefon, e-mail, CVR, åbningstider, retter og priser er hentet fra deilig.dk (nov. 2026).
   Billederne er caféens egne fra deilig.dk, brugt i dette forslag til dem.
   Formularerne sender intet. Bordreservation og QR-bestilling er demos.
-  Intro-tegningerne er lavet til forslaget (H.C. Andersen og børn). Ikke virksomhedens officielle side. Må ikke indekseres.
+  Introen er en original SVG-svane med krusninger (ingen eksterne billeder). Ikke virksomhedens officielle side. Må ikke indekseres.
 -->
 <style>
 :root{
@@ -197,45 +195,40 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;
 }
 html.intro-play,html.intro-play body{overflow:hidden;height:100%;overscroll-behavior:none}
 html.intro-skip .intro{display:none!important}
-.intro{position:fixed;inset:0;z-index:80;background:#f4f0e6;color:#1f2a1c;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.intro-wall{position:absolute;inset:-8%;background:url("img/intro-scene.webp") center/cover no-repeat;filter:blur(22px) saturate(.9);opacity:.22;pointer-events:none}
-.intro-stage{position:relative;z-index:1;width:min(1080px,92vw);height:min(92vh,900px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(12px,2.2vh,22px);padding:64px 0 20px;perspective:2000px}
-.intro-titles{position:relative;z-index:3;text-align:center;padding:0 24px;opacity:0;animation:introIn .8s ease .45s forwards;pointer-events:none;flex:0 0 auto}
-.intro-kicker{font:700 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#2d5a3d;margin-bottom:8px}
-.intro-titles h1{font:600 clamp(26px,4.8vw,52px)/1.12 var(--serif);letter-spacing:-.03em;color:#1f2a1c;max-width:16ch;margin:0 auto}
-.intro-art{position:relative;z-index:1;width:100%;flex:1 1 auto;min-height:0;height:min(64vh,620px);border-radius:22px;overflow:visible;opacity:0;transform:scale(1.03);transform-origin:50% 58%;animation:introIn .9s ease forwards;will-change:transform,opacity}
-.intro-art-clip{height:100%;border-radius:22px;overflow:hidden;box-shadow:0 18px 50px rgba(31,42,28,.22)}
-.intro-art-clip img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:introBob 4.8s ease-in-out .5s infinite alternate}
+.intro{position:fixed;inset:0;z-index:80;background:#f4f0e6;color:#1f2a1c;display:flex;align-items:center;justify-content:center;overflow:hidden;clip-path:circle(150% at 50% 52%)}
 .intro-skip{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:6;background:rgba(244,240,230,.94);color:#1f2a1c;border:1.5px solid #1f2a1c;border-radius:999px;padding:10px 16px;font:700 15px/1 var(--sans);cursor:pointer}
 .intro-skip:hover{background:#1f2a1c;color:#f4f0e6}
-.intro-book{position:absolute;left:50%;top:64%;width:min(260px,48vw);aspect-ratio:3/4;z-index:8;transform:translate(-50%,-50%) rotate(-3deg) scale(.36);pointer-events:none;opacity:0;filter:drop-shadow(0 16px 32px rgba(31,42,28,.38));perspective:1400px}
-.intro-book-inner{position:relative;width:100%;height:100%;transform-origin:left center;border-radius:0 10px 10px 0;overflow:hidden;background:#2d5a3d}
-.intro-cover-img{width:100%;height:100%;object-fit:cover;display:block}
-.intro-cover-title{position:absolute;inset:18% 14% 18% 18%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#1f2a1c;pointer-events:none}
-.intro-cover-title .intro-kicker{margin-bottom:10px}
-.intro-cover-title p.ttl{font:600 clamp(16px,2.6vw,30px)/1.15 var(--serif);letter-spacing:-.02em;margin:0}
-.intro.is-opening .intro-titles{animation:introOut .4s ease forwards}
-.intro.is-opening .intro-book{animation:introBookGrow 2.2s cubic-bezier(.2,.7,.2,1) forwards}
-.intro.is-opening .intro-book-inner{animation:introCoverOpen 1.15s cubic-bezier(.18,.7,.2,1) 1.7s forwards}
-.intro.is-zoom .intro-art{animation:introDive 1.4s cubic-bezier(.2,.7,.15,1) forwards}
-.intro.is-zoom .intro-wall{opacity:0;transition:opacity .5s}
-.intro.is-zoom .intro-book{animation:introBookOut 1.15s ease .1s forwards}
-.intro.is-done{opacity:0;pointer-events:none;transition:opacity .35s ease}
-@keyframes introIn{to{opacity:1;transform:none}}
-@keyframes introOut{to{opacity:0;transform:translateY(-8px)}}
-@keyframes introBob{from{transform:translateY(0) scale(1)}to{transform:translateY(-7px) scale(1.02)}}
-@keyframes introBookGrow{0%{opacity:1;transform:translate(-50%,-50%) rotate(-3deg) scale(.42)}50%{opacity:1;transform:translate(-50%,-50%) rotate(0deg) scale(2.05)}100%{opacity:1;transform:translate(-50%,-50%) rotate(0deg) scale(2.35)}}
-@keyframes introCoverOpen{0%{transform:rotateY(0)}100%{transform:rotateY(-155deg)}}
-@keyframes introDive{0%{transform:scale(1);opacity:1}65%{opacity:1}100%{transform:scale(2.65);transform-origin:51% 58%;opacity:0}}
-@keyframes introBookOut{to{opacity:0;transform:translate(-50%,-50%) scale(3.6)}}
+.intro-stage{position:relative;z-index:1;width:min(560px,88vw);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.intro-pond{position:relative;width:100%;aspect-ratio:5/3.4;overflow:visible}
+.intro-swan{width:100%;height:100%;display:block;overflow:visible;animation:introFloat 3.2s ease-in-out .5s infinite alternate}
+.intro-swan .body-stroke{fill:none;stroke:#2d5a3d;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:introDraw 1.15s cubic-bezier(.45,.1,.2,1) .35s forwards}
+.intro-swan .body-fill{fill:#2d5a3d;opacity:0;animation:introFill .55s ease 1.15s forwards}
+.intro-swan .neck{fill:none;stroke:#2d5a3d;stroke-width:8.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000;animation:introDraw 1.15s cubic-bezier(.45,.1,.2,1) .08s forwards}
+.intro-swan .head,.intro-swan .beak{fill:#2d5a3d;opacity:0;animation:introFill .4s ease 1.05s forwards}
+.intro-swan .wing{fill:none;stroke:#1f3f2b;stroke-width:1.6;stroke-linecap:round;opacity:0;animation:introFill .45s ease 1.35s forwards}
+.intro-swan .eye{fill:#f4f0e6;stroke:none;opacity:0;animation:introFill .35s ease 1.25s forwards}
+.intro-reflect{opacity:0;animation:introFill .8s ease 1.15s forwards;pointer-events:none}
+.intro-reflect .body-fill{fill:url(#introFade);opacity:1;animation:none}
+.intro-water{position:absolute;left:8%;right:8%;top:68%;height:42%;pointer-events:none}
+.intro-water .rip{position:absolute;left:52%;top:14%;width:34%;aspect-ratio:3.6/1;border:1.6px solid rgba(45,90,61,.38);border-radius:50%;transform:translate(-50%,-50%) scale(.35);opacity:0;animation:introRipple 3.2s ease-out infinite}
+.intro-water .rip:nth-child(2){animation-delay:.7s;width:34%}
+.intro-water .rip:nth-child(3){animation-delay:1.4s;width:40%}
+.intro-water .rip:nth-child(4){animation-delay:2.1s;width:30%}
+.intro-line{position:absolute;left:6%;right:6%;top:70%;height:1px;background:linear-gradient(90deg,transparent,rgba(45,90,61,.28) 20%,rgba(45,90,61,.28) 80%,transparent);opacity:0;animation:introFill .8s ease .6s forwards}
+.intro-hello{margin:0 0 6px;text-align:center;font:500 clamp(20px,4.2vw,28px)/1.3 var(--serif);color:#2d5a3d;letter-spacing:-.02em;opacity:0;animation:introHello .7s ease 1.55s forwards}
+.intro.is-out{animation:introOpen .95s cubic-bezier(.22,.7,.18,1) forwards}
+.intro.is-out .intro-stage{animation:introLift .85s ease forwards}
+.intro.is-done{opacity:0;pointer-events:none}
+@keyframes introDraw{to{stroke-dashoffset:0}}
+@keyframes introFill{to{opacity:1}}
+@keyframes introHello{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes introFloat{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+@keyframes introRipple{0%{transform:translate(-50%,-50%) scale(.32);opacity:.0}12%{opacity:.45}100%{transform:translate(-50%,-50%) scale(2.8);opacity:0}}
+@keyframes introOpen{to{clip-path:circle(0% at 50% 52%);opacity:0}}
+@keyframes introLift{to{opacity:0;transform:translateY(-12px) scale(.98)}}
 @media(max-width:759px){
-  .intro-stage{width:100vw;height:100%;height:100dvh;padding:64px 0 24px;gap:16px;justify-content:center}
-  .intro-art{height:auto;flex:0 0 auto;width:100%}
-  .intro-art-clip{border-radius:0;box-shadow:none;aspect-ratio:16/9;height:auto}
-  .intro-art-clip img{object-fit:cover;object-position:center center}
-  .intro-titles{padding:0 20px}
-  .intro-titles h1{font-size:clamp(24px,7.4vw,34px)}
-  .intro-book{top:58%;width:min(200px,70vw)}
+  .intro-stage{width:min(420px,90vw)}
+  .intro-hello{font-size:clamp(18px,5.6vw,24px);margin-top:6px}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -247,26 +240,32 @@ html.intro-skip .intro{display:none!important}
 </head>
 <body>
 <div id="intro" class="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
-  <div class="intro-wall" aria-hidden="true"></div>
   <button type="button" class="intro-skip" id="intro-skip">Spring over</button>
   <div class="intro-stage">
-    <div class="intro-titles">
-      <p class="intro-kicker">café deilig</p>
-      <h1 id="intro-title">Den deilige historie om Odenses eventyrlige Café</h1>
-    </div>
-    <div class="intro-art">
-      <div class="intro-art-clip">
-        <img src="img/intro-scene.webp" alt="Tegnet billede: H.C. Andersen sidder i haven og læser højt for fire små børn." width="1280" height="720">
+    <p class="intro-hello" id="intro-title">Velkommen til café deilig</p>
+    <div class="intro-pond" aria-hidden="true">
+      <div class="intro-line"></div>
+      <div class="intro-water">
+        <span class="rip"></span><span class="rip"></span><span class="rip"></span><span class="rip"></span>
       </div>
-    </div>
-  </div>
-  <div class="intro-book" aria-hidden="true">
-    <div class="intro-book-inner">
-      <img class="intro-cover-img" src="img/intro-bog.webp" alt="" width="720" height="960">
-      <div class="intro-cover-title">
-        <p class="intro-kicker">café deilig</p>
-        <p class="ttl">Den deilige historie om Odenses eventyrlige Café</p>
-      </div>
+      <svg class="intro-swan" viewBox="70 40 250 230" role="img" aria-hidden="true">
+        <defs>
+          <linearGradient id="introFade" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2d5a3d" stop-opacity=".28"/>
+            <stop offset="1" stop-color="#2d5a3d" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g class="intro-reflect" transform="matrix(1 0 0 -.34 0 340)">
+          <path class="body-fill" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
+        </g>
+        <path class="body-fill" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
+        <path class="body-stroke" pathLength="1000" d="M96 210 C88 198 96 180 124 172 C156 162 198 164 224 180 C236 188 238 204 226 216 C212 228 176 234 140 232 C112 230 100 222 96 210 Z"/>
+        <path class="neck" pathLength="1000" d="M216 180 C224 154 210 124 216 98 C222 82 236 72 250 74"/>
+        <ellipse class="head" cx="258" cy="76" rx="13" ry="11.5"/>
+        <path class="beak" d="M269 72 L290 78 L269 82 Z"/>
+        <path class="wing" d="M140 192 C158 184 176 186 190 196"/>
+        <circle class="eye" cx="261" cy="73" r="1.7"/>
+      </svg>
     </div>
   </div>
 </div>
@@ -631,16 +630,15 @@ html.intro-skip .intro{display:none!important}
       root.classList.remove('intro-play');
       root.classList.add('intro-skip');
       if(skipBtn) skipBtn.blur();
-    }, 400);
+    }, 900);
   }
   if(root.classList.contains('intro-skip')){
     intro.hidden=true;
     return;
   }
   intro.hidden=false;
-  later(function(){ intro.classList.add('is-opening'); }, 4500);
-  later(function(){ intro.classList.add('is-zoom'); }, 7000);
-  later(endIntro, 8600);
+  later(function(){ intro.classList.add('is-out'); }, 3000);
+  later(endIntro, 4000);
   if(skipBtn) skipBtn.addEventListener('click', endIntro);
   intro.addEventListener('keydown', function(e){ if(e.key==='Escape') endIntro(); });
 })();
