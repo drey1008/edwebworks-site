@@ -37,7 +37,7 @@
     if(/[?&]intro=1(?:&|$)/.test(q)) skip=false;
     if(/[?&]intro=0(?:&|$)/.test(q)) skip=true;
   }catch(e){}
-  document.documentElement.classList.add(skip?"intro-skip":"intro-play");
+  document.documentElement.classList.add(skip?"intro-done":"intro-play");
 })();
 </script>
 <!--
@@ -194,7 +194,7 @@ footer .inner{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;
   footer .inner{flex-direction:row;justify-content:space-between;align-items:end}
 }
 html.intro-play,html.intro-play body{overflow:hidden;height:100%;overscroll-behavior:none}
-html.intro-skip .intro{display:none!important}
+html.intro-done .intro{display:none!important}
 .intro{position:fixed;inset:0;z-index:80;background:#f4f0e6;color:#1f2a1c;display:flex;align-items:center;justify-content:center;overflow:hidden;clip-path:circle(150% at 50% 52%)}
 .intro-skip{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:6;background:rgba(244,240,230,.94);color:#1f2a1c;border:1.5px solid #1f2a1c;border-radius:999px;padding:10px 16px;font:700 15px/1 var(--sans);cursor:pointer}
 .intro-skip:hover{background:#1f2a1c;color:#f4f0e6}
@@ -696,11 +696,11 @@ Z"/>
     later(function(){
       intro.hidden=true;
       root.classList.remove('intro-play');
-      root.classList.add('intro-skip');
+      root.classList.add('intro-done');
       if(skipBtn) skipBtn.blur();
     }, 900);
   }
-  if(root.classList.contains('intro-skip')){
+  if(root.classList.contains('intro-done')){
     intro.hidden=true;
     return;
   }
