@@ -29,7 +29,7 @@
   FORSLAG: pitch-demo for Ingolf Hundesalon, lavet af ED. Web Works (edwebworks.com).
   Navn, adresse, telefon, e-mail, åbningstider, behandlinger og priser er hentet fra ingolfhundesalon.dk (nov. 2026).
   Logo og billeder er salonens egne fra ingolfhundesalon.dk, brugt i dette forslag til dem.
-  Knappen "Book tid online" peger på salonens eksisterende booking hos Timma. Der er ingen formularer, og siden sender intet.
+  Bookingmodulet og prisoverslaget er eksempler. Intet sendes nogen steder, og ledige tider er genererede eksempler. Linket "Nuværende booking hos Timma" peger på salonens rigtige booking.
   Ikke virksomhedens officielle side. Må ikke indekseres.
 -->
 <link rel="stylesheet" href="../style.css">
@@ -39,9 +39,9 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="../" aria-label="Ingolf Hundesalon, til forsiden"><img src="../img/logo.webp" alt="Ingolf Hundesalon" width="900" height="900"></a>
-    <nav class="main" id="mainnav" aria-label="Menu"><a href="../">Forside</a><a href="../priser/" aria-current="page">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a><a class="navbook" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a></nav>
+    <nav class="main" id="mainnav" aria-label="Menu"><a href="../">Forside</a><a href="../priser/" aria-current="page">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a><a class="navbook" href="../book/">Book tid</a></nav>
     <div class="top-right">
-      <a class="btn sm" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a>
+      <a class="btn sm" href="../book/">Book tid</a>
       <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -74,22 +74,48 @@
   </div>
   <p class="note-small">Priserne er vejledende. Ring på <a href="tel:+4530202770">30 20 27 70</a> eller book online, hvis du er i tvivl om, hvad din hund skal have.</p>
 </div></section>
+<section class="quote" id="prisoverslag">
+  <div class="wrap qwrap">
+    <div>
+      <p class="eyebrow">Prisoverslag</p>
+      <h2>Få et prisoverslag</h2>
+      <p style="margin-top:14px;color:var(--mut);max-width:28em">Priserne er vejledende. Send et billede af din hund og et par oplysninger, så svarer Caroline med en pris på mail eller sms.</p>
+      <p class="demo-note" style="margin-top:18px">Eksempel. Intet sendes, og billedet bliver kun i din browser.</p>
+    </div>
+    <div>
+      <form id="qform" novalidate>
+        <div class="fld photo-up"><label for="q-photo">Billede af hunden (valgfrit)</label><input type="file" id="q-photo" accept="image/*"><img id="q-prev" class="photo-prev" alt="Forhåndsvisning af billedet"></div>
+        <div class="two"><div class="fld"><label for="q-race">Race</label><input type="text" id="q-race" placeholder="Fx cavapoo"><span class="err">Skriv hundens race</span></div>
+        <div class="fld"><label for="q-size">Vægt eller størrelse</label><select id="q-size"><option>Under 12 kg</option><option>12 til 20 kg</option><option>Over 20 kg</option><option>Ved ikke</option></select></div></div>
+        <fieldset class="fld"><legend>Er pelsen filtret?</legend><div class="radios"><label><input type="radio" name="fur" value="nej" checked><span>Nej</span></label><label><input type="radio" name="fur" value="lidt"><span>Lidt</span></label><label><input type="radio" name="fur" value="ja"><span>Ja</span></label></div></fieldset>
+        <div class="fld"><label for="q-treat">Ønsket behandling</label><select id="q-treat"><option value="">Ved ikke endnu</option></select></div>
+        <div class="two"><div class="fld"><label for="q-name">Dit navn</label><input type="text" id="q-name" autocomplete="name"><span class="err">Skriv dit navn</span></div>
+        <div class="fld"><label for="q-tel">Telefon</label><input type="tel" id="q-tel" autocomplete="tel" inputmode="tel"><span class="err">Skriv et telefonnummer</span></div></div>
+        <div class="fld"><label for="q-mail">E-mail</label><input type="email" id="q-mail" autocomplete="email"><span class="err">Skriv en gyldig e-mail</span></div>
+        <fieldset class="fld"><legend>Svar på</legend><div class="radios"><label><input type="radio" name="via" value="mail" checked><span>Mail</span></label><label><input type="radio" name="via" value="sms"><span>Sms</span></label></div></fieldset>
+        <button type="submit" class="btn">Send forespørgsel</button>
+      </form>
+      <div class="qok" id="qok" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
 <section class="book" id="book">
   <div class="wrap">
     <p class="eyebrow">Book tid</p>
     <h2>Book tid til din hund</h2>
     <p>Book online, eller ring på 30 20 27 70.</p>
     <div class="cta">
-      <a class="btn" href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Book tid online</a>
+      <a class="btn" href="../book/">Book tid</a>
       <a class="btn ghost" href="tel:+4530202770">Ring 30 20 27 70</a>
     </div>
+    <p class="tl"><a href="https://book.timma.dk/ingolfhundesalon" target="_blank" rel="noopener">Nuværende booking hos Timma</a></p>
   </div>
 </section>
 </main>
 <footer>
   <div class="wrap footgrid">
     <div>
-      <nav aria-label="Sider"><a href="../">Forside</a><a href="../priser/">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a></nav>
+      <nav aria-label="Sider"><a href="../">Forside</a><a href="../priser/">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a><a href="../book/">Book tid</a></nav>
       <p style="margin-top:12px">Bolbrovej 64D, 2960 Rungsted Kyst · <a href="tel:+4530202770">30 20 27 70</a></p>
     </div>
     <div>
@@ -109,6 +135,60 @@
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&n.classList.contains('open')){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); b.focus(); } });
     window.addEventListener('resize',function(){ if(window.innerWidth>=900){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
   }
+})();
+</script>
+<script>
+var SERVICES=[
+ {id:'bamse',name:'Bamseklip',desc:'Sød og blød klip',sizes:[['Under 12 kg',1200,1300],['12 til 20 kg',1400,1500],['Over 20 kg',1800,1900]]},
+ {id:'nedklip',name:'Nedklip',desc:'En ny start, når pelsen er filtret',sizes:[['Under 12 kg',1200,1350],['12 til 20 kg',1400,1550],['Over 20 kg',1800,1950]]},
+ {id:'puddel',name:'KBH puddelklip',desc:'Puddelklip i København-stil',sizes:[['Under 12 kg',1400,1550],['12 til 20 kg',1600,1750],['Over 20 kg',1800,2000]]},
+ {id:'hvalpestart',name:'Hvalpeopstart',desc:'Rolig start for hvalpe under 6 måneder',sizes:[['Alle størrelser',150,250]]},
+ {id:'hvalpeklip',name:'Hvalpeklip',desc:'For hvalpe under 6 måneder',sizes:[['Alle størrelser',750,850]]},
+ {id:'soign',name:'Luksus soignering',desc:'Vask, føn, børstning, potetrim og negleklip',sizes:[['Under 12 kg',600,700],['12 til 20 kg',900,1000],['Over 20 kg',1800,1500]]},
+ {id:'trim',name:'Trim',desc:'Skånsom håndtrim',sizes:[['Under 12 kg',1400,1550],['Over 12 kg',1800,1950]]},
+ {id:'neglepote',name:'Negleklip og potetrim',desc:'',sizes:[['Alle størrelser',150,200]]},
+ {id:'negle',name:'Negleklip',desc:'',sizes:[['Alle størrelser',75,100]]},
+ {id:'ansigt',name:'Ret af ansigt og intime dele',desc:'',sizes:[['Alle størrelser',200,350]]}
+];
+function kr(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+(function(){
+  var form=document.getElementById('qform');
+  if(!form) return;
+  var sel=document.getElementById('q-treat');
+  SERVICES.forEach(function(s){var o=document.createElement('option');o.value=s.name;o.textContent=s.name;sel.appendChild(o);});
+  var file=document.getElementById('q-photo'),prev=document.getElementById('q-prev'),url=null;
+  file.addEventListener('change',function(){
+    if(url){URL.revokeObjectURL(url);url=null;}
+    var f=file.files&&file.files[0];
+    if(f&&/^image\//.test(f.type)){url=URL.createObjectURL(f);prev.src=url;prev.classList.add('on');}
+    else{prev.removeAttribute('src');prev.classList.remove('on');}
+  });
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var ok=true;
+    function v(id){return document.getElementById(id).value.trim();}
+    function chk(id,cond){var p=document.getElementById(id).parentNode;p.classList.toggle('bad',!cond);if(!cond)ok=false;}
+    chk('q-name',v('q-name').length>1);
+    chk('q-race',v('q-race').length>0);
+    var via=form.querySelector('input[name="via"]:checked').value;
+    var tel=v('q-tel'),mail=v('q-mail');
+    chk('q-tel',via==='mail'?true:tel.replace(/\D/g,'').length>=8);
+    chk('q-mail',via==='sms'?true:/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(mail));
+    if(!ok){var b=form.querySelector('.fld.bad input');if(b)b.focus();return;}
+    var ok2=document.getElementById('qok');
+    var fur=form.querySelector('input[name="fur"]:checked').value;
+    var h='<span class="tag" style="display:inline-block;font:500 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;background:var(--bg2);border-radius:999px;padding:7px 12px;margin-bottom:14px">Eksempel</span>';
+    h+='<h3 style="font-size:32px">Tak, '+esc(v('q-name').split(' ')[0])+'</h3>';
+    h+='<p>Caroline svarer med en pris på '+(via==='sms'?'sms':'mail')+'. I en rigtig løsning lander din forespørgsel med billedet i hendes mail, så hun kan give en mere præcis pris.</p>';
+    if(prev.classList.contains('on')) h+='<img src="'+prev.src+'" alt="Billedet af hunden, som kun ligger i din browser">';
+    h+='<p style="color:var(--mut);font-size:15px">'+esc(v('q-race'))+', '+esc(document.getElementById('q-size').value)+', filtret: '+esc(fur)+(v('q-treat')?', '+esc(v('q-treat')):'')+'.</p>';
+    h+='<p style="color:var(--mut);font-size:14px;margin-top:10px">Dette er et eksempel. Intet er sendt, og billedet er ikke uploadet.</p>';
+    h+='<p style="margin-top:14px"><button type="button" class="btn ghost" id="q-again">Prøv igen</button></p>';
+    ok2.innerHTML=h;ok2.classList.add('on');form.style.display='none';
+    ok2.setAttribute('tabindex','-1');ok2.focus();
+    document.getElementById('q-again').addEventListener('click',function(){ok2.classList.remove('on');form.style.display='';form.reset();prev.classList.remove('on');prev.removeAttribute('src');});
+  });
 })();
 </script>
 <script>

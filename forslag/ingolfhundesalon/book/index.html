@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Book tid | Forslag til Ingolf Hundesalon</title>
+<meta name="description" content="Eksempel på et bookingmodul til Ingolf Hundesalon, lavet af ED. Web Works. Der bliver ikke booket noget.">
+<link rel="canonical" href="https://edwebworks.com/forslag/ingolfhundesalon/book/">
+<link rel="icon" href="../favicon.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ED. Web Works">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://edwebworks.com/forslag/ingolfhundesalon/book/">
+<meta property="og:title" content="Book tid | Forslag til Ingolf Hundesalon">
+<meta property="og:description" content="Eksempel på et bookingmodul til Ingolf Hundesalon, lavet af ED. Web Works. Der bliver ikke booket noget.">
+<meta property="og:image" content="https://edwebworks.com/forslag/ingolfhundesalon/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Book tid | Forslag til Ingolf Hundesalon">
+<meta name="twitter:description" content="Eksempel på et bookingmodul til Ingolf Hundesalon, lavet af ED. Web Works. Der bliver ikke booket noget.">
+<meta name="twitter:image" content="https://edwebworks.com/forslag/ingolfhundesalon/og.jpg">
+<meta name="theme-color" content="#f7f3ed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  FORSLAG: pitch-demo for Ingolf Hundesalon, lavet af ED. Web Works (edwebworks.com).
+  Navn, adresse, telefon, e-mail, åbningstider, behandlinger og priser er hentet fra ingolfhundesalon.dk (nov. 2026).
+  Logo og billeder er salonens egne fra ingolfhundesalon.dk, brugt i dette forslag til dem.
+  Bookingmodulet og prisoverslaget er eksempler. Intet sendes nogen steder, og ledige tider er genererede eksempler. Linket "Nuværende booking hos Timma" peger på salonens rigtige booking.
+  Ikke virksomhedens officielle side. Må ikke indekseres.
+-->
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="flag">Forslag til ny hjemmeside · Lavet af ED. Web Works</div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Ingolf Hundesalon, til forsiden"><img src="../img/logo.webp" alt="Ingolf Hundesalon" width="900" height="900"></a>
+    <nav class="main" id="mainnav" aria-label="Menu"><a href="../">Forside</a><a href="../priser/">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a><a class="navbook" href="../book/" aria-current="page">Book tid</a></nav>
+    <div class="top-right">
+      <a class="btn sm" href="../book/">Book tid</a>
+      <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<main id="top">
+<div class="pagehead"><div class="wrap">
+  <p class="eyebrow">Book tid</p>
+  <h1>Book tid til din hund</h1>
+  <p class="lead">Vælg behandling, groomer og tid i få trin.</p>
+</div></div>
+<section class="sec-s"><div class="wrap">
+  <p class="demo-note">Eksempel på et bookingmodul. Der bliver ikke booket noget, intet sendes, og ledige tider er genererede eksempler.</p>
+  <div class="bk" id="bk"><div id="bk-top"><div id="bk-main"></div></div><aside id="bk-sum" aria-label="Din booking"></aside></div>
+  <noscript><p>Bookingmodulet kræver JavaScript. Ring på <a href="tel:+4530202770">30 20 27 70</a>.</p></noscript>
+</div></section>
+</main>
+<footer>
+  <div class="wrap footgrid">
+    <div>
+      <nav aria-label="Sider"><a href="../">Forside</a><a href="../priser/">Priser</a><a href="../om/">Om salonen</a><a href="../kontakt/">Kontakt</a><a href="../book/">Book tid</a></nav>
+      <p style="margin-top:12px">Bolbrovej 64D, 2960 Rungsted Kyst · <a href="tel:+4530202770">30 20 27 70</a></p>
+    </div>
+    <div>
+      <p>© Ingolf Hundesalon. Billeder og logo er salonens egne.</p>
+      <p style="margin-top:6px">Dette er et forslag til en ny hjemmeside, lavet af ED. Web Works (edwebworks.com). Det er ikke salonens officielle side.</p>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var b=document.getElementById('burger'),n=document.getElementById('mainnav');
+  if(b&&n){
+    b.addEventListener('click',function(){
+      var o=n.classList.toggle('open');
+      b.setAttribute('aria-expanded',o?'true':'false');
+    });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&n.classList.contains('open')){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); b.focus(); } });
+    window.addEventListener('resize',function(){ if(window.innerWidth>=900){ n.classList.remove('open'); b.setAttribute('aria-expanded','false'); } });
+  }
+})();
+</script>
+<script>
+var SERVICES=[
+ {id:'bamse',name:'Bamseklip',desc:'Sød og blød klip',sizes:[['Under 12 kg',1200,1300],['12 til 20 kg',1400,1500],['Over 20 kg',1800,1900]]},
+ {id:'nedklip',name:'Nedklip',desc:'En ny start, når pelsen er filtret',sizes:[['Under 12 kg',1200,1350],['12 til 20 kg',1400,1550],['Over 20 kg',1800,1950]]},
+ {id:'puddel',name:'KBH puddelklip',desc:'Puddelklip i København-stil',sizes:[['Under 12 kg',1400,1550],['12 til 20 kg',1600,1750],['Over 20 kg',1800,2000]]},
+ {id:'hvalpestart',name:'Hvalpeopstart',desc:'Rolig start for hvalpe under 6 måneder',sizes:[['Alle størrelser',150,250]]},
+ {id:'hvalpeklip',name:'Hvalpeklip',desc:'For hvalpe under 6 måneder',sizes:[['Alle størrelser',750,850]]},
+ {id:'soign',name:'Luksus soignering',desc:'Vask, føn, børstning, potetrim og negleklip',sizes:[['Under 12 kg',600,700],['12 til 20 kg',900,1000],['Over 20 kg',1800,1500]]},
+ {id:'trim',name:'Trim',desc:'Skånsom håndtrim',sizes:[['Under 12 kg',1400,1550],['Over 12 kg',1800,1950]]},
+ {id:'neglepote',name:'Negleklip og potetrim',desc:'',sizes:[['Alle størrelser',150,200]]},
+ {id:'negle',name:'Negleklip',desc:'',sizes:[['Alle størrelser',75,100]]},
+ {id:'ansigt',name:'Ret af ansigt og intime dele',desc:'',sizes:[['Alle størrelser',200,350]]}
+];
+function kr(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+(function(){
+  var root=document.getElementById('bk');
+  if(!root) return;
+  var MONTHS=['januar','februar','marts','april','maj','juni','juli','august','september','oktober','november','december'];
+  var DAYS=['Man','Tir','Ons','Tor','Fre','Lør','Søn'];
+  var DAYLONG=['søndag','mandag','tirsdag','onsdag','torsdag','fredag','lørdag'];
+  var GROOMERS=[{id:'ingen',name:'Ingen præference',sub:'Første ledige tid'},{id:'caroline',name:'Caroline',sub:'Indehaver'},{id:'tiphaine',name:'Tiphaine',sub:'Groomer. Taler primært engelsk'}];
+  var st={step:0,svc:null,size:null,groomer:'ingen',date:null,time:null,view:null,f:{}};
+  var today=new Date();today.setHours(0,0,0,0);
+  st.view=new Date(today.getFullYear(),today.getMonth(),1);
+  var maxDate=new Date(today.getTime()+90*86400000);
+  var NEWFROM=new Date(2027,0,1);
+
+  function svc(){return SERVICES.filter(function(s){return s.id===st.svc;})[0];}
+  function steps(){
+    var s=['Behandling'];
+    if(svc()&&svc().sizes.length>1) s.push('Størrelse'); else if(!svc()) s.push('Størrelse');
+    s.push('Groomer','Tid','Dine oplysninger','Bekræftelse');
+    return s;
+  }
+  function stepKeys(){
+    var k=['svc'];
+    if(!svc()||svc().sizes.length>1) k.push('size');
+    k.push('groomer','time','info','done');
+    return k;
+  }
+  function key(){return stepKeys()[st.step];}
+  function openHours(d){var w=d.getDay();if(w===0)return null;if(w===6)return [9,17];return [9,18];}
+  function seed(str){var h=2166136261;for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+  function rnd(n){n=(n+0x6D2B79F5)>>>0;var t=n;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;}
+  function slotsFor(d,g){
+    var oh=openHours(d);if(!oh) return [];
+    var out=[],ds=d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+    var last=oh[1]-1;
+    for(var m=oh[0]*60;m<=last*60;m+=30){
+      var ok;
+      if(g==='ingen'){ok=slotsOne(ds,m,'caroline')||slotsOne(ds,m,'tiphaine');}
+      else ok=slotsOne(ds,m,g);
+      if(ok){
+        var now=new Date();
+        var dt=new Date(d.getFullYear(),d.getMonth(),d.getDate(),0,m);
+        if(dt.getTime()>now.getTime()+3600000) out.push(('0'+Math.floor(m/60)).slice(-2)+':'+('0'+(m%60)).slice(-2));
+      }
+    }
+    return out;
+  }
+  function slotsOne(ds,m,g){return rnd(seed(ds+g)+m*31)<0.55;}
+  function pricelist(){return (st.date&&st.date>=NEWFROM)?2:1;}
+  function priceText(){
+    if(!svc()||st.size===null) return '';
+    var sz=svc().sizes[st.size];
+    return 'fra '+kr(sz[pricelist()])+' kr.';
+  }
+  function fmtDate(d){return DAYLONG[d.getDay()]+' '+d.getDate()+'. '+MONTHS[d.getMonth()]+' '+d.getFullYear();}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  function render(){
+    var k=key(),h='';
+    var names={svc:'Behandling',size:'Størrelse',groomer:'Groomer',time:'Tid',info:'Dine oplysninger',done:'Bekræftelse'};
+    var ks=stepKeys();
+    h+='<ol class="bk-steps" aria-label="Trin">';
+    ks.forEach(function(x,i){h+='<li class="'+(i===st.step?'on':(i<st.step?'done':''))+'"'+(i===st.step?' aria-current="step"':'')+'>'+(i+1)+'. '+names[x]+'</li>';});
+    h+='</ol><div class="bk-panel">';
+    if(k==='svc'){
+      h+='<h2>Vælg behandling</h2><p class="sub">Priserne er vejledende og starter fra.</p><div class="opts" role="radiogroup" aria-label="Behandling">';
+      SERVICES.forEach(function(s){
+        var min=Math.min.apply(null,s.sizes.map(function(z){return z[1];}));
+        h+='<label class="opt"><input type="radio" name="svc" value="'+s.id+'"'+(st.svc===s.id?' checked':'')+'><span><span class="t">'+s.name+'</span>'+(s.desc?'<small>'+s.desc+'</small>':'')+'</span><b>fra '+kr(min)+' kr.</b></label>';
+      });
+      h+='</div><p class="bk-help">Er din hund en doodle eller puddelblanding, eller er du i tvivl om prisen? <a href="../priser/#prisoverslag">Få et prisoverslag</a>.</p>';
+    }
+    if(k==='size'){
+      h+='<h2>Hundens størrelse</h2><p class="sub">Vælg vægt for '+esc(svc().name.toLowerCase())+'.</p><div class="opts" role="radiogroup" aria-label="Størrelse">';
+      svc().sizes.forEach(function(z,i){h+='<label class="opt"><input type="radio" name="size" value="'+i+'"'+(st.size===i?' checked':'')+'><span class="t">'+z[0]+'</span><b>fra '+kr(z[1])+' kr.</b></label>';});
+      h+='</div>';
+    }
+    if(k==='groomer'){
+      h+='<h2>Vælg groomer</h2><p class="sub">Du kan også lade os vælge.</p><div class="opts" role="radiogroup" aria-label="Groomer">';
+      GROOMERS.forEach(function(g){h+='<label class="opt"><input type="radio" name="groomer" value="'+g.id+'"'+(st.groomer===g.id?' checked':'')+'><span><span class="t">'+g.name+'</span><small>'+g.sub+'</small></span></label>';});
+      h+='</div>';
+    }
+    if(k==='time'){
+      h+='<h2>Vælg dato og tid</h2><p class="sub">Åbent mandag til fredag 09 til 18 og lørdag 09 til 17. Søndag er lukket.</p>';
+      h+=calendar();
+      if(st.date){
+        var sl=slotsFor(st.date,st.groomer);
+        h+='<p class="slots-h">Eksempeltider, '+fmtDate(st.date)+'</p>';
+        if(sl.length){h+='<div class="slots" role="radiogroup" aria-label="Tidspunkt">';sl.forEach(function(t){h+='<label><input type="radio" name="time" value="'+t+'"'+(st.time===t?' checked':'')+'><span>'+t+'</span></label>';});h+='</div>';}
+        else h+='<p class="sub" style="margin-top:10px">Ingen ledige eksempeltider denne dag. Prøv en anden dag.</p>';
+      }
+    }
+    if(k==='info'){
+      var f=st.f;
+      h+='<h2>Dine oplysninger</h2><p class="sub">Intet sendes. Det er et eksempel.</p><form id="infoform" novalidate>';
+      h+='<div class="two"><div class="fld"><label for="f-name">Dit navn</label><input type="text" id="f-name" autocomplete="name" value="'+esc(f.name||'')+'"><span class="err">Skriv dit navn</span></div>';
+      h+='<div class="fld"><label for="f-dog">Hundens navn</label><input type="text" id="f-dog" value="'+esc(f.dog||'')+'"><span class="err">Skriv hundens navn</span></div></div>';
+      h+='<div class="two"><div class="fld"><label for="f-tel">Telefon</label><input type="tel" id="f-tel" autocomplete="tel" inputmode="tel" value="'+esc(f.tel||'')+'"><span class="err">Skriv et telefonnummer</span></div>';
+      h+='<div class="fld"><label for="f-mail">E-mail</label><input type="email" id="f-mail" autocomplete="email" value="'+esc(f.mail||'')+'"><span class="err">Skriv en gyldig e-mail</span></div></div>';
+      h+='<div class="fld"><label for="f-note">Bemærkning (valgfri)</label><textarea id="f-note">'+esc(f.note||'')+'</textarea></div></form>';
+    }
+    if(k==='done'){
+      var f2=st.f;
+      h+='<div class="okbox" role="status"><span class="tag">Eksempel</span><h2>Tak, '+esc(f2.name.split(' ')[0])+'</h2>';
+      h+='<p>Sådan ville bekræftelsen se ud. I en rigtig løsning får du en bekræftelse på mail og en påmindelse på sms. Her er intet booket, og intet er sendt.</p>';
+      h+=summary(true)+'<div class="bk-nav"><button type="button" class="btn" id="restart">Prøv igen</button><a class="btn ghost" href="../">Til forsiden</a></div></div>';
+    }
+    if(k!=='done'){
+      h+='<div class="bk-nav">';
+      if(st.step>0) h+='<button type="button" class="btn ghost" id="back">Tilbage</button>';
+      h+='<button type="button" class="btn" id="next"'+(canNext()?'':' disabled')+'>'+(k==='info'?'Bekræft booking':'Næste')+'</button></div>';
+    }
+    h+='</div>';
+    var main=document.getElementById('bk-main');main.innerHTML=h;
+    document.getElementById('bk-sum').innerHTML=k==='done'?'':summary(false);
+    document.getElementById('bk-sum').style.display=k==='done'?'none':'';
+    bind();
+  }
+  function summary(full){
+    var s=svc(),h=(full?'<div class="sum" style="margin-top:14px;border-color:var(--line)">':'<div class="sum"><h3>Din booking</h3>')+'<dl>';
+    h+='<div><dt>Behandling</dt><dd>'+(s?s.name:'Ikke valgt')+'</dd></div>';
+    if(s&&st.size!==null&&s.sizes.length>1) h+='<div><dt>Størrelse</dt><dd>'+s.sizes[st.size][0]+'</dd></div>';
+    h+='<div><dt>Groomer</dt><dd>'+GROOMERS.filter(function(g){return g.id===st.groomer;})[0].name+'</dd></div>';
+    h+='<div><dt>Tid</dt><dd>'+(st.date&&st.time?fmtDate(st.date)+' kl. '+st.time:'Ikke valgt')+'</dd></div>';
+    if(full&&st.f.dog) h+='<div><dt>Hund</dt><dd>'+esc(st.f.dog)+'</dd></div>';
+    if(priceText()) h+='<div><dt>Vejledende pris</dt><dd><div class="pr">'+priceText()+'</div></dd></div>';
+    h+='</dl>'+(priceText()?'<p class="pn">Prisen er vejledende og bekræftes af salonen. Eksempel, ingen rigtig booking.</p>':'<p class="pn">Eksempel. Ingen rigtig booking.</p>')+'</div>';
+    return h;
+  }
+  function calendar(){
+    var v=st.view,y=v.getFullYear(),m=v.getMonth();
+    var first=new Date(y,m,1),off=(first.getDay()+6)%7,dim=new Date(y,m+1,0).getDate();
+    var prevOk=!(y===today.getFullYear()&&m===today.getMonth());
+    var nextOk=new Date(y,m+1,1)<=maxDate;
+    var h='<div class="cal"><div class="cal-h"><button type="button" id="calprev" aria-label="Forrige måned"'+(prevOk?'':' disabled')+'>&larr;</button><strong>'+MONTHS[m]+' '+y+'</strong><button type="button" id="calnext" aria-label="Næste måned"'+(nextOk?'':' disabled')+'>&rarr;</button></div><div class="cal-g">';
+    DAYS.forEach(function(d){h+='<span class="dn">'+d+'</span>';});
+    for(var i=0;i<off;i++) h+='<span></span>';
+    for(var d=1;d<=dim;d++){
+      var dt=new Date(y,m,d),dis=dt<today||dt>maxDate||dt.getDay()===0;
+      var cls=(st.date&&dt.getTime()===st.date.getTime()?'sel ':'')+(dt.getTime()===today.getTime()?'today':'');
+      h+='<button type="button" data-d="'+d+'" class="'+cls+'"'+(dis?' disabled':'')+' aria-label="'+d+'. '+MONTHS[m]+'">'+d+'</button>';
+    }
+    h+='</div><p class="cal-legend">Søndage og tidligere dage kan ikke vælges.</p></div>';
+    return h;
+  }
+  function canNext(){
+    var k=key();
+    if(k==='svc') return !!st.svc;
+    if(k==='size') return st.size!==null;
+    if(k==='time') return !!(st.date&&st.time);
+    return true;
+  }
+  function go(n){st.step=n;render();var t=document.getElementById('bk-top');if(t&&t.getBoundingClientRect().top<0)t.scrollIntoView({behavior:'smooth',block:'start'});}
+  function bind(){
+    var k=key(),main=document.getElementById('bk-main');
+    function radios(name,fn){main.querySelectorAll('input[name="'+name+'"]').forEach(function(r){r.addEventListener('change',function(){fn(r.value);var n=document.getElementById('next');if(n)n.disabled=!canNext();document.getElementById('bk-sum').innerHTML=summary(false);});});}
+    if(k==='svc') radios('svc',function(v){st.svc=v;var s=svc();st.size=s.sizes.length===1?0:null;});
+    if(k==='size') radios('size',function(v){st.size=parseInt(v,10);});
+    if(k==='groomer') radios('groomer',function(v){st.groomer=v;st.time=null;});
+    if(k==='time'){
+      var cp=document.getElementById('calprev'),cn=document.getElementById('calnext');
+      cp.addEventListener('click',function(){st.view=new Date(st.view.getFullYear(),st.view.getMonth()-1,1);render();});
+      cn.addEventListener('click',function(){st.view=new Date(st.view.getFullYear(),st.view.getMonth()+1,1);render();});
+      main.querySelectorAll('.cal-g button[data-d]').forEach(function(b){b.addEventListener('click',function(){st.date=new Date(st.view.getFullYear(),st.view.getMonth(),parseInt(b.dataset.d,10));st.time=null;render();});});
+      radios('time',function(v){st.time=v;});
+    }
+    var nb=document.getElementById('next'),bb=document.getElementById('back'),rs=document.getElementById('restart');
+    if(bb) bb.addEventListener('click',function(){go(st.step-1);});
+    if(rs) rs.addEventListener('click',function(){st.step=0;st.svc=null;st.size=null;st.groomer='ingen';st.date=null;st.time=null;st.f={};render();});
+    if(nb) nb.addEventListener('click',function(){
+      if(k==='info'){
+        var ok=true,g=function(i){return document.getElementById(i);};
+        var f={name:g('f-name').value.trim(),dog:g('f-dog').value.trim(),tel:g('f-tel').value.trim(),mail:g('f-mail').value.trim(),note:g('f-note').value.trim()};
+        function chk(id,cond){var p=g(id).parentNode;p.classList.toggle('bad',!cond);if(!cond)ok=false;}
+        chk('f-name',f.name.length>1);chk('f-dog',f.dog.length>0);chk('f-tel',f.tel.replace(/\D/g,'').length>=8);chk('f-mail',/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.mail));
+        st.f=f;
+        if(!ok){var b=main.querySelector('.fld.bad input');if(b)b.focus();return;}
+      }
+      if(canNext()) go(st.step+1);
+    });
+  }
+  render();
+})();
+</script>
+</body>
+</html>
